@@ -1,16 +1,8 @@
-:root {
-  --primary-color: red;
-  --secondary-color: green;
-  --background-color: lightgray;
-
-  --font-large: 30px;
-}
-
 .background {
   width: 100%;
   height: 100%;
 
-  background-color: aqua;
+  background-color: var(--primary-color);
 
   display: flex;
   flex-direction: column;
@@ -23,7 +15,8 @@ body {
   min-width: 1024px;
   min-height: 100vh;
 
-  background-color: red;
+  background-color: khaki;
+  color: var(--text-color);
 
   display: flex;
   flex-direction: column;
