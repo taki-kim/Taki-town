@@ -3,14 +3,20 @@
   --secondary-color: #f7f7f5;
   --tertiary-color: #f0efea;
 
+  --primary-color-r: #090a0d;
+  --secondary-color-r: #1b1d24;
+  --tertiary-color-r: #2d303b;
+
   --text-color: black;
+  --text-color-2: #2d303b;
 
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
 
-  --font-large: 12px;
-  --font-medium: 12px;
-  --font-small: 12px;
+  --font-xl: 2.4rem;
+  --font-l: 1.8rem;
+  --font-m: 1.2rem;
+  --font-s: 1rem;
 
   --font-w-large: 800;
   --font-w-medium: 500;
@@ -22,8 +28,13 @@
   --secondary-color: #1b1d24;
   --tertiary-color: #2d303b;
 
+  --primary-color-r: #ffffff;
+  --secondary-color-r: #f7f7f5;
+  --tertiary-color-r: #f0efea;
+
   --button-hover-bg: #f0efea;
   --button-hover-text: black;
 
   --text-color: #ffffff;
+  --text-color-2: #f0efea;
 }
