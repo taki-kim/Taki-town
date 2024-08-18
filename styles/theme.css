@@ -13,14 +13,14 @@
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
 
-  --font-xl: 2.4rem;
-  --font-l: 1.8rem;
-  --font-m: 1.2rem;
-  --font-s: 1rem;
+  --font-xl: 1.8rem;
+  --font-l: 1.4rem;
+  --font-m: 1rem;
+  --font-s: 0.9rem;
 
-  --font-w-large: 800;
-  --font-w-medium: 500;
-  --font-w-small: 300;
+  --font-w-l: 800;
+  --font-w-m: 500;
+  --font-w-s: 300;
 }
 
 [data-theme="dark"] {
