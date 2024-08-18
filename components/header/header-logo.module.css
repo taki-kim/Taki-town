@@ -1,0 +1,61 @@
+.logo-wrapper {
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--font-l);
+
+  background-image: linear-gradient(
+    270deg,
+    var(--primary-color) 50%,
+    var(--primary-color-r) 0
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+  user-select: none;
+}
+
+.logo-wrapper:hover {
+  background-position: 0;
+  color: white;
+}
+
+.logo {
+  color: var(--text-color);
+  text-decoration: none;
+
+  padding: 0.4rem;
+
+  position: relative;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-color) 50%,
+    var(--text-color) 0
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+
+  font-size: var(--font-l);
+  font-weight: var(--font-w-l);
+
+  text-transform: uppercase;
+  transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo:hover {
+  background-position: 0;
+  color: var(--primary-color);
+}

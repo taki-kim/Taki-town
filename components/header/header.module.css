@@ -1,0 +1,31 @@
+.header {
+  width: 100vw;
+  height: 3.6rem;
+
+  border: none;
+
+  position: sticky;
+  top: 0;
+
+  padding: 0rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--primary-color);
+}
+
+.header.scrolled-detected {
+  height: 3.7rem;
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  width: 100%;
+}
