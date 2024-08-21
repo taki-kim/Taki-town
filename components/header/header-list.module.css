@@ -1,0 +1,16 @@
+.list {
+  cursor: pointer;
+}
+
+.list-item {
+  margin-left: 1.2rem;
+  padding-bottom: 2px;
+
+  color: var(--text-color);
+  font-weight: var(--font-w-m);
+  text-decoration: none;
+}
+
+.list-item.clicked {
+  border-bottom: 2px solid var(--text-color);
+}
