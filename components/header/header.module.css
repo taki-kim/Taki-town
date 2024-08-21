@@ -2,7 +2,7 @@
   width: 100vw;
   height: 3.6rem;
 
-  border: none;
+  border-bottom: 1px solid var(--tertiary-color);
 
   position: sticky;
   top: 0;
@@ -14,11 +14,6 @@
   align-items: center;
 
   background-color: var(--primary-color);
-}
-
-.header.scrolled-detected {
-  height: 3.7rem;
-  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .navbar {
