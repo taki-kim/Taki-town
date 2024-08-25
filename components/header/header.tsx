@@ -1,6 +1,6 @@
 import HeaderLogo from "./header-logo";
 import HeaderList from "./heade-list";
-import DarkModeButton from "./dark-mode/dark-mode-button";
+import ThemeChangeButton from "./theme-change-button/theme-change-button";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -14,7 +14,7 @@ export default function Header() {
           <HeaderList href="/about" listName="about" />
         </ul>
       </nav>
-      <DarkModeButton />
+      <ThemeChangeButton />
     </header>
   );
 }
