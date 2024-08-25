@@ -16,7 +16,9 @@ body {
   min-width: 1024px;
   min-height: 100vh;
 
-  background-color: khaki;
+  border: 2px solid var(--tertiary-color);
+
+  background-color: var(--primary-color);
   color: var(--text-color);
 
   display: flex;

@@ -4,10 +4,10 @@
 
   border-bottom: 1px solid var(--tertiary-color);
 
-  position: sticky;
+  position: fixed;
   top: 0;
 
-  padding: 0rem 4rem;
+  padding: 0rem 10rem;
 
   display: flex;
   justify-content: space-between;

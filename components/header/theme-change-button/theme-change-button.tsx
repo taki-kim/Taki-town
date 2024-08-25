@@ -10,8 +10,8 @@ export type IConProps = {
   onClick: () => void;
 };
 
-export default function DarkModeButton() {
-  const [theme, setTheme] = useState("light");
+export default function ThemeChangeButton() {
+  const [theme, setTheme] = useState("");
 
   useEffect(() => {
     const savedTheme = getThemeCookie("theme");
@@ -26,9 +26,9 @@ export default function DarkModeButton() {
     setTheme(oppositeTheme);
   };
 
-  return theme === "dark" ? (
-    <DarkModeIcon onClick={handleTheme} />
-  ) : (
-    <LightModeIcon onClick={handleTheme} />
-  );
+  if (theme === "dark") {
+    return <DarkModeIcon onClick={handleTheme} />;
+  } else if (theme === "light") {
+    return <LightModeIcon onClick={handleTheme} />;
+  }
 }
