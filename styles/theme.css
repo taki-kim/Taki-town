@@ -43,19 +43,3 @@
   --text-color: #eeeeee;
   --text-color-2: #dddddd;
 }
-
-/* [data-theme="dark"] {
-  --primary-color: #090a0d;
-  --secondary-color: #1b1d24;
-  --tertiary-color: #2d303b;
-
-  --primary-color-r: #ffffff;
-  --secondary-color-r: #f7f7f5;
-  --tertiary-color-r: #f0efea;
-
-  --button-hover-bg: #f0efea;
-  --button-hover-text: black;
-
-  --text-color: #ffffff;
-  --text-color-2: #f0efea;
-} */

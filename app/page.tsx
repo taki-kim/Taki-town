@@ -24,17 +24,5 @@ export default function Home() {
     fetchData();
   }, []);
 
-  return (
-    <main className={styles.main}>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <p>{data}</p>
-    </main>
-  );
+  return <main className={styles.main}></main>;
 }
