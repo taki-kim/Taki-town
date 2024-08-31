@@ -20,12 +20,17 @@
 
   --font-xl: 1.8rem;
   --font-l: 1.4rem;
-  --font-m: 1rem;
-  --font-s: 0.9rem;
+  --font-m: 1.2rem;
+  --font-s: 1rem;
+  --font-xs: 0.9rem;
 
-  --font-w-l: 800;
+  --font-w-xl: 800;
+  --font-w-l: 700;
   --font-w-m: 500;
-  --font-w-s: 300;
+  --font-w-s: 400;
+  --font-w-xs: 300;
+
+  --header-height: 3.6rem;
 }
 
 [data-theme="dark"] {
@@ -43,19 +48,3 @@
   --text-color: #eeeeee;
   --text-color-2: #dddddd;
 }
-
-/* [data-theme="dark"] {
-  --primary-color: #090a0d;
-  --secondary-color: #1b1d24;
-  --tertiary-color: #2d303b;
-
-  --primary-color-r: #ffffff;
-  --secondary-color-r: #f7f7f5;
-  --tertiary-color-r: #f0efea;
-
-  --button-hover-bg: #f0efea;
-  --button-hover-text: black;
-
-  --text-color: #ffffff;
-  --text-color-2: #f0efea;
-} */

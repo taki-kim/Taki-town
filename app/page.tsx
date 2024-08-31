@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
+import Introduction from "@/components/main-page/introduction";
 
 export default function Home() {
   const [data, setData] = useState<any>("");
@@ -26,15 +27,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <p>{data}</p>
+      <Introduction />
     </main>
   );
 }

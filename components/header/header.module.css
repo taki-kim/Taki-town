@@ -1,6 +1,6 @@
 .header {
   width: 100vw;
-  height: 3.6rem;
+  height: var(--header-height);
 
   border-bottom: 1px solid var(--tertiary-color);
 
