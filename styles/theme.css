@@ -20,12 +20,17 @@
 
   --font-xl: 1.8rem;
   --font-l: 1.4rem;
-  --font-m: 1rem;
-  --font-s: 0.9rem;
+  --font-m: 1.2rem;
+  --font-s: 1rem;
+  --font-xs: 0.9rem;
 
-  --font-w-l: 800;
+  --font-w-xl: 800;
+  --font-w-l: 700;
   --font-w-m: 500;
-  --font-w-s: 300;
+  --font-w-s: 400;
+  --font-w-xs: 300;
+
+  --header-height: 3.6rem;
 }
 
 [data-theme="dark"] {
