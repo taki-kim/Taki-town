@@ -1,0 +1,32 @@
+.button-wrapper {
+  margin: 1rem 0rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--primary-color-r);
+
+  cursor: pointer;
+}
+
+.button-wrapper:hover {
+  font-weight: var(--font-w-l);
+}
+
+.button-wrapper-large {
+  width: 160px;
+  height: 50px;
+
+  font-size: var(--font-l);
+}
+
+.button-wrapper-medium {
+  width: 120px;
+  height: 45px;
+}
+
+.button-wrapper-small {
+  width: 100px;
+  height: 45px;
+}
