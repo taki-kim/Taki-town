@@ -5,6 +5,9 @@ import "../styles/theme.css";
 import "./globals.css";
 import Header from "@/components/header/header";
 import { cookies } from "next/headers";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
 
