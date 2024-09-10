@@ -1,6 +1,4 @@
 .button-wrapper {
-  margin: 1rem 0rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,5 +26,10 @@
 
 .button-wrapper-small {
   width: 100px;
-  height: 45px;
+  height: 40px;
+}
+
+.Link {
+  color: var(--primary-color-r);
+  text-decoration: none;
 }
