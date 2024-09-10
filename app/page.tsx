@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Introduction from "@/components/main-page/introduction";
 import AboutPostSection from "@/components/main-page/about-post-section/about-post-section";
-import Carousel from "@/components/carousel/carousel";
 
 export default function Home() {
   const [data, setData] = useState<any>("");
@@ -28,10 +27,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={styles.main}>
-      <Introduction />
-
-      <AboutPostSection />
-    </main>
+    <>
+      <header className={styles["header"]}>
+        <Introduction />
+      </header>
+      <main className={styles["main"]}>
+        <AboutPostSection />
+      </main>
+    </>
   );
 }
