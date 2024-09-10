@@ -23,7 +23,6 @@ body {
   min-height: 100vh;
 
   padding-top: var(--header-height); /* to fill fixed-header's back space */
-  border: 2px solid var(--tertiary-color);
 
   background-color: var(--primary-color);
   color: var(--text-color);

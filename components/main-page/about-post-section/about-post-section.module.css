@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+}
+
+.title {
+  font-size: var(--font-xl);
+  font-weight: var(--font-w-l);
+}

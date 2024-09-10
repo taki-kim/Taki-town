@@ -12,9 +12,9 @@ export default function Header() {
           <HeaderList href="/posts" listName="posts" />
           <HeaderList href="/portfolit" listName="portfolio" />
           <HeaderList href="/about" listName="about" />
+          <ThemeChangeButton />
         </ul>
       </nav>
-      <ThemeChangeButton />
     </header>
   );
 }
