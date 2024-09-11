@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import styles from "./header-logo.module.css";
+import styles from "./main-logo.module.css";
 
-export type HeaderLogoProps = {
+export type MainLogoProps = {
   link: string;
   title: string;
 };
 
-export default function HeaderLogo({ link, title }: HeaderLogoProps) {
+export default function MainLogo({ link, title }: MainLogoProps) {
   return (
     <div className={styles["logo-wrapper"]}>
       <Link href={link} className={`${styles.logo} ${styles.fromLeft}`}>

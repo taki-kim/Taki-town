@@ -18,9 +18,11 @@
 }
 
 body {
+  position: relative;
+
   width: 100%;
   min-width: 1024px;
-  min-height: 100vh;
+  height: auto;
 
   padding-top: var(--header-height); /* to fill fixed-header's back space */
 
