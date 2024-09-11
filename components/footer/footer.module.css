@@ -1,0 +1,57 @@
+.wrapper {
+  padding: 2rem;
+
+  width: 100%;
+  height: auto;
+
+  border-top: 1px solid var(--tertiary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  margin: 0.5rem 0rem;
+}
+
+.text-wrapper {
+  margin: 0.5rem 0rem;
+
+  color: var(--text-color);
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-button {
+  margin-left: 10px;
+
+  font-size: var(--font-l);
+  cursor: pointer;
+  color: inherit;
+}
+
+.email-wrapper {
+  margin: 0.5rem 0rem;
+
+  display: flex;
+}
+
+.email-nav {
+  font-weight: var(--font-w-m);
+}
+
+.email-text {
+  padding-left: 10px;
+
+  font-weight: var(--font-w-xs);
+  color: var(--text-color-2);
+}
+
+.copyright {
+  font-size: var(--font-xs);
+  font-weight: var(--font-w-xs);
+}
