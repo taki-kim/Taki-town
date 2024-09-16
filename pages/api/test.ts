@@ -9,7 +9,7 @@ export default async function handler(
   try {
     client = await connectDatabase();
     if (req.method === "GET") {
-      const db = client.db("taki-town");
+      const db = client.db(process.env.DB_NAME);
       const collection = db.collection("posts");
       const data = await collection.findOne({ title: "test" });
 
