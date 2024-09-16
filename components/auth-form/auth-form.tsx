@@ -1,16 +1,22 @@
 "use client";
+
 import { FormEvent, useState } from "react";
+import { signIn } from "next-auth/react";
 
 import styles from "./auth-form.module.css";
-import { onSubmit } from "@/app/admin/login/page";
 
 export default function AuthForm() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
-  function handleClick(e: any) {
+  function onSubmit(e: FormEvent) {
     e.preventDefault();
-    onSubmit(id, pw);
+
+    const result = signIn("credentials", {
+      redirect: false,
+      id: id,
+      password: pw,
+    });
   }
   return (
     <div className={styles["login-wrapper"]}>
@@ -38,11 +44,7 @@ export default function AuthForm() {
             }}
           ></input>
         </div>
-        <button
-          type="submit"
-          className={styles["button"]}
-          onClick={handleClick}
-        >
+        <button type="submit" className={styles["button"]} onClick={onSubmit}>
           login
         </button>
       </form>
