@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
 import { cookies } from "next/headers";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
+
+import "./globals.css";
+import NextAuthProvider from "@/providers/next-auth-provider";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="background" data-theme={theme}>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <NextAuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );
