@@ -1,3 +1,5 @@
+"use client";
+
 export default function Post() {
-  return <div>this is post page</div>;
+  return <div></div>;
 }
