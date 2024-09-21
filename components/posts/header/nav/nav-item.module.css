@@ -1,0 +1,10 @@
+.wrapper {
+  padding-right: 1rem;
+
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.wrapper:hover {
+  font-weight: var(--font-w-l);
+}
