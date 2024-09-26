@@ -1,8 +1,9 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 import styles from "./posts-header.module.css";
 import HeaderNav from "./nav/header-nav";
-import { usePathname } from "next/navigation";
 import { getCategoryAndIntro } from "@/utils/postPage";
 
 export default function PostsHeader() {

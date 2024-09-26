@@ -18,3 +18,10 @@ export function getCategoryAndIntro(pathName: string) {
       ];
   }
 }
+
+export function getCategoryString(pathName: string) {
+  let currentPath: string[] | string = pathName.split("/");
+  currentPath = currentPath[currentPath.length - 1];
+
+  return currentPath;
+}
