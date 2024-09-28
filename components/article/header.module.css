@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 3rem 0rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--font-l);
+  font-weight: var(--font-w-m);
+}
+
+.date {
+  margin-bottom: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+
+  width: 90%;
+  height: 700px;
+
+  margin: 1rem 0rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  border-radius: 20px;
+}
