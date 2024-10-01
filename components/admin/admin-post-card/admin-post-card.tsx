@@ -2,19 +2,24 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-
-import styles from "./post-card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export type PostCardProps = {
+import styles from "./admin-post-card.module.css";
+import EditDeleteBar from "./edit-delete-bar/edit-delete-bar";
+
+export type AdminPostCardProps = {
   imageLink: string;
   title: string;
   summary: string;
   postLink: string;
 };
 
-export default function PostCard({ imageLink, title, summary }: PostCardProps) {
+export default function AdminPostCard({
+  imageLink,
+  title,
+  summary,
+}: AdminPostCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const path = usePathname();
   const [isVisible, setIsVisible] = useState(false);
@@ -43,16 +48,19 @@ export default function PostCard({ imageLink, title, summary }: PostCardProps) {
   }, [path]);
 
   return (
-    <Link
-      href={"/" + title}
-      className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
-      ref={cardRef}
-    >
-      <div className={styles["image-wrapper"]}>
-        <Image src={imageLink} alt={`Image ${title + 1}`} fill />
-      </div>
-      <h1 className={styles["title"]}>{title}</h1>
-      <p className={styles["summary"]}>{summary}</p>
-    </Link>
+    <div>
+      <Link
+        href={"/" + title}
+        className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
+        ref={cardRef}
+      >
+        <div className={styles["image-wrapper"]}>
+          <Image src={imageLink} alt={`Image ${title + 1}`} fill />
+        </div>
+        <h1 className={styles["title"]}>{title}</h1>
+        <p className={styles["summary"]}>{summary}</p>
+      </Link>
+      <EditDeleteBar postTitle={title} />
+    </div>
   );
 }
