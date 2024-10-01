@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import styles from "./post-card.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,8 +15,39 @@ export type CardListProps = {
 };
 
 export default function CardList({ imageLink, title, summary }: CardListProps) {
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const path = usePathname();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, [path]);
+
   return (
-    <Link href={"/" + title} className={styles["wrapper"]}>
+    <Link
+      href={"/" + title}
+      className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
+      ref={cardRef}
+    >
       <div className={styles["image-wrapper"]}>
         <Image src={imageLink} alt={`Image ${title + 1}`} fill />
       </div>
