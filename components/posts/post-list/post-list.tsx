@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import styles from "./post-list.module.css";
-import CardList from "../post-card/post-card";
+import PostCard from "../post-card/post-card";
 import { getCategoryString } from "@/utils/postPage";
 
 export default function PostList() {
@@ -32,7 +32,7 @@ export default function PostList() {
     <div className={styles["wrapper"]}>
       {getCategoryString(pathname as string) === "posts"
         ? cardData.map((e) => (
-            <CardList
+            <PostCard
               key={e.title}
               postLink={e.title}
               imageLink={e.imageLink}
@@ -42,7 +42,7 @@ export default function PostList() {
           ))
         : cardData.map((e) =>
             getCategoryString(pathname as string) === e.category ? (
-              <CardList
+              <PostCard
                 key={e.title}
                 postLink={e.title}
                 imageLink={e.imageLink}
