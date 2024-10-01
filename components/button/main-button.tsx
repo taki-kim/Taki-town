@@ -5,11 +5,18 @@ type MainButtonProps = {
   text: string;
   size: string;
   color?: string | undefined;
+  onClick?: () => void;
 };
 
-export default function MainButton({ text, size, color }: MainButtonProps) {
+export default function MainButton({
+  text,
+  size,
+  color,
+  onClick,
+}: MainButtonProps) {
   return (
     <div
+      onClick={onClick ? onClick : undefined}
       className={`${styles["button-wrapper"]} ${
         styles[getButtonSizeClass(size) as string]
       } `}
