@@ -7,8 +7,18 @@ type EditDeleteBarProps = {
 };
 
 export default function EditDeleteBar({ postTitle }: EditDeleteBarProps) {
-  function deletePost() {
-    console.log(postTitle);
+  async function deletePost() {
+    try {
+      const response = await fetch(`/api/post/delete/${postTitle}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete the post");
+      }
+    } catch (error) {
+      console.error("Error deleting post:", error);
+    }
   }
   return (
     <div className={styles["wrapper"]}>
