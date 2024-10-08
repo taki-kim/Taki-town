@@ -1,40 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import styles from "./carousel.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons/faAngleLeft";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
+import { PostDataProps } from "@/type";
 
-export default function Carousel() {
+export default function Carousel({ data }: { data: PostDataProps[] }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFirstImage, setIsfirstImage] = useState(true);
   const [isLastImage, setIsLastImage] = useState(false);
   const [postTitle, setPostTitle] = useState("");
-
-  const images: any = [
-    {
-      image:
-        "https://thumbnail.laftel.net/items/home/4ea9e512-f9f3-4b35-a4b2-107a3c47fcd0.jpg?w=760&webp=0&c=0%2C60%2C640%2C420",
-      title: "놀라는 긴상",
-    },
-    {
-      image: "https://cdn.slist.kr/news/photo/201706/15028_46783_4353.jpg",
-      title: "해결사 긴토키 사무소",
-    },
-    {
-      image:
-        "https://thumbnail.laftel.net/items/home/85001e6f-237e-4de0-b12f-f1b09143dd9c.jpg?w=760&webp=0&c=38%2C0%2C1024%2C554",
-      title: "수리검 긴상",
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW3G6fHtGf2W00DaH4YIbRKQfp87pb5ptZiQ&s",
-      title: "절망하는 긴상",
-    },
-  ];
 
   function movePrev() {
     if (currentImageIndex > 0) {
@@ -45,7 +24,7 @@ export default function Carousel() {
   }
 
   function moveNext() {
-    if (currentImageIndex < images.length - 1) {
+    if (currentImageIndex < data.length - 1) {
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     } else {
       null;
@@ -53,7 +32,7 @@ export default function Carousel() {
   }
 
   useEffect(() => {
-    if (currentImageIndex == images.length - 1) {
+    if (currentImageIndex == data.length - 1) {
       setIsfirstImage(false);
       setIsLastImage(true);
     } else if (currentImageIndex == 0) {
@@ -64,8 +43,12 @@ export default function Carousel() {
       setIsLastImage(false);
     }
 
-    setPostTitle(images[currentImageIndex].title);
+    setPostTitle(data[currentImageIndex]?.title);
   }, [currentImageIndex]);
+
+  useEffect(() => {
+    setPostTitle(data[0]?.title);
+  }, [data]);
 
   return (
     <div className={styles["carousel-container"]}>
@@ -89,9 +72,9 @@ export default function Carousel() {
           transform: `translateX(-${currentImageIndex * 100}%)`,
         }}
       >
-        {images.map((images: any, index: number) => (
+        {data?.map((item, index) => (
           <div key={index} className={styles["carousel-image"]}>
-            <Image src={images.image} alt={`Image ${index + 1}`} fill />
+            <Image src={item.imageLink} alt={`Image ${index + 1}`} fill />
           </div>
         ))}
       </div>
