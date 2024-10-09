@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.css";
-import PostSubmitButton from "@/components/admin/post-page/post-submit-button";
+import PostCreateButton from "@/components/admin/submit-button/post-create-button";
 
 export default function CreatePost() {
   const [form, setForm] = useInputs({
@@ -68,7 +68,7 @@ export default function CreatePost() {
           {form.content}
         </ReactMarkdown>
       </div>
-      <PostSubmitButton formData={form} />
+      <PostCreateButton formData={form} />
     </div>
   );
 }
