@@ -18,6 +18,7 @@ export default function EditPost() {
     category: "",
     tags: "",
     content: "",
+    imageLink: "",
   });
 
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function EditPost() {
           category: result.category || "",
           tags: result.tags || "",
           content: result.content || "",
+          imageLink: result.imageLink || "",
         });
 
         console.log(result._id);
@@ -85,6 +87,15 @@ export default function EditPost() {
             className={styles["input"]}
             name="tags"
             value={form.tags}
+            onChange={setForm}
+          ></input>
+        </div>
+        <div className={styles["input-wrapper"]}>
+          <span className={styles["input-label"]}>메인이미지</span>
+          <input
+            className={styles["input"]}
+            name="imageLink"
+            value={form.imageLink}
             onChange={setForm}
           ></input>
         </div>
