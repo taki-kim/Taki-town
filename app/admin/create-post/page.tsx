@@ -14,6 +14,8 @@ export default function CreatePost() {
     category: "",
     tags: "",
     content: "",
+    imageLink:
+      "https://www.pixelstalk.net/wp-content/uploads/image10/Nature-4K-wallpaper-with-bamboo-forest-with-sunlight-filtering-through-serene-and-peaceful-atmosphere.jpg",
   });
 
   return (
@@ -43,6 +45,15 @@ export default function CreatePost() {
             className={styles["input"]}
             name="category"
             value={form.category}
+            onChange={setForm}
+          ></input>
+        </div>
+        <div className={styles["input-wrapper"]}>
+          <span className={styles["input-label"]}>메인이미지</span>
+          <input
+            className={styles["input"]}
+            name="imageLink"
+            value={form.imageLink}
             onChange={setForm}
           ></input>
         </div>
