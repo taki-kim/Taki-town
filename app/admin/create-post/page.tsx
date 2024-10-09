@@ -66,6 +66,20 @@ export default function CreatePost() {
             onChange={setForm}
           ></input>
         </div>
+        <div className={styles["input-wrapper"]}>
+          <span className={styles["input-label"]}>카테고리</span>
+          <select
+            className={styles["select-box"]}
+            name="category"
+            onChange={setForm}
+            value={form.category}
+          >
+            <option value="development">development</option>
+            <option value="design">design</option>
+            <option value="philosophy">philosophy</option>
+            <option value="etc">etc</option>
+          </select>
+        </div>
       </div>
       <div className={styles["editor-wrapper"]}>
         <textarea
