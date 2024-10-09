@@ -1,20 +1,53 @@
 "use client";
 
-import ReactMarkdown from "react-markdown";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
+import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.css";
-import PostCreateButton from "@/components/admin/submit-button/post-create-button";
+import PostEditButton from "@/components/admin/submit-button/post-edit-button";
 
-export default function CreatePost() {
-  const [form, setForm] = useInputs({
+export default function EditPost() {
+  const postTitle = usePathname()?.split("/")[3];
+  const [form, setForm, setFormData] = useInputs({
+    _id: "",
     title: "",
     summary: "",
     category: "",
     tags: "",
     content: "",
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api/post/${postTitle}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const result = await response.json();
+
+        console.log(result);
+
+        setFormData({
+          _id: result._id || "",
+          title: result.title || "",
+          summary: result.summary || "",
+          category: result.category || "",
+          tags: result.tags || "",
+          content: result.content || "",
+        });
+
+        console.log(result._id);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles["body"]}>
@@ -68,7 +101,7 @@ export default function CreatePost() {
           {form.content}
         </ReactMarkdown>
       </div>
-      <PostCreateButton formData={form} />
+      <PostEditButton formData={form} />
     </div>
   );
 }

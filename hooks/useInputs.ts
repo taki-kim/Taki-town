@@ -8,7 +8,7 @@ export default function useInputs(initialValue: FormData = {}) {
   const [text, setText] = useState<FormData>(initialValue);
 
   const onChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | any): void => {
       const { value, name } = e.target;
       setText({
         ...text,
@@ -17,6 +17,12 @@ export default function useInputs(initialValue: FormData = {}) {
     },
     [text]
   );
+  const setFormData = useCallback((newData: FormData) => {
+    setText((prevText) => ({
+      ...prevText,
+      ...newData,
+    }));
+  }, []);
 
-  return [text, onChange] as const;
+  return [text, onChange, setFormData] as const;
 }
