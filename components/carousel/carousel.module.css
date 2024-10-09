@@ -55,6 +55,11 @@
   font-weight: var(--font-w-l);
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+}
+
 .angle-prev {
   position: absolute;
   left: 5%;

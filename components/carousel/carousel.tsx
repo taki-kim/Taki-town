@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./carousel.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,7 +53,11 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
 
   return (
     <div className={styles["carousel-container"]}>
-      <div className={`${styles["post-title"]}`}>{postTitle}</div>
+      <div className={`${styles["post-title"]}`}>
+        <Link href={`/${postTitle}`} className={styles["link"]}>
+          {postTitle}
+        </Link>
+      </div>
       <div className={styles["angle-prev"]} onClick={movePrev}>
         <FontAwesomeIcon
           icon={faAngleLeft}
