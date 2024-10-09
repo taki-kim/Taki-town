@@ -68,3 +68,8 @@
 .preview {
   flex: 1;
 }
+
+.select-box {
+  width: 80%;
+  height: 20px;
+}
