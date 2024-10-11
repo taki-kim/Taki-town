@@ -20,7 +20,6 @@ export default function DevPosts() {
         }
         const result = await response.json();
         setCardData(sortRecentDevPosts(result));
-        console.log(sortRecentDevPosts(result));
       } catch (error) {
         console.error("Error fetching data:", error);
       }

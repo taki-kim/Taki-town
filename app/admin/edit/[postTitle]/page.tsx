@@ -30,8 +30,6 @@ export default function EditPost() {
         }
         const result = await response.json();
 
-        console.log(result);
-
         setFormData({
           _id: result._id || "",
           title: result.title || "",
@@ -41,8 +39,6 @@ export default function EditPost() {
           content: result.content || "",
           imageLink: result.imageLink || "",
         });
-
-        console.log(result._id);
       } catch (error) {
         console.error("Error fetching data", error);
       }
