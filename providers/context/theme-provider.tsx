@@ -24,7 +24,6 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     document.documentElement.setAttribute("data-theme", oppositeTheme);
     setThemeCookie(oppositeTheme);
     setTheme(oppositeTheme);
-    console.log(theme);
   };
 
   return (
