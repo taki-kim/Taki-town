@@ -9,12 +9,15 @@ import {
 
 import styles from "./text-container.module.css";
 import "@/styles/markdown.css";
+import useTheme from "@/hooks/useTheme";
 
 type TextContainerProps = {
   articleText: string;
 };
 
 export default function TextContainer({ articleText }: TextContainerProps) {
+  const { theme } = useTheme();
+
   return (
     <div className={styles["wrapper"]}>
       <Markdown
@@ -25,7 +28,7 @@ export default function TextContainer({ articleText }: TextContainerProps) {
 
             return !inline && match ? (
               <SyntaxHighlighter
-                style={oneDark}
+                style={theme === "light" ? oneLight : oneDark}
                 PreTag="div"
                 language={match[1]}
                 {...props}

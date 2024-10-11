@@ -7,3 +7,8 @@ export type PostDataProps = {
   content: string;
   date: string;
 };
+
+export type ThemeContextProps = {
+  theme: string;
+  toggleTheme: () => void;
+};
