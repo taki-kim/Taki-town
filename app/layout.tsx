@@ -9,6 +9,7 @@ import NextAuthProvider from "@/providers/next-auth-provider";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import ThemeProvider from "@/providers/context/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,14 +32,16 @@ export default function RootLayout({
 }>) {
   const theme = checkTheme();
   return (
-    <html lang="en" className="background" data-theme={theme}>
-      <body className={inter.className}>
-        <NextAuthProvider>
-          <Header />
-          {children}
-          <Footer />
-        </NextAuthProvider>
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en" className="background" data-theme={theme}>
+        <body className={inter.className}>
+          <NextAuthProvider>
+            <Header />
+            {children}
+            <Footer />
+          </NextAuthProvider>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
