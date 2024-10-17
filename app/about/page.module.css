@@ -1,0 +1,22 @@
+.wrapper {
+  width: 60%;
+  height: 100%;
+
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding: 1rem;
+
+  align-self: center;
+
+  font-size: var(--font-l);
+  font-weight: var(--font-w-l);
+}
+
+.text-wrapper {
+  line-height: 1.4;
+}
