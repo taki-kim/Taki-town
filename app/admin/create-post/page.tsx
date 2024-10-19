@@ -39,15 +39,7 @@ export default function CreatePost() {
             onChange={setForm}
           ></input>
         </div>
-        <div className={styles["input-wrapper"]}>
-          <span className={styles["input-label"]}>카테고리</span>
-          <input
-            className={styles["input"]}
-            name="category"
-            value={form.category}
-            onChange={setForm}
-          ></input>
-        </div>
+
         <div className={styles["input-wrapper"]}>
           <span className={styles["input-label"]}>메인이미지</span>
           <input
