@@ -8,7 +8,7 @@ export default function Introduction() {
   return (
     <main className={styles["wrapper"]}>
       <Image
-        src="https://wallpapercave.com/wp/wp6272794.jpg"
+        src="https://images8.alphacoders.com/134/1349195.png"
         fill
         alt="wallpaper"
       />
