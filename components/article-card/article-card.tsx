@@ -3,18 +3,22 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import styles from "./post-card.module.css";
+import styles from "./article-card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export type PostCardProps = {
+export type ArticleCardProps = {
   imageLink: string;
   title: string;
   summary: string;
   postLink: string;
 };
 
-export default function PostCard({ imageLink, title, summary }: PostCardProps) {
+export default function ArticleCard({
+  imageLink,
+  title,
+  summary,
+}: ArticleCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const path = usePathname();
   const [isVisible, setIsVisible] = useState(false);
