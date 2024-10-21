@@ -8,8 +8,7 @@ export default function AdminLayout({
 }>) {
   return (
     <div className={styles["body"]}>
-      {children}
-      {/* <PageGuard>{children}</PageGuard> */}
+      <PageGuard>{children}</PageGuard>
     </div>
   );
 }
