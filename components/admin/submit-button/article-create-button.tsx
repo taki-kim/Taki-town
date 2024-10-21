@@ -7,9 +7,13 @@ import { getDateString } from "@/utils/date";
 
 type PostSubmitButtonProps = {
   formData: any;
+  article: string;
 };
 
-export default function PostCreateButton({ formData }: PostSubmitButtonProps) {
+export default function ArticleCreateButton({
+  formData,
+  article,
+}: PostSubmitButtonProps) {
   const [submit, setSubmit] = useState(false);
 
   useEffect(() => {
@@ -18,13 +22,25 @@ export default function PostCreateButton({ formData }: PostSubmitButtonProps) {
         const date = getDateString(new Date());
         formData.date = date; // add date
 
-        await fetch("/api/post/create-post", {
-          method: "POST",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        if (article === "post") {
+          await fetch("/api/post/create-post", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        }
+
+        if (article === "project") {
+          await fetch("/api/project/create-project", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        }
       } catch (error) {
         console.log(error);
       }
