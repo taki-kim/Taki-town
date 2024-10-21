@@ -22,7 +22,11 @@ export default function EditDeleteBar({ postTitle }: EditDeleteBarProps) {
   }
   return (
     <div className={styles["wrapper"]}>
-      <NavButton text="수정" size="small" link={`/admin/edit/${postTitle}`} />
+      <NavButton
+        text="수정"
+        size="small"
+        link={`/admin/edit/post/${postTitle}`}
+      />
       <MainButton text="삭제" size="small" onClick={deletePost} />
     </div>
   );
