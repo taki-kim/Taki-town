@@ -10,7 +10,8 @@ export default async function handler(
   try {
     client = await connectDatabase();
 
-    const { _id, title, summary, category, tags, content } = req.body;
+    const { _id, title, summary, category, tags, content, imageLink } =
+      req.body;
 
     if (req.method === "PATCH") {
       const db = client.db(process.env.DB_NAME);
@@ -25,6 +26,7 @@ export default async function handler(
             category,
             tags,
             content,
+            imageLink,
           },
         }
       );

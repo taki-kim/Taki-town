@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+
+  color: pink;
+}
+
+.button {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: pink;
+}
