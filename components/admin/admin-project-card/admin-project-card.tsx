@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./admin-project-card.module.css";
+import EditDeleteBar from "./edit-delete-bar/edit-delete-bar";
 
 export type AdminPostCardProps = {
   imageLink: string;
@@ -19,12 +20,13 @@ export default function AdminProjectCard({
 }: AdminPostCardProps) {
   return (
     <div>
-      <Link href={"/" + title} className={styles["wrapper"]}>
+      <Link href={`/project/${title}`} className={styles["wrapper"]}>
         <div className={styles["image-wrapper"]}>
           <Image src={imageLink} alt={`Image ${title + 1}`} fill />
         </div>
         <h1 className={styles["title"]}>{title}</h1>
         <p className={styles["summary"]}>{summary}</p>
+        <EditDeleteBar projectTitle={title} />
       </Link>
     </div>
   );
