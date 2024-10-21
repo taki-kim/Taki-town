@@ -12,12 +12,14 @@ export type ArticleCardProps = {
   title: string;
   summary: string;
   postLink: string;
+  articleSort: string;
 };
 
 export default function ArticleCard({
   imageLink,
   title,
   summary,
+  articleSort,
 }: ArticleCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const path = usePathname();
@@ -48,7 +50,7 @@ export default function ArticleCard({
 
   return (
     <Link
-      href={"/" + title}
+      href={`/${articleSort}/${title}`}
       className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
       ref={cardRef}
     >
