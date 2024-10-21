@@ -11,7 +11,7 @@ export default function Header() {
       <nav className={styles.navbar}>
         <ul className={styles.navbar}>
           <HeaderList href="/posts" listName="posts" />
-          <HeaderList href="/portfolit" listName="portfolio" />
+          <HeaderList href="/projects" listName="projects" />
           <HeaderList href="/about" listName="about" />
           <AdminMenu />
           <ThemeChangeButton />

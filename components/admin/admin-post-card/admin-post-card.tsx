@@ -50,7 +50,7 @@ export default function AdminPostCard({
   return (
     <div>
       <Link
-        href={"/" + title}
+        href={`/post/${title}`}
         className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
         ref={cardRef}
       >

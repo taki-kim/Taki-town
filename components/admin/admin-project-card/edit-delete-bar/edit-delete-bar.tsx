@@ -3,13 +3,13 @@ import MainButton from "@/components/button/main-button";
 import NavButton from "@/components/button/nav-button";
 
 type EditDeleteBarProps = {
-  postTitle: string;
+  projectTitle: string;
 };
 
-export default function EditDeleteBar({ postTitle }: EditDeleteBarProps) {
+export default function EditDeleteBar({ projectTitle }: EditDeleteBarProps) {
   async function deletePost() {
     try {
-      const response = await fetch(`/api/post/delete/${postTitle}`, {
+      const response = await fetch(`/api/project/delete/${projectTitle}`, {
         method: "DELETE",
       });
 
@@ -25,7 +25,7 @@ export default function EditDeleteBar({ postTitle }: EditDeleteBarProps) {
       <NavButton
         text="수정"
         size="small"
-        link={`/admin/edit/post/${postTitle}`}
+        link={`/admin/edit/project/${projectTitle}`}
       />
       <MainButton text="삭제" size="small" onClick={deletePost} />
     </div>

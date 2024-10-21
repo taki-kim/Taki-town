@@ -10,7 +10,7 @@ import "@/styles/markdown.css";
 import PostEditButton from "@/components/admin/submit-button/post-edit-button";
 
 export default function EditPost() {
-  const postTitle = usePathname()?.split("/")[3];
+  const postTitle = usePathname()?.split("/")[4];
   const [form, setForm, setFormData] = useInputs({
     _id: "",
     title: "",

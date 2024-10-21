@@ -3,23 +3,15 @@
 import { useEffect, useState } from "react";
 
 import sytles from "./submit-button.module.css";
-import { getDateString } from "@/utils/date";
 
-type PostSubmitButtonProps = {
-  formData: any;
-};
-
-export default function PostCreateButton({ formData }: PostSubmitButtonProps) {
+export default function ProjectEditButton({ formData }: any) {
   const [submit, setSubmit] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const date = getDateString(new Date());
-        formData.date = date; // add date
-
-        await fetch("/api/post/create-post", {
-          method: "POST",
+        const response = await fetch(`/api/project/edit/${formData.title}`, {
+          method: "PATCH",
           body: JSON.stringify(formData),
           headers: {
             "Content-Type": "application/json",
@@ -32,14 +24,13 @@ export default function PostCreateButton({ formData }: PostSubmitButtonProps) {
 
     if (submit) {
       fetchData();
-      window.location.href = "/admin";
     }
   }, [submit]);
 
   return (
     <div
       className={sytles["button"]}
-      onClick={() => {
+      onClick={(e: any) => {
         setSubmit(true);
       }}
     >

@@ -8,7 +8,7 @@ import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 
 export default function PostSlug() {
-  const postTitle = usePathname()?.slice(1);
+  const postTitle = usePathname()?.split("/")[2];
   const [data, setData] = useState<any>({});
 
   useEffect(() => {

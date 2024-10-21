@@ -1,22 +1,49 @@
 "use client";
 
-import ReactMarkdown from "react-markdown";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
+import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.css";
-import PostCreateButton from "@/components/admin/submit-button/post-create-button";
+import ProjectEditButton from "@/components/admin/submit-button/project-edit-button";
 
-export default function CreatePost() {
-  const [form, setForm] = useInputs({
+export default function EditPost() {
+  const projectTitle = usePathname()?.split("/")[4];
+  const [form, setForm, setFormData] = useInputs({
+    _id: "",
     title: "",
     summary: "",
     category: "",
     tags: "",
     content: "",
-    imageLink:
-      "https://www.pixelstalk.net/wp-content/uploads/image10/Nature-4K-wallpaper-with-bamboo-forest-with-sunlight-filtering-through-serene-and-peaceful-atmosphere.jpg",
+    imageLink: "",
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api/project/get/${projectTitle}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const result = await response.json();
+
+        setFormData({
+          _id: result._id || "",
+          title: result.title || "",
+          summary: result.summary || "",
+          content: result.content || "",
+          imageLink: result.imageLink || "",
+        });
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles["body"]}>
@@ -39,16 +66,6 @@ export default function CreatePost() {
             onChange={setForm}
           ></input>
         </div>
-
-        <div className={styles["input-wrapper"]}>
-          <span className={styles["input-label"]}>메인이미지</span>
-          <input
-            className={styles["input"]}
-            name="imageLink"
-            value={form.imageLink}
-            onChange={setForm}
-          ></input>
-        </div>
         <div className={styles["input-wrapper"]}>
           <span className={styles["input-label"]}>태그</span>
           <input
@@ -59,20 +76,16 @@ export default function CreatePost() {
           ></input>
         </div>
         <div className={styles["input-wrapper"]}>
-          <span className={styles["input-label"]}>카테고리</span>
-          <select
-            className={styles["select-box"]}
-            name="category"
+          <span className={styles["input-label"]}>메인이미지</span>
+          <input
+            className={styles["input"]}
+            name="imageLink"
+            value={form.imageLink}
             onChange={setForm}
-            value={form.category}
-          >
-            <option value="development">development</option>
-            <option value="design">design</option>
-            <option value="philosophy">philosophy</option>
-            <option value="etc">etc</option>
-          </select>
+          ></input>
         </div>
       </div>
+
       <div className={styles["editor-wrapper"]}>
         <textarea
           className={styles["textarea"]}
@@ -85,7 +98,7 @@ export default function CreatePost() {
           {form.content}
         </ReactMarkdown>
       </div>
-      <PostCreateButton formData={form} />
+      <ProjectEditButton formData={form} />
     </div>
   );
 }
