@@ -9,6 +9,8 @@
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .markdown-body details,
@@ -687,6 +689,10 @@
 
 .markdown-body a {
   color: rgb(132, 54, 174);
+}
+
+.markdown-body strong {
+  font-weight: 800;
 }
 
 @media (max-width: 990px) {
