@@ -685,6 +685,10 @@
   transition: 0.5s;
 }
 
+.markdown-body a {
+  color: rgb(132, 54, 174);
+}
+
 @media (max-width: 990px) {
   .markdown-body {
     font-size: 12px;
