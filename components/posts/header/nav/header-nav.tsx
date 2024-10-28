@@ -4,14 +4,19 @@ import NavItem from "./nav-item";
 type navItem = {
   title: string;
   link: string;
+  categoryId: string;
 };
 
 const navList: navItem[] = [
-  { title: "All", link: "/posts" },
-  { title: "Development", link: "/posts/development" },
-  { title: "Design", link: "/posts/design" },
-  { title: "Philosophy", link: "/posts/philosophy" },
-  { title: "Etc", link: "/posts/etc" },
+  { title: "All", link: "/posts", categoryId: "posts" },
+  {
+    title: "Development",
+    link: "/posts/development",
+    categoryId: "development",
+  },
+  { title: "Design", link: "/posts/design", categoryId: "design" },
+  { title: "Philosophy", link: "/posts/philosophy", categoryId: "philosophy" },
+  { title: "Etc", link: "/posts/etc", categoryId: "etc" },
 ];
 
 export default function HeaderNav() {
@@ -22,6 +27,7 @@ export default function HeaderNav() {
           key={element.title}
           navTitle={element.title}
           navLink={element.link}
+          categoryId={element.categoryId}
         />
       ))}
     </div>
