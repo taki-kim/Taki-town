@@ -8,22 +8,24 @@
 }
 
 .title {
-  margin: 3rem 0rem;
+  margin: 2rem 0rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: var(--font-l);
+  font-size: var(--font-xl);
   font-weight: var(--font-w-m);
 }
 
 .date {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-weight: var(--font-w-s);
 }
 
 .image-wrapper {
