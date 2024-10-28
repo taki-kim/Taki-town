@@ -1,14 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import styles from "./project-list.module.css";
 import ArticleCard from "@/components/article-card/article-card";
+import { sortByNewestArtcile } from "@/utils/article";
+import { ProjectDataProps } from "@/type";
 
 export default function ProjectList() {
-  const [cardData, setCardData] = useState<any[]>([]);
-  const pathname = usePathname();
+  const [cardData, setCardData] = useState<ProjectDataProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +29,7 @@ export default function ProjectList() {
 
   return (
     <div className={styles["wrapper"]}>
-      {cardData.map((e) => (
+      {sortByNewestArtcile(cardData).map((e) => (
         <ArticleCard
           key={e.title}
           articleSort="project"
