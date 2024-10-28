@@ -54,7 +54,7 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
   return (
     <div className={styles["carousel-container"]}>
       <div className={`${styles["post-title"]}`}>
-        <Link href={`/${postTitle}`} className={styles["link"]}>
+        <Link href={`/post/${postTitle}`} className={styles["link"]}>
           {postTitle}
         </Link>
       </div>

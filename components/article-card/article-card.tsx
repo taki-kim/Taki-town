@@ -34,7 +34,7 @@ export default function ArticleCard({
           }
         });
       },
-      { threshold: 0 }
+      { threshold: 0.2 }
     );
 
     if (cardRef.current) {

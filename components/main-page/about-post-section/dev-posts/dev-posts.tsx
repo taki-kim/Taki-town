@@ -31,7 +31,7 @@ export default function DevPosts() {
   return (
     <div className={styles["wrapper"]}>
       <header className={styles["header"]}>
-        <h1 className={styles["title"]}>Dev Posts</h1>
+        <h1 className={styles["title"]}>Dev posts</h1>
         <NavButton text="More Posts" size="small" link="/posts/development" />
       </header>
       <main className={styles["content-wrapper"]}>
