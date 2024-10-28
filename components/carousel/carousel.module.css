@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
 
-  border-radius: 1%;
+  border-radius: 10px;
 
   overflow: hidden;
 }
@@ -28,7 +28,7 @@
 
   height: 90%;
 
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
 
   position: absolute;
   bottom: 0;
@@ -40,7 +40,7 @@
 
 .post-title {
   position: absolute;
-  bottom: 10%;
+  bottom: 6%;
   z-index: 20;
 
   width: 100%;
@@ -52,7 +52,6 @@
 
   color: white;
   font-size: var(--font-l);
-  font-weight: var(--font-w-l);
 }
 
 .link {
