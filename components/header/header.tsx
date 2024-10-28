@@ -7,7 +7,7 @@ import AdminMenu from "./admin-menu/admin-menu";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <MainLogo link="/" title="TAKI-TOWN" />
+      <MainLogo link="/" title="TAKI TOWN" />
       <nav className={styles.navbar}>
         <ul className={styles.navbar}>
           <HeaderList href="/posts" listName="posts" />

@@ -9,6 +9,8 @@
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .markdown-body details,
@@ -50,7 +52,7 @@
   font-weight: var(--base-text-weight-semibold, 600);
   padding-bottom: 0.3em;
   font-size: 2em;
-  border-bottom: 1px solid #34576d;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .markdown-body mark {
@@ -683,6 +685,14 @@
 .markdown-body table img {
   background-color: transparent;
   transition: 0.5s;
+}
+
+.markdown-body a {
+  color: rgb(132, 54, 174);
+}
+
+.markdown-body strong {
+  font-weight: 700;
 }
 
 @media (max-width: 990px) {
