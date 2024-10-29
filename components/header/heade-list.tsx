@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import styles from "./header-list.module.css";
+import { checkIsCurrentPath } from "@/utils/header";
 
 export type HeaderListProps = {
   href: string;
@@ -17,7 +18,7 @@ export default function HeaderList({ href, listName }: HeaderListProps) {
     <li className={styles.list}>
       <Link
         className={
-          href === path
+          checkIsCurrentPath(path as string, listName)
             ? `${styles["list-item"]} ${styles.clicked}`
             : `${styles["list-item"]}`
         }

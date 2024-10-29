@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./page.module.css";
 import Introduction from "@/components/main-page/introduction";
 import AboutPostSection from "@/components/main-page/about-post-section/about-post-section";

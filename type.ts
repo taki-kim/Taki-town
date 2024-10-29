@@ -12,3 +12,12 @@ export type ThemeContextProps = {
   theme: string;
   toggleTheme: () => void;
 };
+
+export type ProjectDataProps = {
+  title: string;
+  summary: string;
+  imageLink: string;
+  category: string;
+  content: string;
+  date: string;
+};

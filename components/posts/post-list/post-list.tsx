@@ -6,9 +6,11 @@ import { useState, useEffect } from "react";
 import styles from "./post-list.module.css";
 import ArticleCard from "@/components/article-card/article-card";
 import { getCategoryString } from "@/utils/postPage";
+import { sortByNewestArtcile } from "@/utils/article";
+import { PostDataProps } from "@/type";
 
 export default function PostList() {
-  const [cardData, setCardData] = useState<any[]>([]);
+  const [cardData, setCardData] = useState<PostDataProps[]>([]);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export default function PostList() {
   return (
     <div className={styles["wrapper"]}>
       {getCategoryString(pathname as string) === "posts"
-        ? cardData.map((e) => (
+        ? sortByNewestArtcile(cardData).map((e) => (
             <ArticleCard
               key={e.title}
               articleSort="post"
@@ -41,7 +43,7 @@ export default function PostList() {
               summary={e.summary}
             />
           ))
-        : cardData.map((e) =>
+        : sortByNewestArtcile(cardData).map((e) =>
             getCategoryString(pathname as string) === e.category ? (
               <ArticleCard
                 key={e.title}
