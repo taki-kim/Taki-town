@@ -1,36 +1,34 @@
-"use client";
+import { Suspense } from "react";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-
-import styles from "./page.module.css";
 import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
+import styles from "./page.module.css";
 
-export default function PostSlug() {
-  const postTitle = usePathname()?.split("/")[2];
-  const [data, setData] = useState<any>({});
+async function fetchPostData(postSlug: string) {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/post/${postSlug}`
+  );
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/post/${postTitle}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data", error);
-      }
-    };
-    fetchData();
-  }, []);
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return response.json();
+}
+
+export default async function PostSlug({
+  params,
+}: {
+  params: { postSlug: string };
+}) {
+  const data = await fetchPostData(params.postSlug);
 
   return (
-    <div className={styles["wrapper"]}>
-      <Header title={data.title} date={data.date} image={data.imageLink} />
-      <TextContainer articleText={data.content} />
-    </div>
+    <Suspense fallback={<p>...loading</p>}>
+      <div className={styles["wrapper"]}>
+        <Header title={data.title} date={data.date} image={data.imageLink} />
+        <TextContainer articleText={data.content} />
+      </div>
+    </Suspense>
   );
 }

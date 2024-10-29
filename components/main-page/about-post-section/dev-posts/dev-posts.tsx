@@ -1,42 +1,37 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import { Suspense } from "react";
 
 import styles from "./dev-posts.module.css";
 import NavButton from "@/components/button/nav-button";
 import Carousel from "@/components/carousel/carousel";
 import { sortRecentDevPosts } from "@/utils/sortPosts";
-import { PostDataProps } from "@/type";
 
-export default function DevPosts() {
-  const [cardData, setCardData] = useState<PostDataProps[]>([]);
+async function fetchDevData() {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/post/get-all-posts`
+  );
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/post/get-all-posts");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const result = await response.json();
-        setCardData(sortRecentDevPosts(result));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
-    fetchData();
-  }, []);
+  return response.json();
+}
+
+export default async function DevPosts() {
+  const fetchResult = await fetchDevData();
+  const data = sortRecentDevPosts(fetchResult);
 
   return (
-    <div className={styles["wrapper"]}>
-      <header className={styles["header"]}>
-        <h1 className={styles["title"]}>Dev posts</h1>
-        <NavButton text="More Posts" size="small" link="/posts/development" />
-      </header>
-      <main className={styles["content-wrapper"]}>
-        <Carousel data={cardData} />
-      </main>
-    </div>
+    <Suspense fallback={<p>...loading</p>}>
+      <div className={styles["wrapper"]}>
+        <header className={styles["header"]}>
+          <h1 className={styles["title"]}>Dev posts</h1>
+          <NavButton text="More Posts" size="small" link="/posts/development" />
+        </header>
+        <main className={styles["content-wrapper"]}>
+          <Carousel data={data} />
+        </main>
+      </div>
+    </Suspense>
   );
 }
