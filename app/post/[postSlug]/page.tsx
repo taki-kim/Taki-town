@@ -3,18 +3,7 @@ import { Suspense } from "react";
 import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 import styles from "./page.module.css";
-
-async function fetchPostData(postSlug: string) {
-  const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/post/${postSlug}`
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return response.json();
-}
+import { fetchPostData } from "@/utils/fetchData";
 
 export default async function PostSlug({
   params,
