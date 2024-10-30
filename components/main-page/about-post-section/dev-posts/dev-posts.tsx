@@ -4,21 +4,10 @@ import styles from "./dev-posts.module.css";
 import NavButton from "@/components/button/nav-button";
 import Carousel from "@/components/carousel/carousel";
 import { sortRecentDevPosts } from "@/utils/sortPosts";
-
-async function fetchDevData() {
-  const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/post/get-all-posts`
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return response.json();
-}
+import { fetchPostList } from "@/utils/fetchData";
 
 export default async function DevPosts() {
-  const fetchResult = await fetchDevData();
+  const fetchResult = await fetchPostList();
   const data = sortRecentDevPosts(fetchResult);
 
   return (
