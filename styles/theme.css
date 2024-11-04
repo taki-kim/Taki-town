@@ -16,6 +16,11 @@
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
 
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.063), 0 1px 2px rgba(0, 0, 0, 0.131);
+  --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.14),
+    0 2px 3px rgba(0, 0, 0, 0.133);
+  /* basic theme */
+
   --theme-icon-color: #f7bb45;
 
   --font-xl: 1.8rem;
@@ -24,8 +29,8 @@
   --font-s: 1rem;
   --font-xs: 0.9rem;
 
-  --font-w-xl: 800;
-  --font-w-l: 700;
+  --font-w-xl: 700;
+  --font-w-l: 600;
   --font-w-m: 500;
   --font-w-s: 400;
   --font-w-xs: 300;
@@ -36,7 +41,9 @@
   --side-padding: 2rem;
   --block-margin: 1rem;
 
-  --wrapper-padding: 3rem;
+  --wrapper-padding: 4rem 2.4rem;
+
+  --transition-all: all 0.3s ease-in-out;
 }
 
 [data-theme="dark"] {
@@ -53,4 +60,8 @@
 
   --text-color: #eeeeee;
   --text-color-2: #dddddd;
+
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.421), 0 1px 2px rgba(0, 0, 0, 0.458);
+  --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.52),
+    0 2px 3px rgba(0, 0, 0, 0.447);
 }
