@@ -1,1 +1,1 @@
-export const STALE_TIME_06 = 21600; // refresh cache in every 6hours
+export const STALE_TIME = 1800; // refresh cache in every 0.5hours

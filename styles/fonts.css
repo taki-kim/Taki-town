@@ -21,6 +21,13 @@
 
 @font-face {
   font-family: "Pretendard";
+  font-weight: 600;
+  src: url("../assets/fonts/Pretendard-Medium.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
   font-weight: 700;
   src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype");
   font-style: normal;
