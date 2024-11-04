@@ -1,10 +1,10 @@
 import { PostDataProps, ProjectDataProps } from "@/type";
-import { STALE_TIME_06 } from "@/constant";
+import { STALE_TIME } from "@/constant";
 
 export async function fetchPostList(): Promise<PostDataProps[]> {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/post/get-all-posts`,
-    { next: { revalidate: STALE_TIME_06 } } // 6시간 마다 갱신
+    { next: { revalidate: STALE_TIME } }
   );
 
   if (!response.ok) {
@@ -17,7 +17,7 @@ export async function fetchPostList(): Promise<PostDataProps[]> {
 export async function fetchProjectList(): Promise<ProjectDataProps[]> {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/project/get/get-all-projects`,
-    { next: { revalidate: STALE_TIME_06 } } // 6시간 마다 갱신
+    { next: { revalidate: STALE_TIME } }
   );
 
   if (!response.ok) {
@@ -30,7 +30,7 @@ export async function fetchProjectList(): Promise<ProjectDataProps[]> {
 export async function fetchPostData(postTitle: string) {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/post/${postTitle}`,
-    { next: { revalidate: STALE_TIME_06 } } // 6시간 마다 갱신
+    { next: { revalidate: STALE_TIME } }
   );
 
   if (!response.ok) {
@@ -43,7 +43,7 @@ export async function fetchPostData(postTitle: string) {
 export async function fetchProjectData(projectTitle: string) {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/project/get/${projectTitle}`,
-    { next: { revalidate: STALE_TIME_06 } } // 6시간 마다 갱신
+    { next: { revalidate: STALE_TIME } }
   );
 
   if (!response.ok) {
