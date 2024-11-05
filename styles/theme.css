@@ -61,7 +61,7 @@
   --text-color: #eeeeee;
   --text-color-2: #dddddd;
 
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.421), 0 1px 2px rgba(0, 0, 0, 0.458);
-  --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.52),
-    0 2px 3px rgba(0, 0, 0, 0.447);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.298), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.711),
+    0 2px 3px rgba(0, 0, 0, 0.693);
 }

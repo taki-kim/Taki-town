@@ -31,6 +31,8 @@
 
   flex: 1;
 
+  background-color: var(--secondary-color);
+
   font-size: var(--font-s);
   font-weight: 500;
 
@@ -43,8 +45,6 @@
 }
 
 .nav-item:hover {
-  background-color: var(--secondary-color);
-
   box-shadow: var(--box-shadow-hover);
 }
 
