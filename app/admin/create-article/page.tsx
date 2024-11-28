@@ -12,7 +12,7 @@ export default function CreateArticle() {
   const [form, setForm] = useInputs({
     title: "",
     summary: "",
-    category: "",
+    category: "development",
     tags: "",
     content: "",
     imageLink:
@@ -91,6 +91,7 @@ export default function CreateArticle() {
             >
               <option value="development">development</option>
               <option value="design">design</option>
+              <option value="work_log">work_log</option>
               <option value="philosophy">philosophy</option>
               <option value="etc">etc</option>
             </select>

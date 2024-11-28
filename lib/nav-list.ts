@@ -24,6 +24,12 @@ export const navList: navItem[] = [
     summary: "디자인",
   },
   {
+    title: "Work-Log",
+    link: "/posts/work_log",
+    categoryId: "work_log",
+    summary: "작업일지",
+  },
+  {
     title: "Philosophy",
     link: "/posts/philosophy",
     categoryId: "philosophy",
