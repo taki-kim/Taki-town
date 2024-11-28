@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-weight: var(--font-w-l);
+  font-size: var(--font-m);
+}

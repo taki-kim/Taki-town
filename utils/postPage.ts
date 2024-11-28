@@ -7,6 +7,8 @@ export function getCategoryAndIntro(pathName: string) {
       return ["Development", "웹과 개발에 대한 주제를 다루고 있습니다."];
     case "design":
       return ["Design", "웹 디자인에 대한 주제를 다루고 있습니다."];
+    case "work_log":
+      return ["Work-Log", "작업들에 대한 내용을 기록하고 있습니다."];
     case "philosophy":
       return ["Philosophy", "인문학과 철학에 관련한 주제를 다루고 있습니다."];
     case "etc":
