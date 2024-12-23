@@ -9,13 +9,7 @@ export default function Introduction() {
   return (
     <>
       <main className={styles["wrapper"]}>
-        <Image
-          src={wallpaper}
-          fill
-          placeholder="blur"
-          quality={60}
-          alt="wallpaper"
-        />
+        <Image src={wallpaper} fill quality={60} alt="wallpaper" />
 
         <div className={styles["text-wrapper"]}>
           안녕하세요 웹 프론트엔드 개발자 Taki입니다. <br />
