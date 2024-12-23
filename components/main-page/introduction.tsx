@@ -7,11 +7,7 @@ import MainButton from "../button/main-button";
 export default function Introduction() {
   return (
     <main className={styles["wrapper"]}>
-      <Image
-        src="https://images8.alphacoders.com/134/1349195.png"
-        fill
-        alt="wallpaper"
-      />
+      <Image src="/img/wallpaper.webp" fill alt="wallpaper" />
 
       <div className={styles["text-wrapper"]}>
         안녕하세요 웹 프론트엔드 개발자 Taki입니다. <br />
