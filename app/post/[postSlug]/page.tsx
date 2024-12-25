@@ -4,6 +4,21 @@ import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 import styles from "./page.module.css";
 import { fetchPostData } from "@/utils/fetchData";
+import { MetadataComponent } from "@/components/metadata/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { postSlug: string };
+}) {
+  const data = await fetchPostData(params.postSlug);
+
+  return MetadataComponent({
+    page: `${data.title}`,
+    isArticle: true,
+    articleSummary: `${data.summary}`,
+  });
+}
 
 export default async function PostSlug({
   params,
