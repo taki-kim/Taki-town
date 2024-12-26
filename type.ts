@@ -6,6 +6,7 @@ export type PostDataProps = {
   tags: string;
   content: string;
   date: string;
+  postNumber: number;
 };
 
 export type ThemeContextProps = {

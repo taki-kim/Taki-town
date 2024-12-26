@@ -1,3 +1,5 @@
+import { PostDataProps } from "@/type";
+
 export function getCategoryAndIntro(pathName: string) {
   let currentPath: string[] | string = pathName.split("/");
   currentPath = currentPath[currentPath.length - 1];
@@ -26,4 +28,30 @@ export function getCategoryString(pathName: string) {
   currentPath = currentPath[currentPath.length - 1];
 
   return currentPath;
+}
+
+type getPrevAndNextPostProps = {
+  postList: PostDataProps[];
+  currentPostCategory: string;
+  currentPostNumber: number;
+};
+
+export function getPrevAndNextPost({
+  postList,
+  currentPostCategory,
+  currentPostNumber,
+}: getPrevAndNextPostProps) {
+  let sameCategoryList = postList.filter(
+    (item) => item.category === currentPostCategory
+  );
+
+  let prevPost: PostDataProps | undefined;
+  let nextPost: PostDataProps | undefined;
+
+  sameCategoryList.forEach((e) => {
+    if (e.postNumber === currentPostNumber - 1) prevPost = e;
+    if (e.postNumber === currentPostNumber + 1) nextPost = e;
+  });
+
+  return [prevPost, nextPost];
 }

@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.8rem;
+
+  background-color: var(--secondary-color);
+
+  align-self: end;
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: var(--font-color);
+
+  box-shadow: var(--box-shadow);
+}
+
+.wrapper:hover {
+  background-color: var(--tertiary-color);
+}
+
+.label {
+  padding: 0.2rem 0rem;
+}
+
+.postTitle {
+  font-size: var(--font-l);
+}
