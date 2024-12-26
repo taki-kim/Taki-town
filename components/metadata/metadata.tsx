@@ -19,9 +19,5 @@ export function MetadataComponent({
       index: true,
       follow: false,
     },
-    viewport: {
-      width: "device-width",
-      initialScale: 1,
-    },
   };
 }
