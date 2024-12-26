@@ -1,0 +1,13 @@
+.wrapper {
+  width: 80%;
+  padding-bottom: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-container {
+  flex: 1;
+  display: flex;
+}
