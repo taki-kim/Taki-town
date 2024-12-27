@@ -11,7 +11,7 @@ export default async function Posts() {
 
   return (
     <div className={styles["wrapper"]}>
-      <PostsHeader />
+      <PostsHeader pathname="all" />
       <PostList dataList={dataList} />
     </div>
   );

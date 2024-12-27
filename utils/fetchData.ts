@@ -1,4 +1,4 @@
-import { PostDataProps, ProjectDataProps } from "@/type";
+import { PostCountProps, PostDataProps, ProjectDataProps } from "@/type";
 import { STALE_TIME } from "@/constant";
 
 export async function fetchPostList(): Promise<PostDataProps[]> {
@@ -51,4 +51,56 @@ export async function fetchProjectData(projectTitle: string) {
   }
 
   return response.json();
+}
+
+export async function fetchPostCount(
+  postCategory: string
+): Promise<PostCountProps> {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/post-counter/get/${postCategory}`,
+    { next: { revalidate: STALE_TIME } }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return response.json();
+}
+
+export async function createPost(formData: PostDataProps) {
+  // update Counter
+  await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/post-counter/patch/increase`,
+    {
+      method: "PATCH",
+      body: JSON.stringify(formData.category),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const recentCount: PostCountProps = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/post-counter/get/${formData.category}`,
+    { next: { revalidate: STALE_TIME } }
+  ).then((res) => res.json());
+
+  formData.postNumber = recentCount.count;
+
+  alert(process.env.PUBLIC_URL);
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/post/create-post`,
+    {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
 }

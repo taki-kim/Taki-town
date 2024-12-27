@@ -1,23 +1,19 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-
 import styles from "./posts-header.module.css";
 import HeaderNav from "./nav/header-nav";
 import { getCategoryAndIntro } from "@/utils/postPage";
+import { fetchPostCount } from "@/utils/fetchData";
 
-export default function PostsHeader() {
-  const pathname = usePathname();
+export default async function PostsHeader({ pathname }: { pathname: string }) {
+  const [category, summary] = getCategoryAndIntro(pathname);
+  const postCount = await fetchPostCount(pathname);
 
   return (
     <div className={styles["wrapper"]}>
       <h1 className={styles["title"]}>
-        {getCategoryAndIntro(pathname as string)[0]}
+        {category}
+        <span className={styles["counter"]}>{`(${postCount.count})`}</span>
       </h1>
-      <p className={styles["summary"]}>
-        {" "}
-        {getCategoryAndIntro(pathname as string)[1]}
-      </p>
+      <p className={styles["summary"]}>{summary}</p>
       <HeaderNav />
     </div>
   );

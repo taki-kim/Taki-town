@@ -5,8 +5,8 @@ export type PostDataProps = {
   category: string;
   tags: string;
   content: string;
-  date: string;
-  postNumber: number;
+  date?: string;
+  postNumber?: number;
 };
 
 export type ThemeContextProps = {
@@ -21,4 +21,9 @@ export type ProjectDataProps = {
   category: string;
   content: string;
   date: string;
+};
+
+export type PostCountProps = {
+  count: number;
+  postCategory: string;
 };

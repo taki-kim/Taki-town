@@ -23,7 +23,7 @@ export default function ArticleCreateButton({
         formData.date = date; // add date
 
         if (article === "post") {
-          await fetch("/api/post/create-post", {
+          await fetch(`/api/post/create-post`, {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {

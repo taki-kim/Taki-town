@@ -11,7 +11,7 @@
   --tertiary-color-r: #20252e;
 
   --text-color: black;
-  --text-color-2: #2d303b;
+  --text-color-2: #868484;
 
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
@@ -25,6 +25,7 @@
 
   --font-xl: 1.8rem;
   --font-l: 1.4rem;
+  --font-ml: 1.3rem;
   --font-m: 1.2rem;
   --font-s: 1rem;
   --font-xs: 0.9rem;
