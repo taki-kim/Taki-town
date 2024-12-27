@@ -46,16 +46,15 @@ export default async function handler(
 
       const insertResult = await postsCollection.insertOne(newPost);
 
-      if (!insertResult.acknowledged) {
+      if (!insertResult) {
         throw new Error("Failed to insert the new post.");
       }
 
-      res
-        .status(201)
-        .json({ message: "Post inserted successfully.", postNumber });
-    } else {
-      res.setHeader("Allow", ["POST"]);
-      res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+      if (insertResult) {
+        res.status(200).json({ message: "Data is sucessfully deleted" });
+      } else {
+        res.status(404).json({ message: "Error ouccured" });
+      }
     }
   } catch (error) {
     console.error("Error fetching data:", error);
