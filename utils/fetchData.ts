@@ -52,3 +52,16 @@ export async function fetchProjectData(projectTitle: string) {
 
   return response.json();
 }
+
+export async function fetchPostCount(postCategory: string) {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/post/get/${postCategory}`,
+    { next: { revalidate: STALE_TIME } }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return response.json();
+}
