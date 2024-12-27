@@ -42,13 +42,26 @@ export function getPrevAndNextPost({
     (item) => item.category === currentPostCategory
   );
 
+  sameCategoryList.sort((a, b) => a.postNumber - b.postNumber);
+
   let prevPost: PostDataProps | undefined;
   let nextPost: PostDataProps | undefined;
 
-  sameCategoryList.forEach((e) => {
-    if (e.postNumber === currentPostNumber - 1) prevPost = e;
-    if (e.postNumber === currentPostNumber + 1) nextPost = e;
-  });
+  for (const post of sameCategoryList) {
+    const postNumber = post.postNumber;
+
+    if (!postNumber) continue;
+
+    if (postNumber < currentPostNumber) {
+      prevPost = post;
+    }
+
+    if (postNumber > currentPostNumber) {
+      nextPost = post;
+
+      if (prevPost && nextPost) break;
+    }
+  }
 
   return [prevPost, nextPost];
 }
