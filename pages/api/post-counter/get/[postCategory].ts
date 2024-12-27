@@ -9,10 +9,10 @@ export default async function handler(
   try {
     client = await connectDatabase();
     if (req.method === "GET") {
-      const { postCount } = req.query;
+      const { postCategory } = req.query;
       const db = client.db(process.env.DB_NAME);
       const collection = db.collection("counter");
-      const data = await collection.findOne({ postCategory: postCount });
+      const data = await collection.findOne({ postCategory: postCategory });
 
       if (data) {
         res.status(200).json(data);
