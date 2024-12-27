@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 
 import sytles from "./submit-button.module.css";
 import { getDateString } from "@/utils/date";
+import { createPost } from "@/utils/fetchData";
+import { PostDataProps } from "@/type";
 
 type PostSubmitButtonProps = {
-  formData: any;
+  formData: PostDataProps;
   article: string;
 };
 
@@ -23,7 +25,7 @@ export default function ArticleCreateButton({
         formData.date = date; // add date
 
         if (article === "post") {
-          await fetch("/api/post/create-post", {
+          await fetch(`/api/post/create-post`, {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {

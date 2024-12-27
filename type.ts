@@ -22,3 +22,8 @@ export type ProjectDataProps = {
   content: string;
   date: string;
 };
+
+export type PostCountProps = {
+  count: number;
+  postCategory: string;
+};
