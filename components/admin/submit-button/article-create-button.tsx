@@ -4,11 +4,9 @@ import { useEffect, useState } from "react";
 
 import sytles from "./submit-button.module.css";
 import { getDateString } from "@/utils/date";
-import { createPost } from "@/utils/fetchData";
-import { PostDataProps } from "@/type";
 
 type PostSubmitButtonProps = {
-  formData: PostDataProps;
+  formData: any;
   article: string;
 };
 
