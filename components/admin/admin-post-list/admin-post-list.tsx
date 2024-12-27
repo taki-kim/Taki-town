@@ -36,6 +36,7 @@ export default function AdminPostList() {
           imageLink={e.imageLink}
           title={e.title}
           summary={e.summary}
+          category={e.category}
         />
       ))}
     </div>

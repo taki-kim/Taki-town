@@ -13,12 +13,14 @@ export type AdminPostCardProps = {
   title: string;
   summary: string;
   postLink: string;
+  category: string;
 };
 
 export default function AdminPostCard({
   imageLink,
   title,
   summary,
+  category,
 }: AdminPostCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const path = usePathname();
@@ -60,7 +62,7 @@ export default function AdminPostCard({
         <h1 className={styles["title"]}>{title}</h1>
         <p className={styles["summary"]}>{summary}</p>
       </Link>
-      <EditDeleteBar postTitle={title} />
+      <EditDeleteBar postTitle={title} postCategory={category} />
     </div>
   );
 }

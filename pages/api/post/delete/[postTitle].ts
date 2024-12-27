@@ -11,8 +11,36 @@ export default async function handler(
     if (req.method === "DELETE") {
       const { postTitle } = req.query;
       const db = client.db(process.env.DB_NAME);
-      const collection = db.collection("posts");
-      const result = await collection.deleteOne({ title: postTitle });
+      const postsCollection = db.collection("posts");
+      const counterCollection = db.collection("counter");
+
+      const postCategory = req.body;
+
+      // update post-counter
+      await counterCollection.bulkWrite([
+        {
+          updateOne: {
+            filter: { postCategory: postCategory },
+            update: { $inc: { count: -1 } },
+          },
+        },
+        {
+          updateOne: {
+            filter: { postCategory: "all" },
+            update: { $inc: { count: -1 } },
+          },
+        },
+      ]);
+
+      const updatedCounter = await counterCollection.findOne({
+        postCategory: postCategory,
+      });
+
+      if (!updatedCounter) {
+        throw new Error("Failed to fetch updated counter.");
+      }
+
+      const result = await postsCollection.deleteOne({ title: postTitle });
 
       if (result) {
         res.status(200).json({ message: "Data is sucessfully deleted" });

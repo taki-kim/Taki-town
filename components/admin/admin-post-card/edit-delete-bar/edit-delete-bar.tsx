@@ -4,13 +4,18 @@ import NavButton from "@/components/button/nav-button";
 
 type EditDeleteBarProps = {
   postTitle: string;
+  postCategory: string;
 };
 
-export default function EditDeleteBar({ postTitle }: EditDeleteBarProps) {
+export default function EditDeleteBar({
+  postTitle,
+  postCategory,
+}: EditDeleteBarProps) {
   async function deletePost() {
     try {
       const response = await fetch(`/api/post/delete/${postTitle}`, {
         method: "DELETE",
+        body: postCategory,
       });
 
       if (!response.ok) {
