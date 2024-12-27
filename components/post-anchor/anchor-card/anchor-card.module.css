@@ -1,14 +1,15 @@
 .wrapper {
   width: 100%;
+  height: 130px;
+
   padding: 2rem;
   border-radius: 0.8rem;
 
   background-color: var(--secondary-color);
 
-  align-self: end;
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   text-decoration: none;
   color: var(--font-color);
@@ -21,9 +22,9 @@
 }
 
 .label {
-  padding: 0.2rem 0rem;
+  padding-bottom: 0.4rem;
 }
 
 .postTitle {
-  font-size: var(--font-l);
+  font-size: var(--font-m);
 }
