@@ -8,15 +8,18 @@ export const generateMetadata = () => MetadataComponent({ page: "Posts" });
 
 export default async function PostLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { id: string };
 }>) {
   const dataList = await fetchPostList();
+  const pathname = params.id;
 
   return (
     <div className={styles["wrapper"]}>
       {children}
-      <PostsHeader />
+      <PostsHeader pathname={pathname} />
       <PostList dataList={dataList} />
     </div>
   );

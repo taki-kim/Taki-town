@@ -1,10 +1,7 @@
 import { PostDataProps } from "@/type";
 
 export function getCategoryAndIntro(pathName: string) {
-  let currentPath: string[] | string = pathName.split("/");
-  currentPath = currentPath[currentPath.length - 1];
-
-  switch (currentPath) {
+  switch (pathName) {
     case "development":
       return ["Development", "웹과 개발에 대한 주제를 다루고 있습니다."];
     case "design":
