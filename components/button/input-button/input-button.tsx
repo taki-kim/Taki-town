@@ -5,7 +5,7 @@ export type buttonSize = "small" | "medium" | "large";
 export type InputButtonProps = {
   label: string;
   size?: buttonSize;
-  onClick?: () => void;
+  onClick?: (e: any) => void;
 };
 
 export default function InputButton({
@@ -13,5 +13,9 @@ export default function InputButton({
   size,
   onClick,
 }: InputButtonProps) {
-  return <button className={styles["button"]}>{label}</button>;
+  return (
+    <button className={styles["button"]} onClick={onClick}>
+      {label}
+    </button>
+  );
 }

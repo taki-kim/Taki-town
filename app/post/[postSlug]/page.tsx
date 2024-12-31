@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import { fetchPostData } from "@/utils/fetchData";
 import { MetadataComponent } from "@/components/metadata/metadata";
 import PostAnchor from "@/components/post-anchor/post-anchor";
+import CommentContainer from "@/components/comment/comment-container";
 
 export async function generateMetadata({
   params,
@@ -34,6 +35,7 @@ export default async function PostSlug({
         <Header title={data.title} date={data.date} image={data.imageLink} />
         <TextContainer articleText={data.content} />
         <PostAnchor postCategory={data.category} postNumber={data.postNumber} />
+        <CommentContainer articleTitle={data.title} />
       </div>
     </Suspense>
   );
