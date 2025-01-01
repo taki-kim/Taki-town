@@ -27,3 +27,10 @@ export type PostCountProps = {
   count: number;
   postCategory: string;
 };
+
+export type CommentProps = {
+  articleTitle: string;
+  comment: string;
+  author: string;
+  password: string;
+};

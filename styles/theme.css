@@ -22,13 +22,15 @@
   /* basic theme */
 
   --theme-icon-color: #f7bb45;
+  --highlight-color: #fe9f00;
+  --highlight-color-2: #ff8d01;
 
   --font-xl: 1.8rem;
   --font-l: 1.4rem;
   --font-ml: 1.3rem;
   --font-m: 1.2rem;
   --font-s: 1rem;
-  --font-xs: 0.9rem;
+  --font-xs: 0.8rem;
 
   --font-w-xl: 700;
   --font-w-l: 600;

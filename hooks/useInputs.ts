@@ -17,6 +17,7 @@ export default function useInputs(initialValue: FormData = {}) {
     },
     [text]
   );
+
   const setFormData = useCallback((newData: FormData) => {
     setText((prevText) => ({
       ...prevText,

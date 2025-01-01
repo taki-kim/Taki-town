@@ -1,5 +1,12 @@
-import { PostCountProps, PostDataProps, ProjectDataProps } from "@/type";
+import {
+  CommentProps,
+  PostCountProps,
+  PostDataProps,
+  ProjectDataProps,
+} from "@/type";
 import { STALE_TIME } from "@/constant";
+
+// posts
 
 export async function fetchPostList(): Promise<PostDataProps[]> {
   const response = await fetch(
@@ -103,4 +110,19 @@ export async function createPost(formData: PostDataProps) {
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
+}
+
+// comments
+
+export async function submitNewComment(commentFormData: any) {
+  await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/comment/create/create-comment`,
+    {
+      method: "POST",
+      body: JSON.stringify(commentFormData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 }

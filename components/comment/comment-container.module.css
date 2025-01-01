@@ -1,0 +1,9 @@
+.wrapper {
+  width: 80%;
+  min-height: 500px;
+}
+
+.title {
+  font-size: var(--font-l);
+  font-weight: var(--font-w-l);
+}
