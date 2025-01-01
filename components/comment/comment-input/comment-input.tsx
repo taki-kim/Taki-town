@@ -5,6 +5,7 @@ import styles from "./comment-input.module.css";
 import InputButton from "@/components/button/input-button/input-button";
 import useInputs from "@/hooks/useInputs";
 import { submitNewComment } from "@/utils/fetchData";
+import { getDateString } from "@/utils/date";
 
 export type CommentInputProps = {
   articleTitle: string;
@@ -14,6 +15,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
   const [openToggle, setOpenToggle] = useState(false);
   const [form, onChange, setForm] = useInputs({
     articleTitle: articleTitle,
+    date: "",
     comment: "",
     author: "",
     password: "",
@@ -21,11 +23,14 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
 
   const onClickSubmit = async (e: any) => {
     e.preventDefault();
+    const currentTime = getDateString(new Date());
+    form.date = currentTime;
 
     await submitNewComment(form);
 
     setForm({
       articleTitle: articleTitle,
+      date: "",
       comment: "",
       author: "",
       password: "",
