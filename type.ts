@@ -34,4 +34,11 @@ export type CommentProps = {
   comment: string;
   author: string;
   password?: string;
+  recomment?: string;
+  recommentDate?: string;
+};
+
+export type RecommentProps = {
+  recomment: string;
+  recommentDate: string;
 };
