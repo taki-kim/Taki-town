@@ -11,6 +11,7 @@ export default function CommentsList({ commentsList }: CommentsListProps) {
     <div className={styles["wrapper"]}>
       {commentsList.map((e) => (
         <CommentCard
+          key={e.author + e.comment + e.recomment}
           author={e.author}
           date={e.date}
           comment={e.comment}
