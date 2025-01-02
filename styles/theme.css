@@ -30,7 +30,7 @@
   --font-ml: 1.3rem;
   --font-m: 1.2rem;
   --font-s: 1rem;
-  --font-xs: 0.8rem;
+  --font-xs: 0.9rem;
 
   --font-w-xl: 700;
   --font-w-l: 600;
@@ -47,12 +47,16 @@
   --wrapper-padding: 4rem 2.4rem;
 
   --transition-all: all 0.3s ease-in-out;
+
+  --color-red: #e84e4e;
+  --color-green: #55d04a;
+  --color-orange: #fe9f00;
 }
 
 [data-theme="dark"] {
   --primary-color: #16171e;
   --secondary-color: #1a1e26;
-  --tertiary-color: #272d39;
+  --tertiary-color: #20252e;
 
   --primary-color-r: #eeeeee;
   --secondary-color-r: #dddddd;
