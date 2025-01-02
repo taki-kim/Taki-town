@@ -1,22 +1,27 @@
 .wrapper {
-  height: 300px;
-  margin: 10px 0px;
-  padding: 10px 5px;
+  margin-top: 50px;
+
+  width: 100%;
+  height: auto;
 
   display: flex;
   flex-direction: column;
-
-  overflow: hidden;
-  transition: height 0.1s ease;
+  gap: 10px;
 }
 
-.wrapper.expanded {
-  height: 350px;
+.alert-error {
+  color: red;
+  align-self: flex-end;
+}
+
+.alert-success {
+  color: green;
+  align-self: flex-end;
 }
 
 .textarea {
   width: 100%;
-  height: 150px;
+  min-height: 170px;
   padding: 20px 10px;
   border-radius: 5px;
   border: 1px solid var(--tertiary-color);
@@ -37,24 +42,12 @@
   border: 1px solid var(--highlight-color);
 }
 
-.textarea.expanded {
-  height: 200px;
-}
-
-.hidden-form {
+.footer {
   display: flex;
-  width: 100%;
+  height: 60px;
+
   justify-content: space-between;
   gap: 10px;
-  overflow: hidden;
-  height: 0px;
-
-  transition: height 0.1s ease;
-}
-
-.hidden-form.expanded {
-  height: 80px;
-  padding: 10px 0px;
 }
 
 .input-wrapper {
@@ -94,8 +87,4 @@
   color: var(--tertiary-color-r);
   font-size: var(--font-xs);
   font-weight: var(--font-w-m);
-}
-
-.button {
-  width: 200px;
 }

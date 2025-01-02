@@ -29,8 +29,16 @@ export type PostCountProps = {
 };
 
 export type CommentProps = {
-  articleTitle: string;
+  articleTitle?: string;
+  date: string;
   comment: string;
   author: string;
-  password: string;
+  password?: string;
+  recomment?: string;
+  recommentDate?: string;
+};
+
+export type RecommentProps = {
+  recomment: string;
+  recommentDate: string;
 };

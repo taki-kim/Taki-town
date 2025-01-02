@@ -1,0 +1,57 @@
+.wrapper {
+  padding: 20px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--secondary-color);
+
+  align-self: flex-end;
+
+  box-shadow: var(--box-shadow);
+}
+
+.recomment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taki-profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--tertiary-color-r);
+  color: var(--tertiary-color);
+  font-size: var(--font-ml);
+  font-weight: var(--font-w-l);
+}
+
+.recomment-header-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.author {
+  font-size: var(--font-s);
+  font-weight: var(--font-w-l);
+}
+
+.date {
+  font-size: var(--font-xs);
+  color: var(--text-color-2);
+  font-weight: var(--font-w-s);
+}
+
+.recomment-string-wrapper {
+  padding-top: 20px;
+  padding-left: 10px;
+}
