@@ -10,7 +10,13 @@ export default function CommentsList({ commentsList }: CommentsListProps) {
   return (
     <div className={styles["wrapper"]}>
       {commentsList.map((e) => (
-        <CommentCard author={e.author} date={e.date} comment={e.comment} />
+        <CommentCard
+          author={e.author}
+          date={e.date}
+          comment={e.comment}
+          recomment={e.recomment}
+          recommentDate={e.recommentDate}
+        />
       ))}
     </div>
   );
