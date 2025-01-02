@@ -1,4 +1,7 @@
 .wrapper {
   width: 100%;
   height: auto;
+
+  padding-top: 80px;
+  border-top: 2px solid var(--tertiary-color);
 }

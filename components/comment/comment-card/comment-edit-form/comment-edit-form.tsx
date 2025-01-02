@@ -2,23 +2,16 @@ import { useState } from "react";
 
 import styles from "./comment-edit-form.module.css";
 import InputButton from "@/components/button/input-button/input-button";
-
-export type editResponse = "default" | "success" | "error";
+import VerificationMessage from "../../verification-message/verification-message";
+import { InputVerificationState } from "@/type";
 
 export default function CommentEditForm() {
-  const [editResponse, setEditResponse] = useState<editResponse>("default");
+  const [editResponse, setEditResponse] =
+    useState<InputVerificationState>("default");
 
   return (
     <div className={styles["wrapper"]}>
-      {editResponse === "default" ? null : editResponse === "success" ? (
-        <span className={styles["alert-success"]}>
-          댓글 수정이 완료되었습니다.
-        </span>
-      ) : (
-        <span className={styles["alert-error"]}>
-          비밀번호가 일치하지 않습니다.
-        </span>
-      )}
+      <VerificationMessage verificationState={editResponse} />
       <textarea
         className={styles["textarea"]}
         placeholder="수정할 내용을 작성하세요"

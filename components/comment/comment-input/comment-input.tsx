@@ -6,6 +6,9 @@ import InputButton from "@/components/button/input-button/input-button";
 import useInputs from "@/hooks/useInputs";
 import { submitNewComment } from "@/utils/fetchData";
 import { getDateString } from "@/utils/date";
+import { commentInputVerification } from "@/utils/verification";
+import { InputVerificationState } from "@/type";
+import VerificationMessage from "../verification-message/verification-message";
 
 export type CommentInputProps = {
   articleTitle: string;
@@ -20,25 +23,35 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
     author: "",
     password: "",
   });
+  const [activateAlert, setActivateAlert] =
+    useState<InputVerificationState>("default");
 
   const onClickSubmit = async (e: any) => {
     e.preventDefault();
-    const currentTime = getDateString(new Date());
-    form.date = currentTime;
 
-    await submitNewComment(form);
+    if (commentInputVerification({ form })) {
+      const currentTime = getDateString(new Date());
+      form.date = currentTime;
 
-    setForm({
-      articleTitle: articleTitle,
-      date: "",
-      comment: "",
-      author: "",
-      password: "",
-    });
+      await submitNewComment(form);
+
+      setForm({
+        articleTitle: articleTitle,
+        date: "",
+        comment: "",
+        author: "",
+        password: "",
+      });
+
+      setActivateAlert("success");
+    } else {
+      setActivateAlert("input-error");
+    }
   };
 
   return (
     <div className={`${styles.wrapper} ${openToggle ? styles.expanded : ""}`}>
+      <VerificationMessage verificationState={activateAlert} />
       <textarea
         className={`${styles["textarea"]} ${openToggle ? styles.expanded : ""}`}
         name="comment"
@@ -70,7 +83,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
           <label className={styles["input-label"]}>Password</label>
           <input
             name="password"
-            placeholder="코멘트 수정에 사용됩니다"
+            placeholder="코멘트 수정에 사용됩니다 (5글자 이상)"
             className={styles["input"]}
             type="password"
             autoComplete="off"
@@ -81,6 +94,11 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
 
         <InputButton label="작성하기" onClick={onClickSubmit} />
       </div>
+      {openToggle ? (
+        <p className={styles["notice-string"]}>
+          코멘트는 삭제가 불가하며 수정만 가능합니다
+        </p>
+      ) : null}
     </div>
   );
 }
