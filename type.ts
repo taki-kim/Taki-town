@@ -42,3 +42,10 @@ export type RecommentProps = {
   recomment: string;
   recommentDate: string;
 };
+
+export type InputVerificationState =
+  | "default"
+  | "success"
+  | "input-error"
+  | "password-error"
+  | "server-error";
