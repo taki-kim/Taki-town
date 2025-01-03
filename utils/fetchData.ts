@@ -128,11 +128,28 @@ export async function submitNewComment(commentFormData: any) {
 }
 
 export async function editComment(commentFormData: any) {
-  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/comment/edit/edit-comment`, {
-    method: "PATCH",
-    body: JSON.stringify(commentFormData),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/edit/edit-comment`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(commentFormData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      return { success: true, code: 200 };
+    } else if (response.status === 401) {
+      return { success: false, code: 401 };
+    } else if (response.status === 500) {
+      return { success: false, code: 500 };
+    } else {
+      return { success: false, code: 500 };
+    }
+  } catch (error) {
+    return { success: false, code: 500 };
+  }
 }

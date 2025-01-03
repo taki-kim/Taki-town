@@ -25,7 +25,21 @@ export default function CommentEditForm({
   const onClickSubmit = async (form: any, e: any) => {
     e.preventDefault();
 
-    await editComment(form);
+    if (form.comment && form.passwordInput) {
+      const result = await editComment(form);
+
+      if (result.code === 200) {
+        setEditResponse("success");
+      }
+      if (result.code === 401) {
+        setEditResponse("password-error");
+      }
+      if (result.code === 500) {
+        setEditResponse("server-error");
+      }
+    } else {
+      setEditResponse("input-error");
+    }
   };
 
   return (
