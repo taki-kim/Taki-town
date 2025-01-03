@@ -18,6 +18,7 @@ export default function CommentsList({ commentsList }: CommentsListProps) {
           comment={e.comment}
           recomment={e.recomment}
           recommentDate={e.recommentDate}
+          password={e.password}
         />
       ))}
     </div>

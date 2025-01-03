@@ -126,3 +126,13 @@ export async function submitNewComment(commentFormData: any) {
     }
   );
 }
+
+export async function editComment(commentFormData: any) {
+  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/comment/edit/edit-comment`, {
+    method: "PATCH",
+    body: JSON.stringify(commentFormData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}

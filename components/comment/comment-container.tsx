@@ -20,45 +20,6 @@ export default function CommentContainer({
 
   const [commentsList, setCommentsList] = useState<CommentProps[]>([]);
 
-  //   const dummyList = [
-  //     {
-  //       _id: "답글을 남겨주어 참으로 감사드리옵니다",
-  //       author: "TAKI",
-  //       comment: "aasd asd assas",
-  //       date: "2025-01-01",
-  //       recomment: "답글을 남겨주어 참으로 감사드리옵니다",
-  //       recommentDate: "2025-01-02",
-  //       password: "1234",
-  //     },
-  //     {
-  //       _id: "답글을 남겨주어 참으로 감사드리옵니다",
-  //       author: "TAKI01",
-  //       comment: "aasdas",
-  //       date: "2025-01-01",
-  //       recomment: "답글을 남겨주어 참으로 감사",
-  //       recommentDate: "2025-01-02",
-  //       password: "1234",
-  //     },
-  //     {
-  //       _id: "답글을 남겨주어 참으로 감사드리옵니다",
-  //       author: "TAKI-2",
-  //       comment: "aasd asd assas a",
-  //       date: "2025-01-01",
-  //       recomment: "답글을 남겨주어 참으로 감사드리옵니다!!",
-  //       recommentDate: "2025-01-02",
-  //       password: "1234",
-  //     },
-  //     {
-  //       _id: "답글을 남겨주어 참으로 감사드리옵니다",
-  //       author: "TAKI=3",
-  //       comment: "aaasddasd assas",
-  //       date: "2025-01-01",
-  //       recomment: "답글을 남겨주어 참으로 감사드링",
-  //       recommentDate: "2025-01-02",
-  //       password: "1234",
-  //     },
-  //   ];
-
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`/api/comment/get/${articleTitle}`, {
