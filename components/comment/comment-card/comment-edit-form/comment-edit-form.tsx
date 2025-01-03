@@ -4,8 +4,9 @@ import styles from "./comment-edit-form.module.css";
 import InputButton from "@/components/button/input-button/input-button";
 import VerificationMessage from "../../verification-message/verification-message";
 import { InputVerificationState } from "@/type";
+import { CommentProps } from "@/type";
 
-export default function CommentEditForm() {
+export default function CommentEditForm({ _id }: Partial<CommentProps>) {
   const [editResponse, setEditResponse] =
     useState<InputVerificationState>("default");
 
