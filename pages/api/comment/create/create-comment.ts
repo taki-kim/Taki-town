@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { connectDatabase } from "@/utils/db";
+import { genSalt, hash } from "bcryptjs";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   let client;
+  let salt = await genSalt(10);
+  let hashedPassword = await hash(req.body.password, salt);
+  req.body.password = hashedPassword;
+
   try {
     if (req.method === "POST") {
       client = await connectDatabase();

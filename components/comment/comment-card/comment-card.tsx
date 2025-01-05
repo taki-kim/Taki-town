@@ -9,12 +9,14 @@ import CommentEditForm from "./comment-edit-form/comment-edit-form";
 import RecommentCard from "../recomment-card/recomment-card";
 
 export default function CommentCard({
+  _id,
   author,
   date,
   comment,
   recomment,
   recommentDate,
-}: CommentProps) {
+  password,
+}: Partial<CommentProps>) {
   const [toggleEdit, setToggleEdit] = useState(false);
 
   return (
@@ -51,15 +53,16 @@ export default function CommentCard({
         style={{ whiteSpace: "pre-wrap" }}
         className={styles["comment-wrapper"]}
       >
-        {comment}
+        <p>{comment}</p>
       </div>
+
       {recomment ? (
         <RecommentCard
           recomment={recomment}
           recommentDate={recommentDate as string}
         />
       ) : null}
-      {toggleEdit ? <CommentEditForm /> : null}
+      {toggleEdit ? <CommentEditForm _id={_id} password={password} /> : null}
     </div>
   );
 }
