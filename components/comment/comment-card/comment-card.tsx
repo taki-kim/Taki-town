@@ -53,8 +53,9 @@ export default function CommentCard({
         style={{ whiteSpace: "pre-wrap" }}
         className={styles["comment-wrapper"]}
       >
-        {comment}
+        <p>{comment}</p>
       </div>
+
       {recomment ? (
         <RecommentCard
           recomment={recomment}
