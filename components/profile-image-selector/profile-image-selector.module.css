@@ -67,12 +67,16 @@
 }
 
 .p {
+  padding: 10px 0;
+
+  align-self: center;
+
   font-size: var(--font-s);
   color: var(--text-color-2);
 }
 
 .image-list {
-  padding: 20px 0px;
+  padding: 30px 0px;
 
   align-self: center;
 

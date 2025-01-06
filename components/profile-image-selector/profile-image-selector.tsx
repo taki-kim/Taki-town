@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
+import ProfileImageBox from "../profile-image-box/profile-image-box";
 import styles from "./profile-image-selector.module.css";
 import profileImageList from "@/lib/profile-image-list";
 
-type AvatorSelectorProps = {
+type ProfileImageSelectorProps = {
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
   imagePath: string;
@@ -17,7 +16,7 @@ export default function ProfileImageSelector({
   setShowModal,
   imagePath,
   setImagePath,
-}: AvatorSelectorProps) {
+}: ProfileImageSelectorProps) {
   if (showModal)
     return (
       <div
@@ -32,15 +31,8 @@ export default function ProfileImageSelector({
             e.stopPropagation();
           }}
         >
-          <div className={styles["preview"]}>
-            <img src={imagePath} alt="" className={styles["circular-image"]} />
-            <span className={styles["image-alt-text"]}>
-              잘못된 이미지 주소입니다
-            </span>
-            <p className={styles["p"]}>
-              댓글 프로필이 위의 이미지로 설정됩니다
-            </p>
-          </div>
+          <ProfileImageBox imageLink={imagePath} size="big" />
+          <p className={styles["p"]}>댓글 프로필이 위의 이미지로 설정됩니다</p>
           <div className={styles["image-list"]}>
             {profileImageList.map((e) => (
               <img
