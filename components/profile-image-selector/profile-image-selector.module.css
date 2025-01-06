@@ -1,0 +1,144 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
+}
+
+.selector-wrapper {
+  width: 600px;
+  height: 600px;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--secondary-color);
+}
+
+.preview {
+  position: relative;
+
+  padding: 10px 0px;
+
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.circular-image {
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  z-index: 10;
+}
+
+.image-alt-text {
+  position: absolute;
+
+  top: 45px;
+  bottom: 50%;
+
+  width: 100px;
+
+  color: var(--color-red);
+  text-align: center;
+
+  z-index: 5;
+}
+
+.p {
+  font-size: var(--font-s);
+  color: var(--text-color-2);
+}
+
+.image-list {
+  padding: 20px 0px;
+
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.circular-image-example {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circular-image-example:focus {
+  border: 2px solid var(--highlight-color);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 80%;
+}
+
+.input-label {
+  padding: 10px 0 5px 0;
+  color: var(--text-color-2);
+}
+
+.link-input {
+  padding: 10px;
+
+  border: 1px solid var(--text-color-2);
+  border-radius: 10px;
+
+  color: var(--text-color-2);
+
+  background-color: transparent;
+  outline: none;
+}
+
+.link-input:focus {
+  border: 1px solid var(--highlight-color);
+}
+
+.close-button {
+  margin: 20px 0px;
+
+  width: 80px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: transparent;
+  color: var(--text-color-2);
+  font-size: var(--font-sm);
+
+  align-self: flex-end;
+
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: var(--highlight-color);
+  font-weight: var(--font-w-l);
+}
