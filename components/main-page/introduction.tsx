@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "./introduction.module.css";
 import MainButton from "../button/main-button";
-import wallpaper from "/public/img/wallpaper.webp";
+import wallpaper from "/public/image/wallpaper.webp";
 
 export default function Introduction() {
   return (

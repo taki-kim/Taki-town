@@ -110,3 +110,33 @@
   font-size: var(--font-xs);
   font-weight: var(--font-w-s);
 }
+
+.image-selector-input-wrapper {
+  padding: 10px;
+
+  border: 1px solid var(--tertiary-color);
+  border-radius: 5px;
+  align-items: center;
+
+  display: flex;
+  gap: 10px;
+
+  box-shadow: var(--box-shadow);
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.image-selector-input-wrapper:hover {
+  background-color: var(--color-orange);
+}
+
+.profile-image-wrapper {
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
