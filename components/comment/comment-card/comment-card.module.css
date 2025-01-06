@@ -2,16 +2,12 @@
   margin-bottom: 1rem;
   padding: 20px;
 
-  /* border-radius: 5px;
-  border: 1px solid var(--tertiary-color); */
   border-bottom: 2px solid var(--tertiary-color);
 
   background-color: var(--primary-color);
 
   display: flex;
   flex-direction: column;
-
-  /* box-shadow: var(--box-shadow); */
 }
 
 .header {

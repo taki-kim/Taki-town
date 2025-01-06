@@ -7,6 +7,7 @@ import styles from "./comment-card.module.css";
 import { CommentProps } from "@/type";
 import CommentEditForm from "./comment-edit-form/comment-edit-form";
 import RecommentCard from "../recomment-card/recomment-card";
+import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
 
 export default function CommentCard({
   _id,
@@ -16,21 +17,19 @@ export default function CommentCard({
   recomment,
   recommentDate,
   password,
+  profileImageLink,
 }: Partial<CommentProps>) {
   const [toggleEdit, setToggleEdit] = useState(false);
+
+  console.log(profileImageLink, author);
 
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["header"]}>
         <div className={styles["header-profile-wrapper"]}>
-          <FontAwesomeIcon
-            icon={faUser}
-            style={{
-              padding: "10px",
-              borderRadius: "50%",
-              backgroundColor: "var(--highlight-color-2)",
-              color: "white",
-            }}
+          <ProfileImageBox
+            imageLink={profileImageLink as string}
+            size="medium"
           />
 
           <div className={styles["author-info"]}>

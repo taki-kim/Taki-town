@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import styles from "./comment-input.module.css";
 import InputButton from "@/components/button/input-button/input-button";
 import useInputs from "@/hooks/useInputs";
@@ -9,6 +10,8 @@ import { getDateString } from "@/utils/date";
 import { commentInputVerification } from "@/utils/verification";
 import { InputVerificationState } from "@/type";
 import VerificationMessage from "../verification-message/verification-message";
+import ProfileImageSelector from "@/components/profile-image-selector/profile-image-selector";
+import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
 
 export type CommentInputProps = {
   articleTitle: string;
@@ -22,9 +25,12 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
     comment: "",
     author: "",
     password: "",
+    profileImageLink: "/image/profile-image/basic.png",
   });
+  const [showModal, setShowModal] = useState(false);
   const [activateAlert, setActivateAlert] =
     useState<InputVerificationState>("default");
+  const [imagePath, setImagePath] = useState(form.profileImageLink);
 
   const onClickSubmit = async (e: any) => {
     e.preventDefault();
@@ -32,6 +38,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
     if (commentInputVerification({ form })) {
       const currentTime = getDateString(new Date());
       form.date = currentTime;
+      form.profileImageLink = imagePath;
 
       await submitNewComment(form);
 
@@ -41,6 +48,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
         comment: "",
         author: "",
         password: "",
+        profileImageLink: "/image/profile-image/basic.png",
       });
 
       setActivateAlert("success");
@@ -51,6 +59,12 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
 
   return (
     <div className={`${styles.wrapper} ${openToggle ? styles.expanded : ""}`}>
+      <ProfileImageSelector
+        showModal={showModal}
+        setShowModal={setShowModal}
+        imagePath={imagePath}
+        setImagePath={setImagePath}
+      />
       <VerificationMessage verificationState={activateAlert} />
       <textarea
         className={`${styles["textarea"]} ${openToggle ? styles.expanded : ""}`}
@@ -67,6 +81,15 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
           openToggle ? styles.expanded : ""
         }`}
       >
+        <div
+          className={`${styles["image-selector-input-wrapper"]}`}
+          onClick={() => {
+            setShowModal(true);
+          }}
+        >
+          <ProfileImageBox imageLink={imagePath} size="medium" />
+        </div>
+
         <div className={`${styles["input-wrapper"]}`}>
           <label className={styles["input-label"]}>Name</label>
           <input
