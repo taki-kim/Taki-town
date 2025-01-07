@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
-import styles from "./comment-card.module.css";
+import styles from "./admin-comment-card.module.css";
 import { CommentProps } from "@/type";
-import CommentEditForm from "./comment-edit-form/comment-edit-form";
-import RecommentCard from "../recomment-card/recomment-card";
 import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
+import RecommentCard from "@/components/comment/recomment-card/recomment-card";
+import AdminRecommentForm from "./recomment-form/admin-recomment-form";
 
-export default function CommentCard({
+export default function AdminCommentCard({
   _id,
   author,
   date,
@@ -16,6 +17,7 @@ export default function CommentCard({
   recommentDate,
   password,
   profileImageLink,
+  articleTitle,
 }: Partial<CommentProps>) {
   const [toggleEdit, setToggleEdit] = useState(false);
 
@@ -36,14 +38,22 @@ export default function CommentCard({
             <div className={styles["date"]}>{date}</div>
           </div>
         </div>
-        <button
-          className={styles["toggle-button"]}
-          onClick={() => {
-            setToggleEdit((prev) => !prev);
-          }}
-        >
-          {toggleEdit ? "닫기" : "수정"}
-        </button>
+        <div className={styles["header-menu-wrapper"]}>
+          <Link
+            className={styles["menu-button"]}
+            href={`/post/${articleTitle}`}
+          >
+            본문
+          </Link>
+          <button
+            className={styles["menu-button"]}
+            onClick={() => {
+              setToggleEdit((prev) => !prev);
+            }}
+          >
+            {toggleEdit ? "닫기" : "답글"}
+          </button>
+        </div>
       </div>
 
       <div
@@ -59,7 +69,7 @@ export default function CommentCard({
           recommentDate={recommentDate as string}
         />
       ) : null}
-      {toggleEdit ? <CommentEditForm _id={_id} password={password} /> : null}
+      {toggleEdit ? <AdminRecommentForm _id={_id} password={password} /> : null}
     </div>
   );
 }
