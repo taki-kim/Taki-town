@@ -18,7 +18,7 @@ export async function fetchPostList(): Promise<PostDataProps[]> {
     throw new Error("Failed to fetch data");
   }
 
-  return response.json();
+  return await response.json();
 }
 
 export async function fetchProjectList(): Promise<ProjectDataProps[]> {
@@ -151,5 +151,27 @@ export async function editComment(commentFormData: any) {
     }
   } catch (error) {
     return { success: false, code: 500 };
+  }
+}
+
+export async function getAllComments() {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/get/get-all-comments`
+    );
+
+    if (!response.ok) {
+      console.error(
+        `Failed to fetch comments: ${response.status} ${response.statusText}`
+      );
+      return null;
+    }
+
+    if (response.ok) {
+      return response.json();
+    }
+  } catch (error) {
+    console.error("An error occurred while fetching comments:", error);
+    return null;
   }
 }
