@@ -175,3 +175,25 @@ export async function getAllComments() {
     return null;
   }
 }
+
+export async function updateRecomment(commentId: string, commentFormData: any) {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/recomment/create/${commentId}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(commentFormData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error("Failed to fetch recomment");
+    }
+  } catch (error) {
+    console.error("An error occurred while fetching recomment:", error);
+    return null;
+  }
+}
