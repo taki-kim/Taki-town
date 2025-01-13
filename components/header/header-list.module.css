@@ -12,5 +12,5 @@
 }
 
 .list-item.clicked {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
