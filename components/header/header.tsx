@@ -10,9 +10,10 @@ export default function Header() {
       <MainLogo link="/" title="TAKI TOWN" />
       <nav className={styles.navbar}>
         <ul className={styles.navbar}>
-          <HeaderList href="/posts" listName="posts" />
-          <HeaderList href="/projects" listName="projects" />
-          <HeaderList href="/about" listName="about" />
+          <HeaderList href="/posts" listName="Posts" />
+          <HeaderList href="/projects" listName="Projects" />
+          <HeaderList href="/about" listName="About" />
+          <HeaderList href="/guestbook" listName="Guestbook" />
           <AdminMenu />
           <ThemeChangeButton />
         </ul>
