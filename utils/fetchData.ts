@@ -140,14 +140,15 @@ export async function editComment(commentFormData: any) {
       }
     );
 
-    if (response.status === 200) {
-      return { success: true, code: 200 };
-    } else if (response.status === 401) {
-      return { success: false, code: 401 };
-    } else if (response.status === 500) {
-      return { success: false, code: 500 };
-    } else {
-      return { success: false, code: 500 };
+    switch (response.status) {
+      case 200:
+        return { success: true, code: 200 };
+      case 401:
+        return { success: false, code: 401 };
+      case 500:
+        return { success: false, code: 500 };
+      default:
+        return { success: false, code: 500 };
     }
   } catch (error) {
     return { success: false, code: 500 };

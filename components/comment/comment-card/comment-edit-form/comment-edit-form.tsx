@@ -7,6 +7,7 @@ import { InputVerificationState } from "@/type";
 import { CommentProps } from "@/type";
 import useInputs from "@/hooks/useInputs";
 import { editComment } from "@/utils/fetchData";
+import { useCommentRefetch } from "@/hooks/useCommentRefetch";
 
 export default function CommentEditForm({
   _id,
@@ -22,6 +23,8 @@ export default function CommentEditForm({
     passwordInput: "",
   });
 
+  const { refreshComments } = useCommentRefetch();
+
   const onClickSubmit = async (form: any, e: any) => {
     e.preventDefault();
 
@@ -30,6 +33,7 @@ export default function CommentEditForm({
 
       if (result.code === 200) {
         setEditResponse("success");
+        refreshComments();
       }
       if (result.code === 401) {
         setEditResponse("password-error");
