@@ -23,7 +23,7 @@
   resize: none;
   outline: none;
 
-  background-color: transparent;
+  background-color: var(--input-background-color);
   color: var(--text-color);
   font-size: var(--font-s);
 
@@ -53,6 +53,8 @@
   flex: 1;
   flex-direction: column;
 
+  background-color: var(--input-background-color);
+
   box-shadow: var(--box-shadow);
 }
 
@@ -68,7 +70,7 @@
 
   flex: 3;
 
-  background-color: transparent;
+  background-color: var(--input-background-color);
   color: var(--text-color);
   font-size: var(--text-s);
 
