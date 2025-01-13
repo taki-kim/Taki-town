@@ -12,6 +12,7 @@ import { InputVerificationState } from "@/type";
 import VerificationMessage from "../verification-message/verification-message";
 import ProfileImageSelector from "@/components/profile-image-selector/profile-image-selector";
 import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
+import { useCommentRefetch } from "@/hooks/useCommentRefetch";
 
 export type CommentInputProps = {
   articleTitle: string;
@@ -27,6 +28,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
     password: "",
     profileImageLink: "/image/profile-image/basic.png",
   });
+  const { refreshComments } = useCommentRefetch();
   const [showModal, setShowModal] = useState(false);
   const [activateAlert, setActivateAlert] =
     useState<InputVerificationState>("default");
@@ -52,6 +54,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
       });
 
       setActivateAlert("success");
+      refreshComments();
     } else {
       setActivateAlert("input-error");
     }

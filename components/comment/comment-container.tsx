@@ -8,6 +8,7 @@ import CommentInput from "./comment-input/comment-input";
 import CommentsList from "./comments-list/comments-list";
 import { CommentProps } from "@/type";
 import { STALE_TIME } from "@/constant";
+import { useCommentRefetch } from "@/hooks/useCommentRefetch";
 
 export type CommentContainerProps = {
   articleTitle: string;
@@ -17,7 +18,7 @@ export default function CommentContainer({
   articleTitle,
 }: CommentContainerProps) {
   // 댓글 불러오기 (postName)
-
+  const { triggerRefetchCount } = useCommentRefetch();
   const [commentsList, setCommentsList] = useState<CommentProps[]>([]);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function CommentContainer({
     };
 
     fetchData();
-  }, []);
+  }, [triggerRefetchCount]);
 
   return (
     <div className={styles["wrapper"]}>
