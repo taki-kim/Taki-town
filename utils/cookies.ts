@@ -6,5 +6,5 @@ export function getThemeCookie(name: string) {
 }
 
 export function setThemeCookie(theme: string) {
-  document.cookie = `theme=${theme}; max-age=${3600 * 24 * 400}`;
+  document.cookie = `theme=${theme}; path=/; max-age=${3600 * 24 * 400}`;
 }
