@@ -4,6 +4,7 @@ import { connectDatabase } from "@/utils/db";
 import { verifyPassword } from "@/utils/auth";
 
 export default NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -38,4 +39,7 @@ export default NextAuth({
       },
     }),
   ],
+  session: {
+    strategy: "jwt",
+  },
 });
