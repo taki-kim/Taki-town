@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 import { fetchProjectData } from "@/utils/fetchData";
-import { MetadataComponent } from "@/components/metadata/metadata";
+import { generateArticleMetadata } from "@/utils/metadata";
 
 export async function generateMetadata({
   params,
@@ -13,10 +13,11 @@ export async function generateMetadata({
 }) {
   const data = await fetchProjectData(params.projectSlug);
 
-  return MetadataComponent({
-    page: `${data.title}`,
-    isArticle: true,
-    articleSummary: `${data.summary}`,
+  return generateArticleMetadata({
+    articleTitle: data.title,
+    articleCategory: "project",
+    articleSummary: data.summary,
+    articleImageUrl: data.imageLink,
   });
 }
 

@@ -1,4 +1,17 @@
 import { PostDataProps } from "@/type";
+import { PostCategoryUrlString, PostCategory } from "@/type";
+
+export function getPostCategoryStringAsCapital(
+  category: PostCategoryUrlString
+): PostCategory {
+  if (category === "work_log") {
+    return "Work-Log";
+  } else {
+    let string = category.split("");
+    string[0] = string[0].toUpperCase();
+    return string.join("").trim() as PostCategory;
+  }
+}
 
 export function getCategoryAndIntro(pathName: string) {
   switch (pathName) {

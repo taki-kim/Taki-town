@@ -1,8 +1,9 @@
 import styles from "./page.module.css";
 import MainButton from "@/components/button/main-button";
-import { MetadataComponent } from "@/components/metadata/metadata";
+import { generatePageMetadata } from "@/utils/metadata";
 
-export const generateMetadata = () => MetadataComponent({ page: "About" });
+export const generateMetadata = () =>
+  generatePageMetadata({ pageCategory: "About" });
 
 export default function About() {
   return (
