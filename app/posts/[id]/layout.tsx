@@ -2,9 +2,18 @@ import styles from "./layout.module.css";
 import PostsHeader from "@/components/posts/header/posts-header";
 import PostList from "@/components/posts/post-list/post-list";
 import { fetchPostList } from "@/utils/fetchData";
-import { MetadataComponent } from "@/components/metadata/metadata";
+import { generatePageMetadata } from "@/utils/metadata";
+import { getPostCategoryStringAsCapital } from "@/utils/postPage";
+import { PostCategoryUrlString } from "@/type";
 
-export const generateMetadata = () => MetadataComponent({ page: "Posts" });
+export const generateMetadata = ({
+  params,
+}: {
+  params: { id: PostCategoryUrlString };
+}) =>
+  generatePageMetadata({
+    pageCategory: getPostCategoryStringAsCapital(params.id),
+  });
 
 export default async function PostLayout({
   children,

@@ -4,9 +4,9 @@ import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 import styles from "./page.module.css";
 import { fetchPostData } from "@/utils/fetchData";
-import { MetadataComponent } from "@/components/metadata/metadata";
 import PostAnchor from "@/components/post-anchor/post-anchor";
 import CommentContainer from "@/components/comment/comment-container";
+import { generateArticleMetadata } from "@/utils/metadata";
 
 export async function generateMetadata({
   params,
@@ -15,10 +15,11 @@ export async function generateMetadata({
 }) {
   const data = await fetchPostData(params.postSlug);
 
-  return MetadataComponent({
-    page: `${data.title}`,
-    isArticle: true,
-    articleSummary: `${data.summary}`,
+  return generateArticleMetadata({
+    articleTitle: data.title,
+    articleCategory: "post",
+    articleSummary: data.summary,
+    articleImageUrl: data.imageLink,
   });
 }
 

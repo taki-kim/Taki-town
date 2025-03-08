@@ -51,3 +51,24 @@ export type InputVerificationState =
   | "input-error"
   | "password-error"
   | "server-error";
+
+export type PageCategory =
+  | "Home"
+  | "Posts"
+  | "Projects"
+  | "Guestbook"
+  | "About";
+
+export type PostCategory =
+  | "Development"
+  | "Design"
+  | "Work-Log"
+  | "Philosophy"
+  | "Etc";
+
+export type PostCategoryUrlString =
+  | "development"
+  | "design"
+  | "work_log"
+  | "philosophy"
+  | "etc";

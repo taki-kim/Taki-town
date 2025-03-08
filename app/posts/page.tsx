@@ -2,9 +2,10 @@ import styles from "./page.module.css";
 import PostsHeader from "@/components/posts/header/posts-header";
 import PostList from "@/components/posts/post-list/post-list";
 import { fetchPostList } from "@/utils/fetchData";
-import { MetadataComponent } from "@/components/metadata/metadata";
+import { generatePageMetadata } from "@/utils/metadata";
 
-export const generateMetadata = () => MetadataComponent({ page: "Posts" });
+export const generateMetadata = () =>
+  generatePageMetadata({ pageCategory: "Posts" });
 
 export default async function Posts() {
   const dataList = await fetchPostList();

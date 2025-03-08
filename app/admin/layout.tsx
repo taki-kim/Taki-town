@@ -1,5 +1,9 @@
 import styles from "./layout.module.css";
 import PageGuard from "@/components/page-guard/page-guard";
+import { generateAdminMetadata } from "@/utils/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateAdminMetadata({ page: "admin" });
 
 export default function AdminLayout({
   children,
