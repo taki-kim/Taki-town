@@ -6,6 +6,7 @@ import {
   oneLight,
   oneDark,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
+import rehypeRaw from "rehype-raw";
 
 import styles from "./text-container.module.css";
 import "@/styles/markdown.css";
@@ -21,6 +22,7 @@ export default function TextContainer({ articleText }: TextContainerProps) {
   return (
     <div className={styles["wrapper"]}>
       <Markdown
+        rehypePlugins={[rehypeRaw]}
         className={"markdown-body"}
         components={{
           code({ node, inline, className, children, ...props }: any) {

@@ -2,6 +2,7 @@
 
 import ReactMarkdown from "react-markdown";
 import { useState } from "react";
+import rehypeRaw from "rehype-raw";
 
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
@@ -106,7 +107,10 @@ export default function CreateArticle() {
           value={form.content}
           onChange={setForm}
         ></textarea>
-        <ReactMarkdown className={`${styles["preview"]} markdown-body`}>
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          className={`${styles["preview"]} markdown-body`}
+        >
           {form.content}
         </ReactMarkdown>
       </div>
