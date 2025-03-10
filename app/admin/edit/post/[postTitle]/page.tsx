@@ -8,6 +8,7 @@ import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.css";
 import PostEditButton from "@/components/admin/submit-button/post-edit-button";
+import rehypeRaw from "rehype-raw";
 
 export default function EditPost() {
   const postTitle = usePathname()?.split("/")[4];
@@ -111,7 +112,10 @@ export default function EditPost() {
           value={form.content}
           onChange={setForm}
         ></textarea>
-        <ReactMarkdown className={`${styles["preview"]} markdown-body`}>
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          className={`${styles["preview"]} markdown-body`}
+        >
           {form.content}
         </ReactMarkdown>
       </div>
