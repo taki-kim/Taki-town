@@ -7,6 +7,10 @@
   border-radius: 10px;
 
   overflow: hidden;
+
+  user-select: none;
+
+  cursor: pointer;
 }
 
 .carousel-images {
@@ -15,12 +19,20 @@
 
   display: flex;
   transition: transform 0.3s ease-in-out;
+
+  pointer-events: auto;
 }
 
 .carousel-image {
   position: relative;
   min-width: 100%;
   height: 100%;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.01);
 }
 
 .carousel-image::after {
@@ -51,7 +63,8 @@
   height: 20%;
 
   color: white;
-  font-size: var(--font-l);
+  font-size: var(--font-ml);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .link {
@@ -61,26 +74,56 @@
 
 .angle-prev {
   position: absolute;
-  left: 5%;
+
+  left: 0%;
   top: 50%;
+
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
 
   color: white;
   font-size: var(--font-xl);
 
-  cursor: pointer;
-
   z-index: 10;
+
+  cursor: default;
 }
 
 .angle-next {
   position: absolute;
-  right: 5%;
+
+  right: 0%;
   top: 50%;
 
-  color: white;
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+
   font-size: var(--font-xl);
 
-  cursor: pointer;
-
   z-index: 10;
+
+  cursor: default;
+}
+
+.angle-not-active {
+  color: gray;
+}
+
+.angle-active {
+  width: 100%;
+  color: gray;
+
+  transition: transform 0.1s ease-in-out;
+
+  cursor: pointer;
+}
+
+.angle-active:hover {
+  color: white;
+
+  transform: scale(1.2);
 }
