@@ -12,9 +12,9 @@ export default function AiRecommandation({
   articleTitle,
   articleCategory,
 }: AiRecommandtionProps) {
-  if (articleCategory !== "development") return null;
-
   useEffect(() => {
+    if (articleCategory !== "development") return;
+
     async function getList() {
       const searchResult = await searchQuery(articleTitle);
       const result = await relatedArticleList(searchResult, articleTitle);
@@ -24,4 +24,6 @@ export default function AiRecommandation({
 
     // getList();
   }, []);
+
+  if (articleCategory !== "development") return null;
 }
