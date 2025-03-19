@@ -209,7 +209,13 @@ export async function searchQuery(query: string) {
     switch (response.status) {
       case 200: {
         const data = await response.json();
-        return data.items;
+        return data.items.map((item: any) => {
+          return {
+            title: item.title,
+            link: item.link,
+            snippet: item.snippet,
+          };
+        });
       }
       case 400:
         throw new Error("400 Bad Request: 요청이 잘못되었습니다.");
@@ -233,5 +239,29 @@ export async function searchQuery(query: string) {
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
+  }
+}
+
+export async function relatedArticleList(
+  searchResult: Array<any>,
+  query: string
+) {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/openai/getRelatedArticles`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ searchResult, query }),
+      }
+    );
+
+    if (response.status === 200) {
+      return await response.json();
+    }
+  } catch (error) {
+    console.error(error);
   }
 }
