@@ -20,7 +20,7 @@ export default function HeaderList({ href, listName }: HeaderListProps) {
         className={
           checkIsCurrentPath(path as string, listName)
             ? `${styles["list-item"]} ${styles.clicked}`
-            : `${styles["list-item"]}`
+            : `${styles["list-item"]} ${styles["to-right-underline"]}`
         }
         href={href}
       >
