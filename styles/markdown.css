@@ -1,7 +1,11 @@
+@import "../styles/fonts.css";
+
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: transparent;
+
+  font-family: "Pretendard";
 
   line-height: 1.8;
   word-wrap: break-word;
@@ -52,7 +56,6 @@
   font-weight: var(--base-text-weight-semibold, 600);
   padding-bottom: 0.3em;
   font-size: 2em;
-  border-bottom: 1px solid var(--text-color);
 }
 
 .markdown-body mark {
