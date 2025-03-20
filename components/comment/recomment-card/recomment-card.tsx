@@ -14,7 +14,9 @@ export default function RecommentCard({
           <span className={styles["date"]}>{recommentDate}</span>
         </div>
       </div>
-      <div className={styles["recomment-string-wrapper"]}>{recomment}</div>
+      <div className={styles["recomment-string-wrapper"]}>
+        <p>{recomment}</p>
+      </div>
     </div>
   );
 }

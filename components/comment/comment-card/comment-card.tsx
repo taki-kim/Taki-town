@@ -46,10 +46,7 @@ export default function CommentCard({
         </button>
       </div>
 
-      <div
-        style={{ whiteSpace: "pre-wrap" }}
-        className={styles["comment-wrapper"]}
-      >
+      <div className={styles["comment-wrapper"]}>
         <p>{comment}</p>
       </div>
 
