@@ -72,58 +72,36 @@
   text-decoration: none;
 }
 
-.angle-prev {
+.angle-button {
   position: absolute;
-
-  left: 0%;
-  top: 50%;
-
   width: 50px;
+  height: 100%;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  color: white;
+  color: gray;
   font-size: var(--font-xl);
 
   z-index: 10;
+  transition: transform 0.1s ease-in-out;
+}
 
-  cursor: default;
+.angle-prev {
+  left: 0%;
 }
 
 .angle-next {
-  position: absolute;
-
   right: 0%;
-  top: 50%;
+}
 
-  width: 50px;
-
-  display: flex;
-  justify-content: center;
-
-  font-size: var(--font-xl);
-
-  z-index: 10;
-
+.angle-locked {
   cursor: default;
+  transition: none;
 }
 
-.angle-not-active {
-  color: gray;
-}
-
-.angle-active {
-  width: 100%;
-  color: gray;
-
-  transition: transform 0.1s ease-in-out;
-
-  cursor: pointer;
-}
-
-.angle-active:hover {
+.angle-button:not(.angle-locked):hover {
   color: white;
-
   transform: scale(1.2);
 }

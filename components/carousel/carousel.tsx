@@ -62,21 +62,21 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
           {truncateString(33, postTitle)}
         </Link>
       </div>
-      <div className={styles["angle-prev"]} onClick={movePrev}>
-        <FontAwesomeIcon
-          icon={faAngleLeft}
-          className={
-            isFirstImage ? styles["angle-not-active"] : styles["angle-active"]
-          }
-        />
+      <div
+        className={`${styles["angle-button"]} ${styles["angle-prev"]} ${
+          isFirstImage ? styles["angle-locked"] : ""
+        }`}
+        onClick={movePrev}
+      >
+        <FontAwesomeIcon icon={faAngleLeft} />
       </div>
-      <div className={styles["angle-next"]} onClick={moveNext}>
-        <FontAwesomeIcon
-          icon={faAngleRight}
-          className={
-            isLastImage ? styles["angle-not-active"] : styles["angle-active"]
-          }
-        />
+      <div
+        className={`${styles["angle-button"]} ${styles["angle-next"]} ${
+          isLastImage ? styles["angle-locked"] : ""
+        }`}
+        onClick={moveNext}
+      >
+        <FontAwesomeIcon icon={faAngleRight} />
       </div>
 
       <div
