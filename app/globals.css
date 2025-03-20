@@ -3,7 +3,7 @@
 @import "../styles/fonts.css";
 
 * {
-  font-family: "Pretendard";
+  font-family: "Pretendard", sans-serif !important;
 }
 
 .background {

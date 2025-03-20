@@ -2,6 +2,8 @@
   padding-top: 20px;
   border-radius: 5px;
 
+  width: 100%;
+
   display: flex;
   flex-direction: column;
 
@@ -12,6 +14,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  align-self: flex-end;
 }
 
 .taki-profile-icon {
@@ -48,12 +51,19 @@
 }
 
 .recomment-string-wrapper {
-  margin: 10px 0px 10px 30px;
+  margin: 10px 20px;
+
+  align-self: flex-end;
+
+  max-width: 100%;
 
   padding: 20px;
   border-radius: 10px;
 
   background-color: var(--tertiary-color);
 
-  box-shadow: var(--box-shadow);
+  font-weight: var(--font-w-s);
+  line-height: 1.3;
+
+  white-space: pre-wrap;
 }

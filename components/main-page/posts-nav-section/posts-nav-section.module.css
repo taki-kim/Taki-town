@@ -41,7 +41,7 @@
 
   box-shadow: var(--box-shadow);
 
-  transition: var(--transition-all);
+  transition: box-shadow 0.3s ease;
 }
 
 .nav-item:hover {

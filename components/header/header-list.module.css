@@ -12,5 +12,27 @@
 }
 
 .list-item.clicked {
+  padding-bottom: 3px;
   border-bottom: 1px solid var(--text-color);
+}
+
+.to-right-underline {
+  position: relative;
+}
+.to-right-underline:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0px;
+  height: 1px;
+  margin: 5px 0 0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  background-color: var(--text-color);
+}
+.to-right-underline:hover:after {
+  width: 100%;
+  opacity: 1;
 }
