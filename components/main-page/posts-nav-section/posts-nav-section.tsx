@@ -6,7 +6,7 @@ import { navList } from "@/lib/nav-list";
 export default function PostsNavSection() {
   return (
     <div className={styles["wrapper"]}>
-      <h1 className={styles["title"]}>What I write about is..</h1>
+      <h1 className={styles["title"]}>Category</h1>
       <nav className={styles["nav-wrapper"]}>
         {navList.map((element) =>
           element.title !== "All" ? (
