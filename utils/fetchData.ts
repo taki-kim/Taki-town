@@ -209,6 +209,7 @@ export async function searchQuery(query: string) {
     switch (response.status) {
       case 200: {
         const data = await response.json();
+        if (!data || !data.items) return undefined;
         return data.items.map((item: any) => {
           return {
             title: item.title,
