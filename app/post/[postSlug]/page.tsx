@@ -7,7 +7,7 @@ import { fetchPostData } from "@/utils/fetchData";
 import PostAnchor from "@/components/post-anchor/post-anchor";
 import CommentContainer from "@/components/comment/comment-container";
 import { generateArticleMetadata } from "@/utils/metadata";
-import AiRecommandation from "@/components/article/ai-recommandation/ai-recommandation";
+import AiSearchButton from "@/components/open-ai/ai-search-button/ai-search-button";
 
 export async function generateMetadata({
   params,
@@ -38,7 +38,7 @@ export default async function PostSlug({
         <TextContainer articleText={data.content} />
         <PostAnchor postCategory={data.category} postNumber={data.postNumber} />
         <CommentContainer articleTitle={data.title} />
-        <AiRecommandation
+        <AiSearchButton
           articleTitle={data.title}
           articleCategory={data.category}
         />
