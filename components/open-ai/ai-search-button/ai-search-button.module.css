@@ -1,0 +1,25 @@
+.wrapper {
+  position: fixed;
+
+  bottom: 10%;
+  right: 5%;
+
+  border: 0;
+  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  background: var(--modal-button-color);
+
+  font-size: var(--font-l);
+  color: var(--text-color-r);
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.wrapper:hover {
+  opacity: 0.6;
+}
