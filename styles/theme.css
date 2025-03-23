@@ -13,6 +13,9 @@
   --text-color: black;
   --text-color-2: #868484;
 
+  --text-color-r: #eeeeee;
+  --text-color-2-r: #dddddd;
+
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
 
@@ -21,6 +24,17 @@
     0 2px 3px rgba(0, 0, 0, 0.133);
 
   --input-background-color: transparent;
+
+  --modal-button-color: rgb(16, 16, 17);
+
+  --modal-background-color: radial-gradient(
+    circle,
+    rgba(22, 22, 30, 0.9) 0%,
+    rgba(22, 22, 30, 0.925) 20%,
+    rgba(22, 22, 30, 0.95) 30%,
+    rgba(22, 22, 30, 0.975) 50%,
+    rgb(16, 16, 17) 100%
+  );
 
   /* basic theme */
 
@@ -54,6 +68,8 @@
   --color-red: #e84e4e;
   --color-green: #55d04a;
   --color-orange: #fe9f00;
+  --color-gray: rgb(154, 156, 157);
+  --color-link: rgb(7, 151, 198);
 }
 
 [data-theme="dark"] {
@@ -71,9 +87,23 @@
   --text-color: #eeeeee;
   --text-color-2: #dddddd;
 
+  --text-color-r: black;
+  --text-color-2-r: #868484;
+
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.298), 0 1px 2px rgba(0, 0, 0, 0.35);
   --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.711),
     0 2px 3px rgba(0, 0, 0, 0.693);
 
   --input-background-color: #1a1e26;
+
+  --modal-button-color: rgb(240, 245, 250);
+
+  --modal-background-color: radial-gradient(
+    circle,
+    rgba(240, 245, 250, 0.925) 0%,
+    rgba(240, 245, 250, 0.95) 20%,
+    rgba(240, 245, 250, 0.975) 40%,
+    rgba(240, 245, 250) 60%,
+    rgb(240, 245, 250) 100%
+  );
 }
