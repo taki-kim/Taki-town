@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ai-recommandation.module.css";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -35,11 +35,21 @@ export default function AiRecommandation({
     isLoading: searchResultLoading,
     isError: searchResultError,
   } = useSearchQuery(articleTitle);
+
   const {
     data: articleResults,
     isLoading: articleResultsLoading,
     isError: articleResultsError,
   } = useGetRelatedArticles(searchResult, articleTitle);
+
+  const [isModalClosing, setIsModalClosing] = useState(false);
+
+  const handleModalClose = () => {
+    setIsModalClosing(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 280);
+  };
 
   if (articleCategory !== "development") return null;
 
@@ -48,11 +58,13 @@ export default function AiRecommandation({
       <div
         className={styles["modal-wrapper"]}
         onClick={() => {
-          setShowModal(false);
+          handleModalClose();
         }}
       >
         <div
-          className={styles["search-result-container"]}
+          className={`${styles["search-result-container"]} ${
+            isModalClosing ? styles["close"] : ""
+          }`}
           onClick={(e) => {
             e.stopPropagation();
           }}
