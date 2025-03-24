@@ -6,19 +6,21 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "@/styles/markdown.css";
 import AiRecommandationLoading from "./loading/loading";
+import useSearchQuery from "@/hooks/useSearchQuery";
+import useGetRelatedArticles from "@/hooks/useGetRelatedArticles";
 
 type AiRecommandtionProps = {
   articleCategory: string;
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-  aiRecommandationResult: string;
+  articleTitle: string;
 };
 
 export default function AiRecommandation({
   articleCategory,
   showModal,
   setShowModal,
-  aiRecommandationResult,
+  articleTitle,
 }: AiRecommandtionProps) {
   useEffect(() => {
     document.documentElement.style.overflowY = "hidden";
@@ -27,6 +29,17 @@ export default function AiRecommandation({
       document.documentElement.style.overflowY = "auto";
     };
   }, []);
+
+  const {
+    data: searchResult,
+    isLoading: searchResultLoading,
+    isError: searchResultError,
+  } = useSearchQuery(articleTitle);
+  const {
+    data: articleResults,
+    isLoading: articleResultsLoading,
+    isError: articleResultsError,
+  } = useGetRelatedArticles(searchResult, articleTitle);
 
   if (articleCategory !== "development") return null;
 
@@ -53,15 +66,19 @@ export default function AiRecommandation({
                 구글 상위 검색을 기반으로 AI가 추천한 내용입니다.
               </p>
             </div>
-            {aiRecommandationResult ? (
+            {(searchResultLoading || articleResultsLoading) && (
+              <AiRecommandationLoading />
+            )}
+            {searchResult && articleResults && (
               <Markdown
                 rehypePlugins={[rehypeRaw]}
                 className={`${styles["result-list-container"]}`}
               >
-                {aiRecommandationResult}
+                {articleResults}
               </Markdown>
-            ) : (
-              <AiRecommandationLoading />
+            )}
+            {(searchResultError || articleResultsError) && (
+              <>검색결과가 존재하지 않습니다.</>
             )}
           </>
         </div>
