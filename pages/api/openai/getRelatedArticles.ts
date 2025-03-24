@@ -54,6 +54,7 @@ export default async function handler(
               <h4>
             </div>
            
+            그리고 <div>와 <div>태그 사이에 공백이나 띄어쓰기 없이 바로 반환해주면 돼.
            
             ${searchResultToString}이 undefined일 경우, 검색결과가 없다는 뜻이야
             이 경우에는 '죄송합니다, 관련 검색결과가 존재하지 않습니다'라는 메세지 반환해줘
