@@ -22,8 +22,9 @@ export default function AiRecommandationLoading() {
         />
       </div>
       <p className={styles["loading-text"]}>
-        구글 상위 검색 결과를 바탕으로 추천 아티클을 분석하고 있습니다. <br />
-        네트워크 환경에 따라서 30초 이상이 소요될 수 있습니다.
+        AI가 구글 상위 검색 결과를 바탕으로 추천 아티클을 선별하고 있습니다.{" "}
+        <br />
+        아티클의 선별 작업에 15초 이상이 소요될 수 있습니다.
       </p>
     </div>
   );
