@@ -6,6 +6,7 @@ config.autoAddCss = false;
 
 import "./globals.css";
 import NextAuthProvider from "@/providers/next-auth-provider";
+import ReactQueryProvider from "@/providers/react-query-provider";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -38,11 +39,13 @@ export default function RootLayout({
       <CommentRefetchProvider>
         <html lang="en" className="background" data-theme={theme}>
           <body className={inter.className}>
-            <NextAuthProvider>
-              <Header />
-              {children}
-              <Footer />
-            </NextAuthProvider>
+            <ReactQueryProvider>
+              <NextAuthProvider>
+                <Header />
+                {children}
+                <Footer />
+              </NextAuthProvider>
+            </ReactQueryProvider>
           </body>
         </html>
       </CommentRefetchProvider>
