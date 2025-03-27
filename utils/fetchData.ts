@@ -10,8 +10,10 @@ import { STALE_TIME } from "@/constant";
 
 export async function fetchPostList(): Promise<PostDataProps[]> {
   const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/post/get-all-posts`,
-    { next: { revalidate: STALE_TIME } }
+    `${process.env.NEXT_PUBLIC_URL}/api/post/get/all-posts`,
+    {
+      next: { revalidate: STALE_TIME },
+    }
   );
 
   if (!response.ok) {
@@ -36,7 +38,7 @@ export async function fetchProjectList(): Promise<ProjectDataProps[]> {
 
 export async function fetchPostData(postTitle: string) {
   const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/post/${postTitle}`,
+    `${process.env.PUBLIC_URL}/api/post/get/${postTitle}`,
     { next: { revalidate: STALE_TIME } }
   );
 

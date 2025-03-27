@@ -25,7 +25,7 @@ export default function EditPost() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/post/${postTitle}`);
+        const response = await fetch(`/api/post/get/${postTitle}`);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }

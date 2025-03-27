@@ -15,7 +15,10 @@ export default function EditDeleteBar({
     try {
       const response = await fetch(`/api/post/delete/${postTitle}`, {
         method: "DELETE",
-        body: postCategory,
+        body: JSON.stringify(postCategory),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       if (!response.ok) {

@@ -1,17 +1,17 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { connectDatabase } from "@/utils/db";
 import { ObjectId } from "mongodb";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+export async function PATCH(
+  req: Request,
+  { params }: { params: { postTitle: string } }
 ) {
   let client;
   try {
     client = await connectDatabase();
 
     const { _id, title, summary, category, tags, content, imageLink } =
-      req.body;
+      await req.json();
 
     if (req.method === "PATCH") {
       const db = client.db(process.env.DB_NAME);
@@ -32,14 +32,20 @@ export default async function handler(
       );
 
       if (result) {
-        res.status(200).json("Document is updated");
-      } else {
-        res.status(404).json({ message: "Document not found" });
+        return NextResponse.json(
+          { message: "Document is updated" },
+          { status: 200 }
+        );
       }
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    return NextResponse.json(
+      {
+        message: "Internal Server Error",
+      },
+      { status: 500 }
+    );
   } finally {
     if (client) client.close();
   }

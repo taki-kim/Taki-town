@@ -88,6 +88,9 @@
   max-width: 100%;
   box-sizing: content-box;
   background-color: var(--color-canvas-default);
+
+  display: block;
+  margin: auto;
 }
 
 .markdown-body code,

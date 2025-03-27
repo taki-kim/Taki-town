@@ -10,7 +10,7 @@ export default function PostEditButton({ formData }: any) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/post/edit/${formData.title}`, {
+        const response = await fetch(`/api/post/edit/`, {
           method: "PATCH",
           body: JSON.stringify(formData),
           headers: {
