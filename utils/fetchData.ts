@@ -117,22 +117,19 @@ export async function createPost(formData: PostDataProps) {
 // comments
 
 export async function submitNewComment(commentFormData: any) {
-  await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/comment/create/create-comment`,
-    {
-      method: "POST",
-      body: JSON.stringify(commentFormData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/comment/create`, {
+    method: "POST",
+    body: JSON.stringify(commentFormData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
 
 export async function editComment(commentFormData: any) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/api/comment/edit/edit-comment`,
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/edit`,
       {
         method: "PATCH",
         body: JSON.stringify(commentFormData),
@@ -160,7 +157,7 @@ export async function editComment(commentFormData: any) {
 export async function getAllComments() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/api/comment/get/get-all-comments`
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/get/all-comments`
     );
 
     if (!response.ok) {
