@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { connectDatabase } from "@/utils/db";
 import { verifyPassword } from "@/utils/auth";
 
-export default NextAuth({
+const handler = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
@@ -43,3 +43,5 @@ export default NextAuth({
     strategy: "jwt",
   },
 });
+
+export { handler as GET, handler as POST };
