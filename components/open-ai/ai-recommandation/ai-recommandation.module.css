@@ -72,11 +72,11 @@
 }
 
 .header-title {
-  font-size: var(--font-l);
+  font-size: 1.6rem;
 }
 
 .header-subtitle {
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   color: var(--color-orange);
 }
 
@@ -117,6 +117,7 @@
 .result-list-container a {
   font-size: var(--font-s);
   color: var(--color-link);
+  font-weight: var(--font-w-m);
   text-decoration: none;
 }
 
