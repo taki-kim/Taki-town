@@ -26,8 +26,8 @@ export default function AdminProjectCard({
         </div>
         <h1 className={styles["title"]}>{title}</h1>
         <p className={styles["summary"]}>{summary}</p>
-        <EditDeleteBar projectTitle={title} />
       </Link>
+      <EditDeleteBar projectTitle={title} />
     </div>
   );
 }
