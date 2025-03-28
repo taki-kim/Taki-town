@@ -25,7 +25,7 @@ export async function fetchPostList(): Promise<PostDataProps[]> {
 
 export async function fetchProjectList(): Promise<ProjectDataProps[]> {
   const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/project/get/get-all-projects`,
+    `${process.env.PUBLIC_URL}/api/project/get/all-projects`,
     { next: { revalidate: STALE_TIME } }
   );
 

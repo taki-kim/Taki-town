@@ -35,7 +35,7 @@ export default function ArticleCreateButton({
         }
 
         if (article === "project") {
-          await fetch("/api/project/create-project", {
+          await fetch("/api/project/create", {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
