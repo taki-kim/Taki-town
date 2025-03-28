@@ -1,35 +1,30 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import styles from "./admin-post-list.module.css";
+import { fetchPostList } from "@/utils/fetchData";
 import AdminPostCard from "../admin-post-card/admin-post-card";
 
 export default function AdminPostList() {
-  const [cardData, setCardData] = useState<any[]>([]);
-  const pathname = usePathname();
+  const [cardData, setCardData] = useState<any[]>();
 
   useEffect(() => {
-    const fetchData = async () => {
+    async function fetchData() {
       try {
-        const response = await fetch("/api/post/get-all-posts");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const result = await response.json();
-        setCardData(result);
+        const res = await fetchPostList();
+        if (res) setCardData(res);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error(error);
       }
-    };
+    }
 
     fetchData();
   }, []);
 
   return (
     <div className={styles["wrapper"]}>
-      {cardData.map((e) => (
+      {cardData?.map((e) => (
         <AdminPostCard
           key={e.title}
           postLink={e.title}

@@ -72,10 +72,10 @@ export default function AiRecommandation({
           <>
             <div className={styles["search-result-container-header"]}>
               <h1 className={styles["header-title"]}>
-                AI가 추천하는 본문과 관련된 아티클입니다
+                AI가 추천하는 아티클입니다
               </h1>
               <p className={styles["header-subtitle"]}>
-                구글 상위 검색을 기반으로 AI가 추천한 내용입니다.
+                구글 상위 검색 결과를 기반으로 추천된 내용입니다.
               </p>
             </div>
             {(searchResultLoading || articleResultsLoading) && (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import { useRouter } from "next/navigation";
 import sytles from "./submit-button.module.css";
 import { getDateString } from "@/utils/date";
 
@@ -15,6 +15,7 @@ export default function ArticleCreateButton({
   article,
 }: PostSubmitButtonProps) {
   const [submit, setSubmit] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +24,8 @@ export default function ArticleCreateButton({
         formData.date = date; // add date
 
         if (article === "post") {
-          await fetch(`/api/post/create-post`, {
+          console.log(formData);
+          await fetch(`/api/post/create`, {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
@@ -33,7 +35,7 @@ export default function ArticleCreateButton({
         }
 
         if (article === "project") {
-          await fetch("/api/project/create-project", {
+          await fetch("/api/project/create", {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
@@ -48,7 +50,7 @@ export default function ArticleCreateButton({
 
     if (submit) {
       fetchData();
-      window.location.href = "/admin";
+      router.push("/admin");
     }
   }, [submit]);
 
