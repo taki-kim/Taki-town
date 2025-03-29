@@ -18,7 +18,7 @@ export default function Footer() {
       </p>
       <div className={styles["nav-wrapper"]}>
         <a
-          href="https://github.com/turkey-kim"
+          href="https://github.com/taki-kim"
           target="_blank"
           className={styles["nav-button"]}
         >
