@@ -176,6 +176,40 @@ export async function getAllComments() {
   }
 }
 
+// export async function getComments(articleTitle: string): Promise<any> {
+//   try {
+//     const response = await fetch(`/api/comment/get/${articleTitle}`);
+
+//     if (!response.ok) {
+//       console.error(
+//         `Failed to fetch comments: ${response.status} ${response.statusText}`
+//       );
+//     }
+//     return response.json();
+//   } catch (error) {
+//     console.error("Error occured, can't get Comments.");
+//   }
+// }
+
+export async function getComments(articleTitle: string): Promise<any> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/get/${articleTitle}`
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch comments: ${response.status} ${response.statusText}`
+      );
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error occurred, can't get Comments.");
+    throw error; // 반드시 다시 던져줘야 React Query가 에러로 인식함
+  }
+}
+
 export async function updateRecomment(commentId: string, commentFormData: any) {
   try {
     const response = await fetch(
