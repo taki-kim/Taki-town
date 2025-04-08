@@ -11,7 +11,6 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ThemeProvider from "@/providers/context/theme-provider";
-import CommentRefetchProvider from "@/providers/context/comment-refetch-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,19 +35,17 @@ export default function RootLayout({
   const theme = checkTheme();
   return (
     <ThemeProvider>
-      <CommentRefetchProvider>
-        <html lang="en" className="background" data-theme={theme}>
-          <body className={inter.className}>
-            <ReactQueryProvider>
-              <NextAuthProvider>
-                <Header />
-                {children}
-                <Footer />
-              </NextAuthProvider>
-            </ReactQueryProvider>
-          </body>
-        </html>
-      </CommentRefetchProvider>
+      <html lang="en" className="background" data-theme={theme}>
+        <body className={inter.className}>
+          <ReactQueryProvider>
+            <NextAuthProvider>
+              <Header />
+              {children}
+              <Footer />
+            </NextAuthProvider>
+          </ReactQueryProvider>
+        </body>
+      </html>
     </ThemeProvider>
   );
 }
