@@ -4,7 +4,7 @@ import styles from "./recent-posts.module.css";
 import NavButton from "@/components/button/nav-button";
 import Carousel from "@/components/carousel/carousel";
 import { sortRecentPosts } from "@/utils/sortPosts";
-import { fetchPostList } from "@/utils/fetchData";
+import { fetchPostList } from "@/utils/api";
 
 export default async function RecentPosts() {
   const fetchResult = await fetchPostList();

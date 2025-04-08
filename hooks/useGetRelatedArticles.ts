@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { relatedArticleList } from "@/utils/fetchData";
+import { relatedArticleList } from "@/utils/api";
 
 export default function useGetRelatedArticles(
   searchResult: Array<any>,

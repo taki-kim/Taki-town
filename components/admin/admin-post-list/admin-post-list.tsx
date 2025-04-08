@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 import styles from "./admin-post-list.module.css";
-import { fetchPostList } from "@/utils/fetchData";
+import { fetchPostList } from "@/utils/api";
 import AdminPostCard from "../admin-post-card/admin-post-card";
 
 export default function AdminPostList() {

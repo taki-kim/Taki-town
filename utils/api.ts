@@ -176,6 +176,25 @@ export async function getAllComments() {
   }
 }
 
+export async function getComments(articleTitle: string): Promise<any> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/comment/get/${articleTitle}`
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch comments: ${response.status} ${response.statusText}`
+      );
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error occurred, can't get Comments.");
+    throw error;
+  }
+}
+
 export async function updateRecomment(commentId: string, commentFormData: any) {
   try {
     const response = await fetch(

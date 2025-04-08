@@ -4,7 +4,7 @@ import styles from "./admin-recomment-form.module.css";
 import useInputs from "@/hooks/useInputs";
 import InputButton from "@/components/button/input-button/input-button";
 import { getDateString } from "@/utils/date";
-import { updateRecomment } from "@/utils/fetchData";
+import { updateRecomment } from "@/utils/api";
 import { CommentProps } from "@/type";
 
 export default function AdminRecommentForm({ _id }: Partial<CommentProps>) {

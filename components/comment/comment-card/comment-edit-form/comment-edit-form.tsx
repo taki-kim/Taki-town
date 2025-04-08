@@ -6,12 +6,12 @@ import VerificationMessage from "../../verification-message/verification-message
 import { InputVerificationState } from "@/type";
 import { CommentProps } from "@/type";
 import useInputs from "@/hooks/useInputs";
-import { editComment } from "@/utils/fetchData";
-import { useCommentRefetch } from "@/hooks/useCommentRefetch";
+import useEditComment from "@/hooks/useEditComments";
 
 export default function CommentEditForm({
   _id,
   password,
+  articleTitle,
 }: Partial<CommentProps>) {
   const [editResponse, setEditResponse] =
     useState<InputVerificationState>("default");
@@ -21,19 +21,20 @@ export default function CommentEditForm({
     password: password,
     comment: "",
     passwordInput: "",
+    articleTitle: articleTitle,
   });
 
-  const { refreshComments } = useCommentRefetch();
+  const { mutateAsync } = useEditComment();
 
   const onClickSubmit = async (form: any, e: any) => {
     e.preventDefault();
 
     if (form.comment && form.passwordInput) {
-      const result = await editComment(form);
+      const result = await mutateAsync(form);
 
       if (result.code === 200) {
         setEditResponse("success");
-        refreshComments();
+        console.log(articleTitle);
       }
       if (result.code === 401) {
         setEditResponse("password-error");
