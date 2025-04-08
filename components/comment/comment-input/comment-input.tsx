@@ -5,7 +5,7 @@ import { useState } from "react";
 import styles from "./comment-input.module.css";
 import InputButton from "@/components/button/input-button/input-button";
 import useInputs from "@/hooks/useInputs";
-import { submitNewComment } from "@/utils/fetchData";
+import { submitNewComment } from "@/utils/api";
 import { getDateString } from "@/utils/date";
 import { commentInputVerification } from "@/utils/verification";
 import { InputVerificationState } from "@/type";

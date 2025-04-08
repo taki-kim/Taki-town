@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
 import styles from "./page.module.css";
-import { fetchPostData } from "@/utils/fetchData";
+import { fetchPostData } from "@/utils/api";
 import PostAnchor from "@/components/post-anchor/post-anchor";
 import CommentContainer from "@/components/comment/comment-container";
 import { generateArticleMetadata } from "@/utils/metadata";

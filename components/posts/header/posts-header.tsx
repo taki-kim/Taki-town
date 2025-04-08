@@ -1,7 +1,7 @@
 import styles from "./posts-header.module.css";
 import HeaderNav from "./nav/header-nav";
 import { getCategoryAndIntro } from "@/utils/postPage";
-import { fetchPostCount } from "@/utils/fetchData";
+import { fetchPostCount } from "@/utils/api";
 
 export default async function PostsHeader({ pathname }: { pathname: string }) {
   const [category, summary] = getCategoryAndIntro(pathname);

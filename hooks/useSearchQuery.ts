@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { searchQuery } from "@/utils/fetchData";
+import { searchQuery } from "@/utils/api";
 
 export default function useSearchQuery(articleTitle: string) {
   return useQuery({

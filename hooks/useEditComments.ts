@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { editComment } from "@/utils/fetchData";
+import { editComment } from "@/utils/api";
 
 export default function useEditComment() {
   const queryClient = useQueryClient();

@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import PostsHeader from "@/components/posts/header/posts-header";
 import PostList from "@/components/posts/post-list/post-list";
-import { fetchPostList } from "@/utils/fetchData";
+import { fetchPostList } from "@/utils/api";
 import { generatePageMetadata } from "@/utils/metadata";
 
 export const generateMetadata = () =>

@@ -1,5 +1,5 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { getComments } from "@/utils/fetchData";
+import { getComments } from "@/utils/api";
 import { CommentProps } from "@/type";
 
 export default function useGetComments(articleTitle: string) {
