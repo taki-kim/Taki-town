@@ -13,6 +13,7 @@ import VerificationMessage from "../verification-message/verification-message";
 import ProfileImageSelector from "@/components/profile-image-selector/profile-image-selector";
 import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
 import { useCommentRefetch } from "@/hooks/useCommentRefetch";
+import useSubmitNewComment from "@/hooks/useSubmitNewComment";
 
 export type CommentInputProps = {
   articleTitle: string;
@@ -34,6 +35,8 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
     useState<InputVerificationState>("default");
   const [imagePath, setImagePath] = useState(form.profileImageLink);
 
+  const { mutate } = useSubmitNewComment();
+
   const onClickSubmit = async (e: any) => {
     e.preventDefault();
 
@@ -42,7 +45,7 @@ export default function CommentInput({ articleTitle }: CommentInputProps) {
       form.date = currentTime;
       form.profileImageLink = imagePath;
 
-      await submitNewComment(form);
+      mutate(form);
 
       setForm({
         articleTitle: articleTitle,
