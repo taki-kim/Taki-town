@@ -16,6 +16,7 @@ export default function CommentCard({
   recommentDate,
   password,
   profileImageLink,
+  articleTitle,
 }: Partial<CommentProps>) {
   const [toggleEdit, setToggleEdit] = useState(false);
 
@@ -56,7 +57,13 @@ export default function CommentCard({
           recommentDate={recommentDate as string}
         />
       ) : null}
-      {toggleEdit ? <CommentEditForm _id={_id} password={password} /> : null}
+      {toggleEdit ? (
+        <CommentEditForm
+          _id={_id}
+          password={password}
+          articleTitle={articleTitle}
+        />
+      ) : null}
     </div>
   );
 }

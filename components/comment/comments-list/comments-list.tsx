@@ -30,6 +30,7 @@ export default function CommentsList({
             recommentDate={e.recommentDate}
             password={e.password}
             profileImageLink={e.profileImageLink}
+            articleTitle={e.articleTitle}
           />
         ))}
       </div>
@@ -48,6 +49,7 @@ export default function CommentsList({
             recommentDate={e.recommentDate}
             password={e.password}
             profileImageLink={e.profileImageLink}
+            articleTitle={e.articleTitle}
           />
         ))}
       </div>
