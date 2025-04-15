@@ -23,6 +23,25 @@ export async function fetchPostList(): Promise<PostDataProps[]> {
   return await response.json();
 }
 
+export async function fetchPostListByPage({
+  pageParam = 0,
+  category,
+}: {
+  pageParam?: number;
+  category?: string;
+}) {
+  const res =
+    category !== "posts"
+      ? await fetch(
+          `${process.env.NEXT_PUBLIC_URL}/api/post/get/posts?offset=${pageParam}&category=${category}`
+        )
+      : await fetch(
+          `${process.env.NEXT_PUBLIC_URL}/api/post/get/posts?offset=${pageParam}`
+        );
+  if (!res.ok) throw new Error("Failed to fetch posts");
+  return res.json(); // { data, hasMore }
+}
+
 export async function fetchProjectList(): Promise<ProjectDataProps[]> {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/project/get/all-projects`,
