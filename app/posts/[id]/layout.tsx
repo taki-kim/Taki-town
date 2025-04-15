@@ -29,7 +29,7 @@ export default async function PostLayout({
     <div className={styles["wrapper"]}>
       {children}
       <PostsHeader pathname={pathname} />
-      <PostList dataList={dataList} />
+      <PostList />
     </div>
   );
 }
