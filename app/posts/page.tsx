@@ -13,7 +13,7 @@ export default async function Posts() {
   return (
     <div className={styles["wrapper"]}>
       <PostsHeader pathname="all" />
-      <PostList dataList={dataList} />
+      <PostList />
     </div>
   );
 }
