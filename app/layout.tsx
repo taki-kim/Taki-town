@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
-import "./globals.css";
+import "./globals.scss";
 import NextAuthProvider from "@/providers/next-auth-provider";
 import ReactQueryProvider from "@/providers/react-query-provider";
 import Header from "@/components/header/header";
