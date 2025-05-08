@@ -1,7 +1,11 @@
 .wrapper {
   width: 100%;
-  height: 530px;
+
   display: flex;
+
+  @media (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+  }
 }
 
 .title {

@@ -9,7 +9,7 @@ import {
 import rehypeRaw from "rehype-raw";
 
 import styles from "./text-container.module.css";
-import "@/styles/markdown.css";
+import "@/styles/markdown.scss";
 import useTheme from "@/hooks/useTheme";
 
 type TextContainerProps = {

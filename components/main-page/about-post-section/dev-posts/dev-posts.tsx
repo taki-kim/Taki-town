@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import styles from "./dev-posts.module.css";
+import styles from "./dev-posts.module.scss";
 import NavButton from "@/components/button/nav-button";
 import Carousel from "@/components/carousel/carousel";
 import { sortRecentDevPosts } from "@/utils/sortPosts";

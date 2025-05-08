@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./introduction.module.css";
+import styles from "./introduction.module.scss";
 import MainButton from "../button/main-button";
 import wallpaper from "/public/image/wallpaper.webp";
 

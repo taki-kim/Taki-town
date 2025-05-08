@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
-import "@/styles/markdown.css";
+import "@/styles/markdown.scss";
 import PostEditButton from "@/components/admin/submit-button/post-edit-button";
 import rehypeRaw from "rehype-raw";
 
