@@ -9,13 +9,18 @@ import { checkIsCurrentPath } from "@/utils/header";
 export type HeaderListProps = {
   href: string;
   listName: string;
+  onClick?: () => void;
 };
 
-export default function HeaderList({ href, listName }: HeaderListProps) {
+export default function HeaderList({
+  href,
+  listName,
+  onClick,
+}: HeaderListProps) {
   const path = usePathname();
 
   return (
-    <li className={styles.list}>
+    <li className={styles.list} onClick={onClick}>
       <Link
         className={
           checkIsCurrentPath(path as string, listName)

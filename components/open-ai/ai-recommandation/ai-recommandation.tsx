@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./ai-recommandation.module.css";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import "@/styles/markdown.css";
+import "@/styles/markdown.scss";
 import AiRecommandationLoading from "./loading/loading";
 import useSearchQuery from "@/hooks/useSearchQuery";
 import useGetRelatedArticles from "@/hooks/useGetRelatedArticles";

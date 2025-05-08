@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  sassOptions: {
+    includePaths: ["styles"],
+    prependData: `@import "variables.scss";`, // 자동으로 삽입
+  },
   images: {
     remotePatterns: [
       {

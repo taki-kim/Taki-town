@@ -42,3 +42,22 @@ export const navList: navItem[] = [
     summary: "잡담/일상",
   },
 ];
+
+export const headerNavList = [
+  {
+    listName: "Post",
+    link: "/posts",
+  },
+  {
+    listName: "Projects",
+    link: "/projects",
+  },
+  {
+    listName: "About",
+    link: "/about",
+  },
+  {
+    listName: "Guestbook",
+    link: "/guestbook",
+  },
+];

@@ -1,0 +1,44 @@
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  z-index: 45;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+
+  height: 60vh;
+  width: 100vw;
+
+  background-color: var(--primary-color);
+
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  z-index: 50;
+}
+
+.background-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-list-open {
+  transform: translateY(0); // 내려오게 함
+}

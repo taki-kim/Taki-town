@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import styles from "./recent-posts.module.css";
+import styles from "./recent-posts.module.scss";
 import NavButton from "@/components/button/nav-button";
 import Carousel from "@/components/carousel/carousel";
 import { sortRecentPosts } from "@/utils/sortPosts";

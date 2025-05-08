@@ -6,7 +6,7 @@ import rehypeRaw from "rehype-raw";
 
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
-import "@/styles/markdown.css";
+import "@/styles/markdown.scss";
 import ArticleCreateButton from "@/components/admin/submit-button/article-create-button";
 
 export default function CreateArticle() {

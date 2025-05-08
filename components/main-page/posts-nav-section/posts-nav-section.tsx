@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "./posts-nav-section.module.css";
+import styles from "./posts-nav-section.module.scss";
 import { navList } from "@/lib/nav-list";
 
 export default function PostsNavSection() {

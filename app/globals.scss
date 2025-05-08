@@ -1,6 +1,7 @@
-@import "../styles/reset.css";
-@import "../styles/theme.css";
-@import "../styles/fonts.css";
+@import "../styles/reset.scss";
+@import "../styles/theme.scss";
+@import "../styles/fonts.scss";
+@import "../styles/variables.scss";
 
 * {
   font-family: "Pretendard", sans-serif !important;
@@ -42,6 +43,6 @@ body {
   @media screen and (max-width: 1024px) {
     width: 100%;
     min-width: 0px;
-    font-size: var(--font-large);
+    font-size: var(--font-s);
   }
 }

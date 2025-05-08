@@ -1,10 +1,18 @@
 .wrapper {
-  width: 50%;
-  min-height: 500px;
+  display: flex;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
   padding: var(--wrapper-padding);
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 2rem;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 2rem 0rem;
+  }
 }
 
 .header {

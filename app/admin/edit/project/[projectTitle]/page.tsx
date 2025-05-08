@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import useInputs from "@/hooks/useInputs";
-import "@/styles/markdown.css";
+import "@/styles/markdown.scss";
 import ProjectEditButton from "@/components/admin/submit-button/project-edit-button";
 
 export default function EditPost() {
