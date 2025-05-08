@@ -18,10 +18,19 @@
   z-index: 100;
 }
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   margin-right: 2rem;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
+  }
 }
 
 .navbar ul {

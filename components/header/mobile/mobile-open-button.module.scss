@@ -1,0 +1,8 @@
+.wrapper {
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: block;
+  }
+}
