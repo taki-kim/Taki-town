@@ -16,7 +16,6 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFirstImage, setIsfirstImage] = useState(true);
   const [isLastImage, setIsLastImage] = useState(false);
-  const [postTitle, setPostTitle] = useState("");
 
   const router = useRouter();
 
@@ -47,20 +46,23 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
       setIsfirstImage(false);
       setIsLastImage(false);
     }
-
-    setPostTitle(data[currentImageIndex]?.title);
-  }, [currentImageIndex]);
-
-  useEffect(() => {
-    setPostTitle(data[0]?.title);
-  }, [data]);
+  }, [currentImageIndex, data.length]);
 
   return (
     <div className={styles["carousel-container"]}>
-      <div className={`${styles["post-title"]}`}>
-        <Link href={`/post/${postTitle}`} className={styles["link"]}>
-          {truncateString(33, postTitle)}
-        </Link>
+      <div className={styles["titles-container"]}>
+        {data?.map((item, index) => (
+          <div
+            key={index}
+            className={`${styles["post-title"]} ${
+              index === currentImageIndex ? styles["active"] : ""
+            }`}
+          >
+            <Link href={`/post/${item.title}`} className={styles["link"]}>
+              {truncateString(33, item.title)}
+            </Link>
+          </div>
+        ))}
       </div>
       <div
         className={`${styles["angle-button"]} ${styles["angle-prev"]} ${
@@ -90,7 +92,7 @@ export default function Carousel({ data }: { data: PostDataProps[] }) {
             key={index}
             className={styles["carousel-image"]}
             onClick={() => {
-              router.push(`/post/${postTitle}`);
+              router.push(`/post/${item.title}`);
             }}
           >
             <Image src={item.imageLink} alt={`Image ${index + 1}`} fill />

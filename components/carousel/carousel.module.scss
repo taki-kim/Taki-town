@@ -58,21 +58,40 @@
   z-index: 5;
 }
 
-.post-title {
+.titles-container {
   position: absolute;
   bottom: 6%;
+  left: 0;
+  right: 0;
+  height: 20%;
   z-index: 20;
+  overflow: hidden;
+}
 
+.post-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20%;
+  opacity: 0;
 
+  transition: opacity 0.5s ease;
+  pointer-events: none;
   color: white;
   font-size: var(--font-ml);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+
+  &.active {
+    opacity: 1;
+
+    transition: opacity 0.5s ease 0.1s;
+    pointer-events: auto;
+  }
 
   @media (max-width: $mobile-breakpoint) {
     font-size: var(--font-m);
