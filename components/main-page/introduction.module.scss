@@ -57,15 +57,20 @@
 
   font-size: var(--font-m);
 
-  opacity: 1;
-
-  transition: font 0.1s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: font 0.1s ease-in-out, transform 0.5s ease-in-out;
 
   z-index: 10;
 
   @media (max-width: $tablet-breakpoint) {
     font-size: var(--font-s);
     padding-bottom: 50px;
+  }
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
