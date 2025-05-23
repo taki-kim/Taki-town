@@ -12,6 +12,8 @@
 
   cursor: pointer;
 
+  box-shadow: var(--box-shadow-2);
+
   @media (max-width: $tablet-breakpoint) {
     height: 400px;
   }

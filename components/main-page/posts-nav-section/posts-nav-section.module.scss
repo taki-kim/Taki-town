@@ -29,28 +29,21 @@
 
 .nav-item {
   padding: 2.5rem 1.5rem;
-
   min-width: 150px;
-
   border-radius: 20px;
-
   background-color: var(--secondary-color);
-
   flex: 1;
-
   font-size: var(--font-s);
   font-weight: 500;
-
   color: var(--font-color);
   text-decoration: none;
-
-  box-shadow: var(--box-shadow);
-
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .nav-item:hover {
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transform: translate(1px, 2px);
 }
 
 .nav-item-title {
