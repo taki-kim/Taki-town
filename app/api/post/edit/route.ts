@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectDatabase } from "@/utils/db";
 import { ObjectId } from "mongodb";
+import { tagsToArray } from "@/utils/postPage";
 
 export async function PATCH(
   req: Request,
@@ -24,7 +25,7 @@ export async function PATCH(
             title,
             summary,
             category,
-            tags,
+            tags: tagsToArray(tags),
             content,
             imageLink,
           },
