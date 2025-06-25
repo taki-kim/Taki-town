@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./TextAutoSlider.module.scss";
 import NextIcon from "/public/icons/nextjs-icon.svg";
