@@ -459,6 +459,7 @@
 
 .markdown-body table {
   background-color: transparent;
+  border: 1px solid var(--tertiary-color);
 }
 
 .markdown-body table th {
@@ -468,8 +469,8 @@
 
 .markdown-body table th:first-child,
 .markdown-body table td:first-child {
-  background-color: #f1f1ef;
-  font-weight: 600;
+  background-color: var(--markdown-element-background-color);
+  font-weight: var(--font-w-m);
 }
 
 .markdown-body table th,
@@ -484,6 +485,10 @@
 
 .markdown-body table img:hover {
   /* transform: scale(1.6); */
+}
+.markdown-body table tr:first-child th {
+  border-bottom: 1px solid var(--tertiary-color);
+  font-weight: var(--font-w-l);
 }
 
 .markdown-body img[align="right"] {
@@ -718,9 +723,9 @@
   padding: 3px 8px;
   border-radius: 5px;
 
-  background-color: var(--tertiary-color);
+  background-color: var(--markdown-element-background-color);
 
-  font-size: var(--font-);
+  font-size: var(--font-s);
 }
 
 @media (max-width: 990px) {

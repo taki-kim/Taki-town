@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import styles from "./project-list.module.css";
 import ArticleCard from "@/components/article-card/article-card";
-import { sortByNewestArtcile } from "@/utils/article";
+import { sortByNewestArticle } from "@/utils/article";
 import { ProjectDataProps } from "@/type";
 
 export default function ProjectList({
@@ -14,7 +14,7 @@ export default function ProjectList({
 }) {
   return (
     <div className={styles["wrapper"]}>
-      {sortByNewestArtcile(cardList).map((e) => (
+      {sortByNewestArticle(cardList).map((e) => (
         <ArticleCard
           key={e.title}
           articleSort="project"

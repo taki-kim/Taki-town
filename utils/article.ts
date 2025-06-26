@@ -1,6 +1,6 @@
 import { PostDataProps, ProjectDataProps } from "@/type";
 
-export function sortByNewestArtcile(
+export function sortByNewestArticle(
   data: PostDataProps[] | ProjectDataProps[]
 ) {
   const dateStringToNumber = (date: string) => {

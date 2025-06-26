@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import MainLogo from "../main-logo/main-logo";
 import HeaderList from "./header-list";
@@ -17,10 +17,26 @@ const MobileNavList = dynamic(() => import("./mobile/mobile-nav-list"), {
 
 export default function Header() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY.current && currentY > 10) {
+        setHidden(true);
+      } else if (currentY < lastScrollY.current) {
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${hidden ? styles.hidden : ""}`}>
         <div className={styles["title-wrapper"]}>
           <MobileOpenButton setOpenList={setOpenMobileNav} />
           <MainLogo link="/" title="TAKI TOWN" />
