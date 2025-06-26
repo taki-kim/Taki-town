@@ -5,7 +5,7 @@
   align-items: center;
   overflow: hidden;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   transform: translate(0, 0);
 
   border: 1px solid var(--color-light-gray);
@@ -13,6 +13,8 @@
   padding: 0 16px;
   width: 400px;
   cursor: pointer;
+
+  opacity: 0;
 }
 
 .button-wrapper:hover {
@@ -21,15 +23,20 @@
   border-color: var(--primary-color-r);
 }
 
+.button-wrapper.visible {
+  transform: translateY(-2rem);
+  opacity: 1;
+}
+
 .button-wrapper-large {
-  width: 160px;
+  width: 180px;
   height: 50px;
   font-size: var(--font-l);
   padding: 0 24px;
 }
 
 .button-wrapper-medium {
-  width: 120px;
+  width: 160px;
   height: 45px;
 }
 
