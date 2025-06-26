@@ -8,6 +8,19 @@ import { STALE_TIME } from "@/constant";
 
 // posts
 
+export async function fetchLatestPostList(): Promise<PostDataProps[]> {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/post/get/latest-posts`,
+    { next: { revalidate: STALE_TIME } }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return response.json();
+}
+
 export async function fetchPostList(): Promise<PostDataProps[]> {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api/post/get/all-posts`,

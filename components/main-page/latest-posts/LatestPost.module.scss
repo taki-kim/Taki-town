@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+
+  padding: 2rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inner-wrapper {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(2, 400px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  gap: 3rem 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--font-ml);
+  font-weight: var(--font-w-s);
+}

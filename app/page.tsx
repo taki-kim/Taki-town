@@ -4,18 +4,23 @@ import AboutPostSection from "@/components/main-page/about-post-section/about-po
 import PostsNavSection from "@/components/main-page/posts-nav-section/posts-nav-section";
 import { generatePageMetadata } from "@/utils/metadata";
 
+import { fetchLatestPostList } from "@/utils/api";
+
+import LatestPost from "@/components/main-page/latest-posts/LatestPost";
+
 export const generateMetadata = () =>
   generatePageMetadata({ pageCategory: "Home" });
 
-export default function Home() {
+export default async function Home() {
+  const latestPostList = await fetchLatestPostList();
+
   return (
     <>
       <header className={styles["header"]}>
         <Introduction />
       </header>
       <main className={styles["main"]}>
-        <AboutPostSection />
-        <PostsNavSection />
+        <LatestPost latestPostList={latestPostList} />
       </main>
     </>
   );
