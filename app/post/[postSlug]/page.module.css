@@ -3,6 +3,7 @@
   min-height: 100vh;
 
   margin: 6rem 0rem;
+  padding-top: var(--header-height);
 
   display: flex;
   flex-direction: column;

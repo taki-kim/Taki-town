@@ -2,5 +2,5 @@
   width: 100%;
   height: 100%;
 
-  padding: 0rem var(--side-padding);
+  padding: var(--header-height) var(--side-padding) 0 var(--side-padding);
 }

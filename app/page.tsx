@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import Introduction from "@/components/main-page/introduction/introduction";
+import Introduction from "@/components/main-page/introduction/Introduction";
 import AboutPostSection from "@/components/main-page/about-post-section/about-post-section";
 import PostsNavSection from "@/components/main-page/posts-nav-section/posts-nav-section";
 import { generatePageMetadata } from "@/utils/metadata";
