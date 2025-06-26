@@ -5,22 +5,21 @@
   width: 100%;
   height: var(--footer-height);
 
+  padding-bottom: 7rem;
   border-top: 1px solid var(--tertiary-color);
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-}
 
-.header {
-  padding: 0.5rem 0rem;
+  gap: 1rem;
 }
 
 .text-wrapper {
-  padding: 0.5rem 0rem;
-
   color: var(--text-color);
+  font-size: var(--font-m);
+  font-weight: var(--font-w-xs);
 }
 
 .nav-wrapper {
@@ -36,8 +35,6 @@
 }
 
 .email-wrapper {
-  padding: 0.5rem 0rem;
-
   display: flex;
 }
 

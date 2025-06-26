@@ -10,11 +10,10 @@ import MainLogo from "../main-logo/main-logo";
 export default function Footer() {
   return (
     <footer className={styles["wrapper"]}>
-      <div className={styles["header"]}>
-        <MainLogo title="TAKI TOWN" link="/" />
-      </div>
+      <MainLogo title="TAKI TOWN" link="/" />
+
       <p className={styles["text-wrapper"]}>
-        개발과 관심사에 대한 이야기를 나눕니다
+        Writing about my development and interests
       </p>
       <div className={styles["nav-wrapper"]}>
         <a
