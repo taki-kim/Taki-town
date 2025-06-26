@@ -1,4 +1,4 @@
-import styles from "./LatestPost.module.scss";
+import styles from "./highlight-list.module.scss";
 import { PostDataProps } from "@/type";
 import ArticleCard from "@/components/article-card/article-card";
 import NavButton from "@/components/button/nav-button";
@@ -11,7 +11,7 @@ export default function LatestPost({
   return (
     <div className={styles["wrapper"]}>
       <h1 className={styles["title"]}>LATEST POSTS</h1>
-      <div className={styles["inner-wrapper"]}>
+      <div className={styles["card-list"]}>
         {latestPostList.map((e) => (
           <ArticleCard
             key={e.title}
@@ -23,7 +23,7 @@ export default function LatestPost({
           />
         ))}
       </div>
-      <NavButton text="More Posts" size="small" link="/posts" />
+      <NavButton text="View All Posts" size="medium" link="/posts" />
     </div>
   );
 }
