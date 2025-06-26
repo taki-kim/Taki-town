@@ -81,6 +81,21 @@ export async function fetchPostData(postTitle: string) {
   return response.json();
 }
 
+// projects
+
+export async function fetchFeaturedProjectList(): Promise<ProjectDataProps[]> {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL}/api/project/get/featured-projects`,
+    { next: { revalidate: STALE_TIME } }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return response.json();
+}
+
 export async function fetchProjectData(projectTitle: string) {
   const response = await fetch(
     `${process.env.PUBLIC_URL}/api/project/get/${projectTitle}`,
