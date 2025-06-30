@@ -5,12 +5,11 @@
   width: 100%;
   height: var(--footer-height);
 
-  padding-bottom: 7rem;
   border-top: 1px solid var(--tertiary-color);
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   gap: 1rem;

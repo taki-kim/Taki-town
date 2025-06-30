@@ -8,12 +8,14 @@
 
   height: auto;
 
+  padding: 0 var(--side-padding) 10rem var(--side-padding);
+
   display: flex;
   flex-direction: column;
 
-  color: var(--text-color);
+  gap: 10rem;
 
-  padding: 0 var(--side-padding);
+  color: var(--text-color);
 
   @media (max-width: $tablet-breakpoint) {
     width: 100%;
