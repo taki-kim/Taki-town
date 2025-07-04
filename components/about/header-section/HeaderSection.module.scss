@@ -1,0 +1,43 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+
+  margin: 5rem 0 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 1rem;
+
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.4s ease;
+
+  :last-child {
+    margin-top: 0.5rem;
+  }
+}
+
+.wrapper.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: var(--font-w-l);
+}
+
+.sub-title {
+  font-size: var(--font-l);
+  font-weight: var(--font-w-m);
+}
+
+.semi-introduce {
+  font-size: var(--font-m);
+  font-weight: var(--font-w-xs);
+  text-align: center;
+  line-height: 1.4;
+}

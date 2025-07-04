@@ -13,7 +13,7 @@ export default function useFloatingEffect<T extends HTMLElement>() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.4 }
     );
 
     const currentTarget = targetRef.current;
