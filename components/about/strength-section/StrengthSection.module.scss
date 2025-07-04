@@ -22,7 +22,8 @@
 }
 
 .title {
-  font-size: var(--font-l);
+  font-size: var(--font-xl);
+  font-weight: var(--font-w-l);
 }
 
 .cards-list {
@@ -33,7 +34,7 @@
 
 .card {
   opacity: 0;
-  transform: translateY(4rem);
+  transform: translateY(3rem);
   transition: transform 0.4s ease, opacity 0.4s ease;
 
   // visible 클래스가 붙을 때 효과

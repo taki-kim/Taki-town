@@ -3,7 +3,8 @@ import { generatePageMetadata } from "@/utils/metadata";
 import HeaderSection from "@/components/about/header-section/HeaderSection";
 import IntroduceSection from "@/components/about/introduce-section/IntroduceSection";
 import StrengthSection from "@/components/about/strength-section/StrengthSection";
-import FeaturedProjects from "@/components/main-page/highlight-list/FeaturedProjects";
+
+import SkillsSection from "@/components/about/skills-section/SkillsSection";
 
 export const generateMetadata = () =>
   generatePageMetadata({ pageCategory: "About" });
@@ -14,6 +15,7 @@ export default function About() {
       <HeaderSection />
       <StrengthSection />
       <IntroduceSection />
+      <SkillsSection />
     </div>
   );
 }
