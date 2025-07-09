@@ -13,7 +13,7 @@ export default function About() {
   return (
     <div className={styles["wrapper"]}>
       <HeaderSection />
-      <StrengthSection />
+      {/* <StrengthSection /> */}
       <IntroduceSection />
       <ProjectsSection />
       <SkillsSection />
