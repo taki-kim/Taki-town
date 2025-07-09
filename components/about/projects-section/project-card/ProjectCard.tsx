@@ -43,6 +43,7 @@ export default function ProjectCard({
         <div className={styles["links-wrapper"]}>
           {links.map((item) => (
             <Link
+              key={item.linkTo}
               className={styles["nav-button"]}
               href={item.link}
               target="_blank"
