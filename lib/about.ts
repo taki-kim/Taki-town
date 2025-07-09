@@ -77,3 +77,63 @@ export const hybridSkillList = [
     description: `Figma의 기본 기능을 숙지하고 있으며, \n 개인 서비스의 웹 화면, 디자인 시스템을 직접 설계 · 제작한 경험이 있습니다.`,
   },
 ];
+
+export type ProjectsListType = {
+  image: string;
+  title: string;
+  techStacks: string[];
+  description: string;
+  links: { link: string; linkTo: string }[];
+  effectPosition: "left" | "right";
+};
+
+export const projectsList: ProjectsListType[] = [
+  {
+    image: "/about-page/images/project_takitown.png",
+    title: "TAKI TOWN",
+    techStacks: ["Next.js", "TypeScript", "React-Query", "MongoDB"],
+    description:
+      "Next.js를 활용하여 풀스택으로 구현한 개발 블로그입니다. \n 개발자로서 경험과 배움을 중심으로 다양한 관심사를 공유하고 있습니다.",
+    links: [
+      { link: "https://takitown.com", linkTo: "GITHUB" },
+      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
+      {
+        link: "https://www.takitown.com/project/Taki%20Town",
+        linkTo: "MORE DETAIL",
+      },
+    ],
+    effectPosition: "left",
+  },
+  {
+    image: "/about-page/images/project_murie.png",
+    title: "뮤리의 서재",
+    techStacks: ["React", "Express.js", "TypeScript", "MongoDB", "React-Query"],
+    description:
+      "RPG게임 'BLUE-PROTOCOL'의 위키서비스입니다. \n 게임 플레이를 위한 다양한 정보 및 최신 뉴스 등을 제공합니다. \n 초기 계획부터 런칭까지 전체적인 개발을 담당했습니다.",
+    links: [
+      { link: "https://takitown.com", linkTo: "GITHUB" },
+      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
+      {
+        link: "https://www.takitown.com/project/Taki%20Town",
+        linkTo: "MORE DETAIL",
+      },
+    ],
+    effectPosition: "right",
+  },
+  {
+    image: "/about-page/images/project_sound.png",
+    title: "SoundSupply_Service",
+    techStacks: ["Next.js", "Apollo-Client", "GraphQl", "tailwindcss"],
+    description:
+      "국내 음반사 'Sound-Supply'의 웹페이지입니다. \n 음반사의 아카이빙 페이지로 발매 앨범 및 소속 아티스트들을 소개합니다. 서비스의 뷰 전체를 담당하여 개발했습니다.",
+    links: [
+      { link: "https://takitown.com", linkTo: "GITHUB" },
+      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
+      {
+        link: "https://www.takitown.com/project/Taki%20Town",
+        linkTo: "MORE DETAIL",
+      },
+    ],
+    effectPosition: "left",
+  },
+];
