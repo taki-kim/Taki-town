@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./HeaderSection.module.scss";
-import NavButton from "../../button/nav-button";
+import NavButton from "../../button/NavButton";
 import useFloatingEffect from "@/hooks/useFloatingEffect";
 
 export default function HeaderSection() {

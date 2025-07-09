@@ -1,5 +1,5 @@
 import styles from "./Introduction.module.scss";
-import NavButton from "../../button/nav-button";
+import NavButton from "../../button/NavButton";
 import HoverTextItem from "./hover-text-item/HoverTextItem";
 import TextAutoSlider from "./text-auto-slider/TextAutoSlider";
 
