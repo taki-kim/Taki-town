@@ -95,8 +95,8 @@ export const projectsList: ProjectsListType[] = [
     description:
       "Next.js를 활용하여 풀스택으로 구현한 개발 블로그입니다. \n 개발자로서 경험과 배움을 중심으로 다양한 관심사를 공유하고 있습니다.",
     links: [
-      { link: "https://takitown.com", linkTo: "GITHUB" },
-      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
+      { link: "https://github.com/taki-kim/Taki-town", linkTo: "GITHUB" },
+      { link: "https://takitown.com", linkTo: "VIEW LIVE" },
       {
         link: "https://www.takitown.com/project/Taki%20Town",
         linkTo: "MORE DETAIL",
@@ -111,10 +111,16 @@ export const projectsList: ProjectsListType[] = [
     description:
       "RPG게임 'BLUE-PROTOCOL'의 위키서비스입니다. \n 게임 플레이를 위한 다양한 정보 및 최신 뉴스 등을 제공합니다. \n 초기 계획부터 런칭까지 전체적인 개발을 담당했습니다.",
     links: [
-      { link: "https://takitown.com", linkTo: "GITHUB" },
-      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
       {
-        link: "https://www.takitown.com/project/Taki%20Town",
+        link: "https://github.com/taki-kim/Blue-Protocol_front",
+        linkTo: "GITHUB",
+      },
+      {
+        link: "https://blue-protocol-db-test.netlify.app/",
+        linkTo: "VIEW LIVE",
+      },
+      {
+        link: "https://www.takitown.com/project/%EB%AE%A4%EB%A6%AC%EC%9D%98%20%EC%84%9C%EC%9E%AC",
         linkTo: "MORE DETAIL",
       },
     ],
@@ -127,10 +133,10 @@ export const projectsList: ProjectsListType[] = [
     description:
       "국내 음반사 'Sound-Supply'의 웹페이지입니다. \n 음반사의 아카이빙 페이지로 발매 앨범 및 소속 아티스트들을 소개합니다. 서비스의 뷰 전체를 담당하여 개발했습니다.",
     links: [
-      { link: "https://takitown.com", linkTo: "GITHUB" },
-      { link: "https://github.com/taki-kim/Taki-town", linkTo: "VIEW LIVE" },
+      { link: "https://www.soundsupplyservice.kr/", linkTo: "VIEW LIVE" },
+
       {
-        link: "https://www.takitown.com/project/Taki%20Town",
+        link: "https://www.takitown.com/project/Sound%20Supply%20Archive%20Service",
         linkTo: "MORE DETAIL",
       },
     ],

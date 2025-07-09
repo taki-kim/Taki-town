@@ -22,12 +22,12 @@
   margin-bottom: 2rem;
 
   font-size: var(--font-l);
-  font-weight: var(--font-w-s);
+  font-weight: var(--font-w-m);
 }
 
 .skills-list {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .skill-item {
@@ -42,14 +42,15 @@
   align-items: center;
   border-radius: 10px;
 
+  border: 2px solid var(--tertiary-color);
   transition: border 0.2s ease, transform 0.2s ease;
   overflow: hidden;
 
   cursor: pointer;
 
   &.active {
-    border: 3px solid var(--highlight-color);
-    transform: scale(1.2);
+    border: 3px solid var(--color-green);
+    transform: scale(1.1);
   }
 }
 
@@ -63,8 +64,8 @@
   width: 100%;
   height: 100px;
 
-  font-size: var(--font-ml);
-  font-weight: var(--font-w-s);
+  font-size: var(--font-m);
+  font-weight: var(--font-w-m);
 
   text-align: center;
 

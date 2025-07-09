@@ -6,14 +6,18 @@
 
   gap: 3rem;
 
-  width: 70%;
+  width: 85%;
   height: 60vh;
+
+  margin-top: -10rem;
 
   font-weight: var(--font-w-xs);
 
   opacity: 0;
   transform: translateY(2rem);
   transition: all 0.6s ease;
+
+  align-self: center;
 }
 
 .wrapper.visible {
