@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  width: 70%;
+  height: auto;
+
+  transform: translateY(2rem);
+  opacity: 0;
+
+  transition: all 0.6s ease;
+}
+
+.wrapper.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.title {
+  font-size: var(--font-xl);
+  font-weight: var(--font-w-l);
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  white-space: pre-line;
+  line-height: 1.5;
+
+  font-size: var(--font-ml);
+
+  font-weight: var(--font-w-s);
+}

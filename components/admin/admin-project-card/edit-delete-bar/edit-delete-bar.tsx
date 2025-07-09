@@ -1,6 +1,6 @@
 import styles from "./edit-delete-bar.module.css";
 import MainButton from "@/components/button/main-button";
-import NavButton from "@/components/button/nav-button";
+import NavButton from "@/components/button/NavButton";
 
 type EditDeleteBarProps = {
   projectTitle: string;

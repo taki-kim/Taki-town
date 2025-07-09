@@ -3,7 +3,7 @@
 import styles from "./highlight-list.module.scss";
 import { PostDataProps } from "@/type";
 import ArticleCard from "@/components/article-card/article-card";
-import NavButton from "@/components/button/nav-button";
+import NavButton from "@/components/button/NavButton";
 import useFloatingEffect from "@/hooks/useFloatingEffect";
 
 export default function LatestPost({

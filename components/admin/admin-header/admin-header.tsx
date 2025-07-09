@@ -1,5 +1,5 @@
 import styles from "./admin-header.module.css";
-import NavButton from "@/components/button/nav-button";
+import NavButton from "@/components/button/NavButton";
 
 export default function AdminHeader() {
   return (
