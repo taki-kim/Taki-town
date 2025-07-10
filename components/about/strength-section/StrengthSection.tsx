@@ -12,7 +12,7 @@ export default function StrengthSection() {
       className={`${styles["wrapper"]} ${isVisible ? styles.visible : ""}`}
       ref={targetRef}
     >
-      <h1 className={styles["title"]}>Focusing On</h1>
+      <h1 className={styles["title"]}>FOCUSING ON</h1>
       <div className={styles["cards-list"]}>
         {strengthList.map((e) => (
           <StrengthCard
