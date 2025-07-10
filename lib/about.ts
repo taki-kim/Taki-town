@@ -89,7 +89,7 @@ export type ProjectsListType = {
 
 export const projectsList: ProjectsListType[] = [
   {
-    image: "/about-page/images/project_takitown.png",
+    image: "/about-page/images/project_takitown.gif",
     title: "TAKI TOWN",
     techStacks: ["Next.js", "TypeScript", "React-Query", "MongoDB"],
     description:
@@ -105,7 +105,7 @@ export const projectsList: ProjectsListType[] = [
     effectPosition: "left",
   },
   {
-    image: "/about-page/images/project_murie.png",
+    image: "/about-page/images/project_murie.gif",
     title: "뮤리의 서재",
     techStacks: ["React", "Express.js", "TypeScript", "MongoDB", "React-Query"],
     description:
@@ -127,7 +127,7 @@ export const projectsList: ProjectsListType[] = [
     effectPosition: "right",
   },
   {
-    image: "/about-page/images/project_sound.png",
+    image: "/about-page/images/project_sound.gif",
     title: "SoundSupply_Service",
     techStacks: ["Next.js", "Apollo-Client", "GraphQl", "tailwindcss"],
     description:
