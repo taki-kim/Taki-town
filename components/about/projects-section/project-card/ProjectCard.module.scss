@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   img {
     object-fit: cover;
   }
@@ -104,10 +106,10 @@
 .nav-button {
   text-decoration: none;
   outline: none;
-  background-color: rgb(230, 106, 106);
+  background-color: rgb(110, 0, 0);
 
   color: white;
-  font-weight: var(--font-w-s);
+  font-weight: var(--font-w-m);
 
   border-radius: 8px;
   padding: 0.5rem 0.7rem;
