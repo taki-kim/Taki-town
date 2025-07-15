@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Taki-Town",
   description:
     "블로그 Taki Town입니다. 웹개발, 디자인, 철학, 취미 등 다양한 주제들을 다루고 있습니다.",
+  icons: {
+    icon: "/takitown_logo.svg",
+  },
 };
 
 const checkTheme = () => {
