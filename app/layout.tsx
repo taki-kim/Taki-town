@@ -11,6 +11,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ThemeProvider from "@/providers/context/theme-provider";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
     <ThemeProvider>
       <html lang="en" className="background" data-theme={theme}>
         <body className={inter.className}>
+          <GoogleAnalytics />
           <ReactQueryProvider>
             <NextAuthProvider>
               <Header />
