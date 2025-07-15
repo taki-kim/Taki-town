@@ -1,21 +1,21 @@
 export const strengthList = [
   {
-    image: "/about-page/images/strength_ux.jpg",
-    title: "쾌적한 사용자 경험",
+    image: "/about-page/images/strength-ux.svg",
+    title: "쾌적한 사용자 경험 지향",
     description:
-      "세심한 관찰과 정량적 지표를 바탕으로 UX를 개선합니다. 불편을 최소화하고, 사용자가 자연스럽게 몰입할 수 있는 경험을 만듭니다.",
+      "사용자 행동에 대한 관찰과 데이터를 바탕으로, 불편을 최소화하고 자연스럽게 흐르는 경험을 만들어갑니다.",
   },
   {
-    image: "/about-page/images/strength_ui.jpg",
-    title: "신뢰할 수 있는 UI 품질",
+    image: "/about-page/images/strength-ui.svg",
+    title: "신뢰할 수 있는 UI 품질 설계",
     description:
-      "UI는 서비스의 얼굴이라 생각합니다. 예상 가능한 동작, 일관된 스타일, 디자인 시스템을 바탕으로 품질을 체계적으로 유지합니다.",
+      "UI는 서비스의 얼굴이라 생각합니다. 예상 가능한 동작, 일관된 스타일, 디자인 시스템을 바탕으로 체계적인 품질을 유지합니다.",
   },
   {
-    image: "/about-page/images/strength_dx.jpg",
-    title: "견고한 개발 환경",
+    image: "/about-page/images/strength-growth.svg",
+    title: "꾸준히, 멀리 성장하는 개발자",
     description:
-      "좋은 개발 환경이 결국 제품의 완성도로 이어진다고 믿습니다. 유지보수성을 고려해 구조를 설계하고, 직관적이고 확정성 있는 코드를 지향합니다.",
+      "꾸준히 기록하고 적용하는 습관을 통해 성장하며, 팀과 서비스에 긍정적인 영향을 주는 개발자를 지향합니다.",
   },
 ];
 
