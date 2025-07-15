@@ -29,7 +29,7 @@ export default function HeaderSection() {
           onInit={(typewriter) => {
             typewriter
               .typeString("Hello, I'm Taki")
-              .callFunction(() => setTimeout(() => setShowCursor(false), 1500))
+              .callFunction(() => setTimeout(() => setShowCursor(false), 500))
               .start();
           }}
         />
