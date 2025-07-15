@@ -45,7 +45,7 @@ export const navList: navItem[] = [
 
 export const headerNavList = [
   {
-    listName: "Post",
+    listName: "Posts",
     link: "/posts",
   },
   {
