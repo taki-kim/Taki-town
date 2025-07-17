@@ -5,20 +5,20 @@
   padding: 2rem;
   border-radius: 0.8rem;
 
-  background-color: var(--secondary-color);
+  background-color: var(--background-20);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--text-color-10);
 
   box-shadow: var(--box-shadow);
 }
 
 .wrapper:hover {
-  background-color: var(--tertiary-color);
+  background-color: var(--background-30);
 }
 
 .label {

@@ -15,7 +15,7 @@
 
   object-fit: cover;
 
-  background-color: var(--text-color-2);
+  background-color: var(--text-color-20);
 }
 
 .circular-image.small {

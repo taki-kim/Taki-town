@@ -2,19 +2,27 @@
   --transition-duration: 0.1s;
   --transition-timing: ease-in-out;
 
-  --primary-color: #ffffff;
-  --secondary-color: #f7f7f5;
-  --tertiary-color: #e2e2df;
+  --background-10: #ffffff;
+  --background-20: #f7f7f5;
+  --background-30: #ebebeb;
+  --background-40: #d8d8d8;
+  --background-50: #c7c7c7;
 
-  --primary-color-r: #0c0d11;
-  --secondary-color-r: #171a21;
-  --tertiary-color-r: #242934;
+  --background-10-r: #16171e;
+  --background-20-r: #1a1e26;
+  --background-30-r: #292f3c;
+  --background-40-r: #333c4e;
+  --background-50-r: #424c60;
 
-  --text-color: black;
-  --text-color-2: #868484;
+  --text-color-10: #000000;
+  --text-color-20: #393939;
+  --text-color-30: #5a5a5a;
+  --text-color-40: #868484;
 
-  --text-color-r: #eeeeee;
-  --text-color-2-r: #dddddd;
+  --text-color-10-r: #eeeeee;
+  --text-color-20-r: #dddddd;
+  --text-color-30-r: #c7c7c7;
+  --text-color-40-r: #aeaeae;
 
   --button-hover-bg: #2d303b;
   --button-hover-text: #ffffff;
@@ -72,28 +80,37 @@
   --color-red: #e84e4e;
   --color-green: #55d04a;
   --color-orange: #fe9f00;
-  --color-light-gray: rgb(225, 227, 228);
-  --color-gray: rgb(154, 156, 157);
-  --color-link: rgb(7, 151, 198);
+  --color-light-gray: #e1e3e4;
+  --color-gray: #9a9ca1;
+  --color-blue: #00a5d3;
+  --color-link: #0797c6;
 }
 
 [data-theme="dark"] {
-  --primary-color: #16171e;
-  --secondary-color: #1a1e26;
-  --tertiary-color: #292f3c;
+  --background-10: #16171e;
+  --background-20: #1a1e26;
+  --background-30: #292f3c;
+  --background-40: #333c4e;
+  --background-50: #424c60;
 
-  --primary-color-r: #eeeeee;
-  --secondary-color-r: #dddddd;
-  --tertiary-color-r: #cccccc;
+  --background-10-r: #ffffff;
+  --background-20-r: #f7f7f5;
+  --background-30-r: #ebebeb;
+  --background-40-r: #d8d8d8;
+  --background-50-r: #c7c7c7;
+
+  --text-color-10: #eeeeee;
+  --text-color-20: #dddddd;
+  --text-color-30: #c7c7c7;
+  --text-color-40: #aeaeae;
+
+  --text-color-10-r: #000000;
+  --text-color-20-r: #393939;
+  --text-color-30-r: #5a5a5a;
+  --text-color-40-r: #868484;
 
   --button-hover-bg: #f0efea;
   --button-hover-text: black;
-
-  --text-color: #eeeeee;
-  --text-color-2: #dddddd;
-
-  --text-color-r: black;
-  --text-color-2-r: #868484;
 
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.298), 0 1px 2px rgba(0, 0, 0, 0.35);
   --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.711),

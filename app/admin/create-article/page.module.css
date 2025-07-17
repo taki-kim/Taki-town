@@ -29,13 +29,13 @@
 }
 
 .input {
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
 
   flex: 4;
 
   background-color: transparent;
 
-  color: var(--text-color);
+  color: var(--text-color-10);
 
   outline: none;
 }
@@ -47,7 +47,7 @@
   height: 1000px;
 
   margin: 1rem 0rem;
-  border: 2px solid var(--tertiary-color);
+  border: 2px solid var(--background-30);
 
   display: flex;
 
@@ -56,13 +56,13 @@
 
 .textarea {
   border: none;
-  border-right: 2px solid var(--tertiary-color);
+  border-right: 2px solid var(--background-30);
 
   flex: 1;
 
   background-color: transparent;
 
-  color: var(--text-color);
+  color: var(--text-color-10);
 
   outline: none;
 

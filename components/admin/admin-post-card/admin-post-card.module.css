@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 12px;
 
-  color: var(--text-color);
+  color: var(--text-color-10);
   text-decoration: none;
 
   cursor: pointer;

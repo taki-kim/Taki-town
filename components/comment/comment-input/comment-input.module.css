@@ -21,14 +21,14 @@
   height: 150px;
   padding: 20px 10px;
   border-radius: 5px;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
 
   resize: none;
   outline: none;
 
   background-color: var(--input-background-color);
 
-  color: var(--text-color);
+  color: var(--text-color-10);
   font-size: var(--font-s);
 
   box-shadow: var(--box-shadow);
@@ -61,7 +61,7 @@
 }
 
 .input-wrapper {
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
   border-radius: 5px;
 
   display: flex;
@@ -86,7 +86,7 @@
   flex: 3;
 
   background-color: var(--input-background-color);
-  color: var(--text-color);
+  color: var(--text-color-10);
   font-size: var(--text-s);
 
   outline: none;
@@ -96,7 +96,7 @@
   padding: 5px 0px 0px 5px;
   flex: 1;
 
-  color: var(--tertiary-color-r);
+  color: var(--background-30-r);
   font-size: var(--font-xs);
   font-weight: var(--font-w-m);
 }
@@ -110,7 +110,7 @@
 
   align-self: flex-end;
 
-  color: var(--text-color-2);
+  color: var(--text-color-20);
   font-size: var(--font-xs);
   font-weight: var(--font-w-s);
 }
@@ -118,7 +118,7 @@
 .image-selector-input-wrapper {
   padding: 10px;
 
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
   border-radius: 5px;
   align-items: center;
 

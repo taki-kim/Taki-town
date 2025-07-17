@@ -208,7 +208,7 @@
   padding: 0.5rem 1rem;
   line-height: 1.4rem;
   border-left: 5px solid var(--color-light-gray);
-  color: var(--text-color);
+  color: var(--text-color-10);
   font-weight: var(--font-w-s);
 }
 
@@ -459,7 +459,7 @@
 
 .markdown-body table {
   background-color: transparent;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
 }
 
 .markdown-body table th {
@@ -487,7 +487,7 @@
   /* transform: scale(1.6); */
 }
 .markdown-body table tr:first-child th {
-  border-bottom: 1px solid var(--tertiary-color);
+  border-bottom: 1px solid var(--background-30);
   font-weight: var(--font-w-l);
 }
 
@@ -694,7 +694,7 @@
 .markdown-body ol li::marker {
   content: counter(list-item) ". ";
 
-  color: var(--text-color);
+  color: var(--text-color-10);
   margin-right: 0.5rem;
 }
 

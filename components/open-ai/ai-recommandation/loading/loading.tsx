@@ -14,7 +14,7 @@ export default function AiRecommandationLoading() {
     <div className={styles["loading-wrapper"]}>
       <div className={styles["loading-spinner-wrapper"]}>
         <GridLoader
-          color={`var(--primary-color)`}
+          color={`var(--background-10)`}
           size={25}
           cssOverride={override}
           aria-label="Loading Spinner"

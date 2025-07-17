@@ -18,13 +18,13 @@
   margin-bottom: 10px;
   padding: 20px 10px;
   border-radius: 5px;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
 
   resize: none;
   outline: none;
 
   background-color: transparent;
-  color: var(--text-color);
+  color: var(--text-color-10);
   font-size: var(--font-s);
 
   box-shadow: var(--box-shadow);
@@ -46,7 +46,7 @@
 }
 
 .input-wrapper {
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--background-30);
   border-radius: 5px;
 
   display: flex;
@@ -69,8 +69,8 @@
   flex: 3;
 
   background-color: transparent;
-  color: var(--text-color);
-  font-size: var(--text-s);
+  color: var(--text-color-10);
+  font-size: var(--font-s);
 
   outline: none;
 }
@@ -79,7 +79,7 @@
   padding: 5px 0px 0px 5px;
   flex: 1;
 
-  color: var(--tertiary-color-r);
+  color: var(--background-30-r);
   font-size: var(--font-xs);
   font-weight: var(--font-w-m);
 }

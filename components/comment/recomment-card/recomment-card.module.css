@@ -26,8 +26,8 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--tertiary-color-r);
-  color: var(--tertiary-color);
+  background-color: var(--background-30-r);
+  color: var(--background-30);
   font-size: var(--font-ml);
   font-weight: var(--font-w-l);
 }
@@ -46,7 +46,7 @@
 
 .date {
   font-size: var(--font-xs);
-  color: var(--text-color-2);
+  color: var(--text-color-20);
   font-weight: var(--font-w-s);
 }
 
@@ -60,7 +60,7 @@
   padding: 20px;
   border-radius: 10px;
 
-  background-color: var(--tertiary-color);
+  background-color: var(--background-30);
 
   font-weight: var(--font-w-s);
   line-height: 1.3;
