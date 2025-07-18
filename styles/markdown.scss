@@ -1,4 +1,5 @@
 @import "../styles/fonts.scss";
+@import "../styles/typography.scss";
 
 .markdown-body {
   -ms-text-size-adjust: 100%;
@@ -7,14 +8,13 @@
 
   font-family: "Pretendard";
 
-  line-height: 1.8;
   word-wrap: break-word;
   padding: 2rem 2rem;
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
-  font-weight: 400;
-  font-size: var(--font-s);
+
+  @include body-s-regular;
 }
 
 .markdown-body details,
