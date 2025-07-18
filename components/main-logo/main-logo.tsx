@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "./main-logo.module.css";
+import styles from "./main-logo.module.scss";
 
 export type MainLogoProps = {
   link: string;

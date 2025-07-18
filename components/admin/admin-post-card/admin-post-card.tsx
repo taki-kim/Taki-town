@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./admin-post-card.module.css";
+import styles from "./admin-post-card.module.scss";
 import EditDeleteBar from "./edit-delete-bar/edit-delete-bar";
 
 export type AdminPostCardProps = {

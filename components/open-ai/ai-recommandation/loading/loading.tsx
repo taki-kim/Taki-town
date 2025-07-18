@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { GridLoader } from "react-spinners";
 
-import styles from "./loading.module.css";
+import styles from "./loading.module.scss";
 
 const override: CSSProperties = {
   display: "block",
@@ -14,7 +14,7 @@ export default function AiRecommandationLoading() {
     <div className={styles["loading-wrapper"]}>
       <div className={styles["loading-spinner-wrapper"]}>
         <GridLoader
-          color={`var(--primary-color)`}
+          color={`var(--background-10)`}
           size={25}
           cssOverride={override}
           aria-label="Loading Spinner"

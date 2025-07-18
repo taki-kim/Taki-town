@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import styles from "./comment-card.module.css";
+import styles from "./comment-card.module.scss";
 import { CommentProps } from "@/type";
 import CommentEditForm from "./comment-edit-form/comment-edit-form";
 import RecommentCard from "../recomment-card/recomment-card";

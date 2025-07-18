@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import sytles from "./submit-button.module.css";
+import sytles from "./submit-button.module.scss";
 
 export default function PostEditButton({ formData }: any) {
   const [submit, setSubmit] = useState(false);

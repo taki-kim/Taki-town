@@ -1,0 +1,14 @@
+@import "styles/typography.scss";
+
+.wrapper {
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  @include body-m-bold;
+}

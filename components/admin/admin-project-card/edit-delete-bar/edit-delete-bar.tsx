@@ -1,4 +1,4 @@
-import styles from "./edit-delete-bar.module.css";
+import styles from "./edit-delete-bar.module.scss";
 import MainButton from "@/components/button/main-button";
 import NavButton from "@/components/button/NavButton";
 

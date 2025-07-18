@@ -2,6 +2,7 @@
 @import "../styles/theme.scss";
 @import "../styles/fonts.scss";
 @import "../styles/variables.scss";
+@import "../styles/typography.scss";
 
 * {
   font-family: "Pretendard", sans-serif !important;
@@ -10,7 +11,7 @@
 .background {
   width: 100%;
 
-  background-color: var(--primary-color);
+  background-color: var(--background-10);
 
   display: flex;
   flex-direction: column;
@@ -34,14 +35,14 @@ body {
   flex-direction: column;
   align-items: center;
 
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--background-10);
+  color: var(--text-color-10);
 
-  font-weight: var(--font-w-m);
+  font-weight: var(--font-weight-m);
 
   @media screen and (max-width: 1024px) {
     width: 100%;
     min-width: 0px;
-    font-size: var(--font-s);
+    font-size: var(--font-size-s);
   }
 }

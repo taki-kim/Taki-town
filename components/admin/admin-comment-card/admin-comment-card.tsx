@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import styles from "./admin-comment-card.module.css";
+import styles from "./admin-comment-card.module.scss";
 import { CommentProps } from "@/type";
 import ProfileImageBox from "@/components/profile-image-box/profile-image-box";
 import RecommentCard from "@/components/comment/recomment-card/recomment-card";

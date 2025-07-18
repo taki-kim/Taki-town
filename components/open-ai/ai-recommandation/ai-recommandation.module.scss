@@ -1,0 +1,134 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+
+  top: 0%;
+  left: 0%;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 100;
+}
+
+.search-result-container {
+  border-radius: 10px;
+
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+
+  width: 40%;
+  height: 60%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--modal-background-color);
+
+  color: var(--text-color-10-r);
+
+  animation: fadeInUp 0.3s ease;
+
+  z-index: 110;
+}
+
+.search-result-container.close {
+  animation: fadeOutDown 0.3s ease;
+}
+
+.search-result-container-header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 1.2rem 1rem;
+
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.header-title {
+  font-size: 1.6rem;
+}
+
+.header-subtitle {
+  font-size: var(--font--size-s);
+  color: var(--color-orange);
+}
+
+.result-list-container {
+  padding: 0 1rem;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  font-weight: var(--font-weight-s);
+
+  overflow-y: scroll;
+}
+
+.result-list-container::-webkit-scrollbar {
+  display: block;
+
+  width: 5px;
+}
+
+.result-list-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray); /* 스크롤 핸들 색상 */
+  border-radius: 4px; /* 스크롤 핸들 모서리 */
+}
+
+.result-list-container div {
+  padding: 30px 0;
+  border-bottom: 0.5px solid var(--color-gray);
+}
+
+.result-list-container div:last-child {
+  border-bottom: none;
+}
+
+.result-list-container a {
+  font-size: var(--font-size-s);
+  color: var(--color-link);
+  font-weight: var(--font-weight-m);
+  text-decoration: none;
+}
+
+.result-list-container span {
+  padding-left: 5px;
+  font-size: var(--font-size-xs);
+  color: gray;
+}
+
+.result-list-container p {
+  padding-top: 5px;
+
+  font-size: var(--font-size-xs);
+}

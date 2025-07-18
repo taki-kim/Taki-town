@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import styles from "./nav-item.module.css";
+import styles from "./nav-item.module.scss";
 import { getCategoryString } from "@/utils/postPage";
 
 type NavItem = {

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import Header from "@/components/article/header";
 import TextContainer from "@/components/article/text-container";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import { fetchPostData } from "@/utils/api";
 import PostAnchor from "@/components/post-anchor/post-anchor";
 import CommentContainer from "@/components/comment/comment-container";

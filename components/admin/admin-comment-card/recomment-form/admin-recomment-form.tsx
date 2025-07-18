@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./admin-recomment-form.module.css";
+import styles from "./admin-recomment-form.module.scss";
 import useInputs from "@/hooks/useInputs";
 import InputButton from "@/components/button/input-button/input-button";
 import { getDateString } from "@/utils/date";

@@ -1,4 +1,4 @@
-import styles from "./admin-header.module.css";
+import styles from "./admin-header.module.scss";
 import NavButton from "@/components/button/NavButton";
 
 export default function AdminHeader() {

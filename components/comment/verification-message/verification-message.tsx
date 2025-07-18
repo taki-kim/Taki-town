@@ -1,4 +1,4 @@
-import styles from "./verification-message.module.css";
+import styles from "./verification-message.module.scss";
 import { InputVerificationState } from "@/type";
 
 export default function VerificationMessage({

@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import { generatePageMetadata } from "@/utils/metadata";
 import HeaderSection from "@/components/about/header-section/HeaderSection";
 import IntroduceSection from "@/components/about/introduce-section/IntroduceSection";

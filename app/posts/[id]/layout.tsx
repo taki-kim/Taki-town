@@ -1,4 +1,4 @@
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import PostsHeader from "@/components/posts/header/posts-header";
 import PostList from "@/components/posts/post-list/post-list";
 import { fetchPostList } from "@/utils/api";

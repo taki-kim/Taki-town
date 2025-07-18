@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./admin-project-card.module.css";
+import styles from "./admin-project-card.module.scss";
 import EditDeleteBar from "./edit-delete-bar/edit-delete-bar";
 
 export type AdminPostCardProps = {

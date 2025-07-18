@@ -1,7 +1,7 @@
 "use client";
 
 import useGetComments from "@/hooks/useGetComments";
-import styles from "./comments-list.module.css";
+import styles from "./comments-list.module.scss";
 import CommentCard from "../comment-card/comment-card";
 import { sortByNewestComment } from "@/utils/comment";
 

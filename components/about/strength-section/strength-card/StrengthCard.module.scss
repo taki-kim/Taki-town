@@ -1,3 +1,5 @@
+@import "styles/typography.scss";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -21,14 +23,11 @@
 .title {
   padding: 0 0.5rem;
 
-  font-weight: var(--font-w-m);
-  font-size: var(--font-ml);
+  @include title-xxl-regular;
 }
 
 .description {
   padding: 0 0.5rem;
 
-  font-weight: var(--font-w-xs);
-  font-size: var(--font-s);
-  line-height: 1.4;
+  @include body-m-regular;
 }

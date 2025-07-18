@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { useSession } from "next-auth/react";
 
-import styles from "./page-gaurd.module.css";
+import styles from "./page-gaurd.module.scss";
 
 export default function PageGuard({ children }: { children: ReactNode }) {
   const { status } = useSession();

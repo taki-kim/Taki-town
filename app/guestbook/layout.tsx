@@ -1,4 +1,4 @@
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import { generatePageMetadata } from "@/utils/metadata";
 import type { Metadata } from "next";
 

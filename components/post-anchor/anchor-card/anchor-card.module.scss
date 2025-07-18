@@ -1,0 +1,32 @@
+@import "styles/typography.scss";
+
+.wrapper {
+  width: 100%;
+  height: 130px;
+
+  padding: 2rem;
+  border-radius: 0.8rem;
+
+  background-color: var(--background-20);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--text-color-10);
+
+  box-shadow: var(--box-shadow);
+}
+
+.wrapper:hover {
+  background-color: var(--background-30);
+}
+
+.label {
+  padding-bottom: 0.4rem;
+}
+
+.postTitle {
+  @include body-m-bold;
+}

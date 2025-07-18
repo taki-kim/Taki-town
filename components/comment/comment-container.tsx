@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Suspense } from "react";
-import styles from "./comment-container.module.css";
+import styles from "./comment-container.module.scss";
 import CommentInput from "./comment-input/comment-input";
 import CommentsList from "./comments-list/comments-list";
 

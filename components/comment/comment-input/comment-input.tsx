@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import styles from "./comment-input.module.css";
+import styles from "./comment-input.module.scss";
 import InputButton from "@/components/button/input-button/input-button";
 import useInputs from "@/hooks/useInputs";
 import { submitNewComment } from "@/utils/api";

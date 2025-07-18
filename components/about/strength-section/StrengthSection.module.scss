@@ -11,7 +11,7 @@
 
   margin-top: -10rem;
 
-  font-weight: var(--font-w-xs);
+  font-weight: var(--font-weight-xs);
 
   opacity: 0;
   transform: translateY(2rem);
@@ -26,8 +26,8 @@
 }
 
 .title {
-  font-size: var(--font-l);
-  font-weight: var(--font-w-m);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-m);
 }
 
 .cards-list {

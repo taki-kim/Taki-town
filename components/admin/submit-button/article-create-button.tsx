@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import sytles from "./submit-button.module.css";
+import sytles from "./submit-button.module.scss";
 import { getDateString } from "@/utils/date";
 
 type PostSubmitButtonProps = {

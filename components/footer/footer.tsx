@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "./footer.module.css";
+import styles from "./footer.module.scss";
 import MainLogo from "../main-logo/main-logo";
 
 export default function Footer() {

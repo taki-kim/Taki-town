@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import styles from "./comment-edit-form.module.css";
+import styles from "./comment-edit-form.module.scss";
 import InputButton from "@/components/button/input-button/input-button";
 import VerificationMessage from "../../verification-message/verification-message";
 import { InputVerificationState } from "@/type";

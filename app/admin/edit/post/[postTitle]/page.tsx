@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import ReactMarkdown from "react-markdown";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.scss";
 import PostEditButton from "@/components/admin/submit-button/post-edit-button";

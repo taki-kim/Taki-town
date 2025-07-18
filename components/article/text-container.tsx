@@ -10,7 +10,7 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import rehypeRaw from "rehype-raw";
 
-import styles from "./text-container.module.css";
+import styles from "./text-container.module.scss";
 import "@/styles/markdown.scss";
 import useTheme from "@/hooks/useTheme";
 

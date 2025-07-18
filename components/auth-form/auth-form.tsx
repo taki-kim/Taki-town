@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { signIn } from "next-auth/react";
 
-import styles from "./auth-form.module.css";
+import styles from "./auth-form.module.scss";
 
 export default function AuthForm() {
   const [id, setId] = useState("");

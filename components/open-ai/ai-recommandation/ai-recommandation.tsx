@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./ai-recommandation.module.css";
+import styles from "./ai-recommandation.module.scss";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "@/styles/markdown.scss";

@@ -1,5 +1,5 @@
 import { RecommentProps } from "@/type";
-import styles from "./recomment-card.module.css";
+import styles from "./recomment-card.module.scss";
 
 export default function RecommentCard({
   recomment,
