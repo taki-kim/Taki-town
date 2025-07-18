@@ -47,12 +47,21 @@
   );
 
   --markdown-element-background-color: rgb(234, 234, 242);
-
   /* basic theme */
 
-  --theme-icon-color: #f7bb45;
-  --highlight-color: #fe9f00;
-  --highlight-color-2: #ff8d01;
+  --font-size-xxl: 30px;
+  --font-size-xl: 26px;
+  --font-size-l: 22px;
+  --font-size-m: 18px;
+  --font-size-s: 16px;
+  --font-size-xs: 14px;
+  --font-size-xxs: 12px;
+
+  --font-weight-xl: 700;
+  --font-weight-l: 600;
+  --font-weight-m: 500;
+  --font-weight-s: 400;
+  --font-weight-xs: 300;
 
   --font-xl: 1.8rem;
   --font-l: 1.4rem;
@@ -84,6 +93,10 @@
   --color-gray: #9a9ca1;
   --color-blue: #00a5d3;
   --color-link: #0797c6;
+
+  --theme-icon-color: #f7bb45;
+  --highlight-color: #fe9f00;
+  --highlight-color-2: #ff8d01;
 }
 
 [data-theme="dark"] {
