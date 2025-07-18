@@ -24,7 +24,7 @@
 
   &:hover {
     transform: translateY(-4px);
-    font-weight: var(--font-w-m);
+    font-weight: var(--font-weight-m);
     border-color: var(--background-10-r);
   }
 }
@@ -32,7 +32,7 @@
 .button-wrapper-large {
   width: 180px;
   height: 50px;
-  font-size: var(--font-l);
+  font-size: var(--font-size-l);
   padding: 0 24px;
 }
 

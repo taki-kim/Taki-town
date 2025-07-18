@@ -71,7 +71,7 @@
 
   align-self: center;
 
-  font-size: var(--font-s);
+  font-size: var(--font-size-s);
   color: var(--text-color-20);
 }
 
@@ -135,7 +135,7 @@
 
   background-color: transparent;
   color: var(--text-color-20);
-  font-size: var(--font-sm);
+  font-size: var(--font-size-m);
 
   align-self: flex-end;
 
@@ -144,5 +144,5 @@
 
 .close-button:hover {
   color: var(--highlight-color);
-  font-weight: var(--font-w-l);
+  font-weight: var(--font-weight-l);
 }

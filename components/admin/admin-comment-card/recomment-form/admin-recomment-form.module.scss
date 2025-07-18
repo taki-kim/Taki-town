@@ -25,7 +25,7 @@
 
   background-color: transparent;
   color: var(--text-color-10);
-  font-size: var(--font-s);
+  font-size: var(--font-size-s);
 
   box-shadow: var(--box-shadow);
 
@@ -70,7 +70,7 @@
 
   background-color: transparent;
   color: var(--text-color-10);
-  font-size: var(--font-s);
+  font-size: var(--font-size-s);
 
   outline: none;
 }
@@ -80,6 +80,6 @@
   flex: 1;
 
   color: var(--background-30-r);
-  font-size: var(--font-xs);
-  font-weight: var(--font-w-m);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-m);
 }

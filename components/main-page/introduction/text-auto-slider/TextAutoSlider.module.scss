@@ -6,7 +6,7 @@
   height: 40px;
   width: auto;
 
-  font-size: var(--font-xl);
+  font-size: var(--font-size-xxl);
 }
 
 .inner-wrapper {
@@ -23,7 +23,7 @@
   gap: 8px;
 
   color: var(--text-color-10);
-  font-weight: var(--font-w-s);
+  font-weight: var(--font-weight-m);
 
   svg {
     width: 35px;

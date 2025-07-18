@@ -38,11 +38,11 @@ body {
   background-color: var(--background-10);
   color: var(--text-color-10);
 
-  font-weight: var(--font-w-m);
+  font-weight: var(--font-weight-m);
 
   @media screen and (max-width: 1024px) {
     width: 100%;
     min-width: 0px;
-    font-size: var(--font-s);
+    font-size: var(--font-size-s);
   }
 }

@@ -1,3 +1,5 @@
+@import "../../../styles/typography.scss";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -21,8 +23,7 @@
 }
 
 .title {
-  font-size: var(--font-xl);
-  font-weight: var(--font-w-l);
+  @include title-xl-bold;
 }
 
 .text-wrapper {
@@ -33,7 +34,6 @@
   white-space: pre-line;
   line-height: 1.5;
 
-  font-size: var(--font-ml);
-
-  font-weight: var(--font-w-s);
+  font-size: 20px;
+  font-weight: var(--font-weight-s);
 }

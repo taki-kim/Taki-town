@@ -29,7 +29,7 @@
   background-color: var(--input-background-color);
 
   color: var(--text-color-10);
-  font-size: var(--font-s);
+  font-size: var(--font-size-s);
 
   box-shadow: var(--box-shadow);
 
@@ -87,7 +87,7 @@
 
   background-color: var(--input-background-color);
   color: var(--text-color-10);
-  font-size: var(--text-s);
+  font-size: var(--font-size-s);
 
   outline: none;
 }
@@ -97,8 +97,8 @@
   flex: 1;
 
   color: var(--background-30-r);
-  font-size: var(--font-xs);
-  font-weight: var(--font-w-m);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-m);
 }
 
 .button {
@@ -111,8 +111,8 @@
   align-self: flex-end;
 
   color: var(--text-color-20);
-  font-size: var(--font-xs);
-  font-weight: var(--font-w-s);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-s);
 }
 
 .image-selector-input-wrapper {

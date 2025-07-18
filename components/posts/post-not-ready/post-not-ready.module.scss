@@ -1,3 +1,5 @@
+@import "styles/typography.scss";
+
 .wrapper {
   width: 100%;
   min-height: 500px;
@@ -8,6 +10,5 @@
 }
 
 .text {
-  font-weight: var(--font-w-l);
-  font-size: var(--font-m);
+  @include body-m-bold;
 }

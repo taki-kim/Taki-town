@@ -1,3 +1,5 @@
+@import "styles/typography.scss";
+
 .wrapper {
   margin-bottom: 1rem;
   padding: 20px;
@@ -37,14 +39,13 @@
 }
 
 .author {
-  font-size: var(--font-s);
-  font-weight: var(--font-w-l);
+  @include body-s-bold;
 }
 
 .date {
-  font-size: var(--font-xs);
+  @include body-xs-thin;
+
   color: var(--text-color-20);
-  font-weight: var(--font-w-s);
 }
 
 .comment-wrapper {
@@ -59,7 +60,7 @@
   padding: 20px;
 
   box-shadow: var(--box-shadow);
-  font-weight: var(--font-w-s);
+  font-weight: var(--font-weight-s);
 
   background-color: var(--background-30);
 }
@@ -72,8 +73,7 @@
 
   background-color: transparent;
   color: var(--text-color-20);
-  font-size: var(--font-s);
-  font-weight: var(--font-w-s);
+  @include body-s-thin;
 
   text-decoration: none;
 

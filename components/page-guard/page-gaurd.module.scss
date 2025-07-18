@@ -1,3 +1,5 @@
+@import "../../styles/typography.scss";
+
 .wrapper {
   width: 100%;
   min-height: 60vh;
@@ -9,7 +11,6 @@
 }
 
 .text-wrapper {
-  font-size: var(--font-l);
-  font-weight: var(--font-w-l);
+  @include body-l-bold;
   padding: 2rem;
 }

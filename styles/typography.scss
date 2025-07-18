@@ -4,7 +4,7 @@
 
 @mixin title-xxl-bold {
   font-size: var(--font-size-xxl);
-  font-weight: var(--font-weight-xl);
+  font-weight: var(--font-weight-l);
 }
 
 @mixin title-xl-bold {
@@ -15,6 +15,21 @@
 @mixin title-l-bold {
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-m);
+}
+
+@mixin title-xxl-regular {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-m);
+}
+
+@mixin title-xl-regular {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-m);
+}
+
+@mixin title-l-regular {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-s);
 }
 
 @mixin title-xxl-thin {

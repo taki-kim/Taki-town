@@ -1,3 +1,5 @@
+@import "../../styles/typography.scss";
+
 .wrapper {
   position: absolute;
   bottom: 0;
@@ -17,8 +19,7 @@
 
 .text-wrapper {
   color: var(--text-color-10);
-  font-size: var(--font-m);
-  font-weight: var(--font-w-xs);
+  @include subtitle-m-thin;
 }
 
 .nav-wrapper {
@@ -28,7 +29,7 @@
 .nav-button {
   padding-left: 10px;
 
-  font-size: var(--font-l);
+  font-size: var(--font-size-l);
   cursor: pointer;
   color: inherit;
 }
@@ -38,17 +39,16 @@
 }
 
 .email-nav {
-  font-weight: var(--font-w-m);
+  font-weight: var(--font-weight-m);
 }
 
 .email-text {
   padding-left: 10px;
 
-  font-weight: var(--font-w-xs);
+  font-weight: var(--font-weight-xs);
   color: var(--text-color-20);
 }
 
 .copyright {
-  font-size: var(--font-xs);
-  font-weight: var(--font-w-xs);
+  @include body-xs-thin;
 }
