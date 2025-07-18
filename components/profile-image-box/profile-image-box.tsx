@@ -1,4 +1,4 @@
-import styles from "./profile-image-box.module.css";
+import styles from "./profile-image-box.module.scss";
 
 type ProfileImageSize = "small" | "medium" | "big";
 

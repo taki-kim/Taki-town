@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import styles from "./button.module.css";
+import styles from "./button.module.scss";
 import { getButtonSizeClass } from "@/utils/button";
 import useFloatingEffect from "@/hooks/useFloatingEffect";
 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import styles from "./project-list.module.css";
+import styles from "./project-list.module.scss";
 import ArticleCard from "@/components/article-card/article-card";
 import { sortByNewestArticle } from "@/utils/article";
 import { ProjectDataProps } from "@/type";

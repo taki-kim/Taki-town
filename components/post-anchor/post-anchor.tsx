@@ -1,4 +1,4 @@
-import styles from "./post-anchor.module.css";
+import styles from "./post-anchor.module.scss";
 import AnchorCardPrev from "./anchor-card/anchor-card";
 import { fetchPostList } from "@/utils/api";
 import { getPrevAndNextPost } from "@/utils/postPage";

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchengin } from "@fortawesome/free-brands-svg-icons";
 
-import styles from "./ai-search-button.module.css";
+import styles from "./ai-search-button.module.scss";
 import AiRecommandation from "../ai-recommandation/ai-recommandation";
 
 type AiSearchButtonProps = {

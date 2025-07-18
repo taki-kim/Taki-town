@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import styles from "./header-list.module.css";
+import styles from "./header-list.module.scss";
 import { checkIsCurrentPath } from "@/utils/header";
 
 export type HeaderListProps = {

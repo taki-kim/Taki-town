@@ -1,4 +1,4 @@
-import styles from "./post-not-ready.module.css";
+import styles from "./post-not-ready.module.scss";
 
 export default function PostNotReady() {
   return (

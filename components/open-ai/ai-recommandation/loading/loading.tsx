@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { GridLoader } from "react-spinners";
 
-import styles from "./loading.module.css";
+import styles from "./loading.module.scss";
 
 const override: CSSProperties = {
   display: "block",

@@ -1,7 +1,7 @@
 "use client";
 
 import ProfileImageBox from "../profile-image-box/profile-image-box";
-import styles from "./profile-image-selector.module.css";
+import styles from "./profile-image-selector.module.scss";
 import profileImageList from "@/lib/profile-image-list";
 
 type ProfileImageSelectorProps = {

@@ -3,7 +3,7 @@
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import AuthForm from "@/components/auth-form/auth-form";
 
 export default function Login() {

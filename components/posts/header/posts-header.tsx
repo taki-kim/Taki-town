@@ -1,4 +1,4 @@
-import styles from "./posts-header.module.css";
+import styles from "./posts-header.module.scss";
 import HeaderNav from "./nav/header-nav";
 import { getCategoryAndIntro } from "@/utils/postPage";
 import { fetchPostCount } from "@/utils/api";

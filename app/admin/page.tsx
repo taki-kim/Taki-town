@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import AdminHeader from "@/components/admin/admin-header/admin-header";
 import AdminPostList from "@/components/admin/admin-post-list/admin-post-list";
 import AdminProjectList from "@/components/admin/admin-project-list/admin-project-list";

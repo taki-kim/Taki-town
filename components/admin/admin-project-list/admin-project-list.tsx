@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import styles from "./admin-project-list.module.css";
+import styles from "./admin-project-list.module.scss";
 import AdminProjectCard from "../admin-project-card/admin-project-card";
 
 export default function AdminProjectList() {

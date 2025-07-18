@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "./anchor-card.module.css";
+import styles from "./anchor-card.module.scss";
 import { PostDataProps } from "@/type";
 
 type AnchorCardProps = {

@@ -1,4 +1,4 @@
-import styles from "./input-button.module.css";
+import styles from "./input-button.module.scss";
 
 export type buttonSize = "small" | "medium" | "large";
 
