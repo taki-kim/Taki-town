@@ -16,7 +16,7 @@ export default function NavButton({
   text,
   size,
   link,
-  newTab,
+  newTab = false,
 }: NavButtonProps) {
   const { isVisible, targetRef } = useFloatingEffect<HTMLAnchorElement>();
 
