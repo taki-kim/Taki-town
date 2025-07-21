@@ -1,12 +1,12 @@
 import { PuffLoader } from "react-spinners";
 
-import styles from "./loading.module.css";
+import styles from "./loading.module.scss";
 
 export default function PostListLoading() {
   return (
     <div className={styles["wrapper"]}>
       <PuffLoader
-        color={`var(--primary-color-r)`}
+        color={`var(--background-10-r)`}
         aria-label="Loading Spinner"
       />
     </div>

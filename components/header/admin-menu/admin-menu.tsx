@@ -4,7 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import Link from "next/link";
 
-import styles from "./admin-menu.module.css";
+import styles from "./admin-menu.module.scss";
 
 export default function AdminMenu() {
   const { status } = useSession();

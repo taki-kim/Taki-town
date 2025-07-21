@@ -1,0 +1,15 @@
+.default {
+  padding: 0px 3px 5px 0px;
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-s);
+  align-self: flex-end;
+}
+
+.default.success {
+  color: var(--color-green);
+}
+
+.default.error {
+  color: var(--color-red);
+}

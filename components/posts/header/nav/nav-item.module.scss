@@ -1,0 +1,10 @@
+.wrapper {
+  color: var(--text-color-10);
+  text-decoration: none;
+
+  transition: font-weight 0.3s ease;
+}
+
+.wrapper:hover {
+  font-weight: var(--font-weight-l);
+}

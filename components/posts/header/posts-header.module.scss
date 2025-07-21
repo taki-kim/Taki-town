@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-size: var(--font-size-xxl);
+}
+
+.counter {
+  padding-left: 0.2rem;
+
+  font-size: var(--font-size-l);
+}
+
+.summary {
+  font-size: var(--font-size-l);
+}

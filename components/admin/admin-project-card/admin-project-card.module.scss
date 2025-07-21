@@ -1,0 +1,43 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  color: var(--text-color-10);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  border-radius: 50px;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  font-size: var(--font-size-m);
+}
+
+.summary {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-s);
+
+  line-height: 1.6;
+}

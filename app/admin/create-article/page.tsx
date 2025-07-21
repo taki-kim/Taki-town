@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { useState } from "react";
 import rehypeRaw from "rehype-raw";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import useInputs from "@/hooks/useInputs";
 import "@/styles/markdown.scss";
 import ArticleCreateButton from "@/components/admin/submit-button/article-create-button";

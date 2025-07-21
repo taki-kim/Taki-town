@@ -1,0 +1,10 @@
+@import "../../styles/typography.scss";
+
+.wrapper {
+  width: 80%;
+  min-height: 500px;
+}
+
+.title {
+  @include title-xl-bold;
+}

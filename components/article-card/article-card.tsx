@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import styles from "./article-card.module.css";
+import styles from "./article-card.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 

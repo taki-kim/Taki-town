@@ -1,4 +1,4 @@
-import styles from "./projects-header.module.css";
+import styles from "./projects-header.module.scss";
 
 export default function ProjectsHeader() {
   return (

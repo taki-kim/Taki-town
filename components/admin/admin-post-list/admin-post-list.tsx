@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import styles from "./admin-post-list.module.css";
+import styles from "./admin-post-list.module.scss";
 import { fetchPostList } from "@/utils/api";
 import AdminPostCard from "../admin-post-card/admin-post-card";
 

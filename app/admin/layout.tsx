@@ -1,4 +1,4 @@
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import PageGuard from "@/components/page-guard/page-guard";
 import { generateAdminMetadata } from "@/utils/metadata";
 import type { Metadata } from "next";

@@ -85,7 +85,7 @@
   transition: opacity 0.5s ease;
   pointer-events: none;
   color: white;
-  font-size: var(--font-ml);
+  font-size: var(--font-size-l);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
   &.active {
@@ -96,7 +96,7 @@
   }
 
   @media (max-width: $mobile-breakpoint) {
-    font-size: var(--font-m);
+    font-size: var(--font-size-m);
   }
 }
 
@@ -115,7 +115,7 @@
   align-items: center;
 
   color: gray;
-  font-size: var(--font-xl);
+  font-size: var(--font-size-l);
 
   z-index: 10;
   transition: transform 0.1s ease-in-out;

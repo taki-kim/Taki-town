@@ -1,0 +1,27 @@
+@import "styles/typography.scss";
+
+.button {
+  width: 200px;
+  height: 100%;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: var(--highlight-color);
+
+  color: white;
+
+  @include body-s-bold;
+
+  box-shadow: var(--box-shadow);
+
+  transition: all 0.2s ease;
+
+  box-shadow: var(--box-shadow);
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--highlight-color-2);
+}

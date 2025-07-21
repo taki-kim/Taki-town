@@ -1,3 +1,5 @@
+@import "styles/typography.scss";
+
 .wrapper {
   padding: var(--wrapper-padding);
   padding-top: 0;
@@ -14,8 +16,7 @@
 }
 
 .title {
-  font-size: var(--font-xl);
-  font-weight: var(--font-w-m);
+  @include title-xl-regular;
 }
 
 .nav-wrapper {
@@ -31,11 +32,11 @@
   padding: 2.5rem 1.5rem;
   min-width: 150px;
   border-radius: 20px;
-  background-color: var(--secondary-color);
+  background-color: var(--background-20);
   flex: 1;
-  font-size: var(--font-s);
+  font-size: var(--font-size-s);
   font-weight: 500;
-  color: var(--font-color);
+  color: var(--text-color-10);
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -49,6 +50,6 @@
 .nav-item-title {
   padding-bottom: 5px;
 
-  font-size: var(--font-m);
+  font-size: var(--font-size-m);
   font-weight: 600;
 }
