@@ -1,4 +1,4 @@
-@import "../../styles/typography.scss";
+@use "../../styles/typography.scss" as typo;
 
 .wrapper {
   position: absolute;
@@ -19,7 +19,7 @@
 
 .text-wrapper {
   color: var(--text-color-10);
-  @include subtitle-m-thin;
+  @include typo.subtitle-m-thin;
 }
 
 .nav-wrapper {
@@ -50,5 +50,5 @@
 }
 
 .copyright {
-  @include body-xs-thin;
+  @include typo.body-xs-thin;
 }

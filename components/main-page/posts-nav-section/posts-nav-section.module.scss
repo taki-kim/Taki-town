@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "styles/typography.scss" as typo;
 
 .wrapper {
   padding: var(--wrapper-padding);
@@ -16,7 +16,7 @@
 }
 
 .title {
-  @include title-xl-regular;
+  @include typo.title-xl-regular;
 }
 
 .nav-wrapper {

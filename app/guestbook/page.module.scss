@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "../../styles/typography.scss" as typo;
 
 .wrapper {
   width: 60%;
@@ -15,7 +15,7 @@
 
   margin: 1rem 0;
 
-  @include title-xxl-regular;
+  @include typo.title-xxl-regular;
 
   color: var(--background-20-r);
 }
@@ -26,7 +26,7 @@
 
   line-height: 1.4;
 
-  @include body-m-thin;
+  @include typo.body-m-thin;
 
   color: var(--color-orange);
 }

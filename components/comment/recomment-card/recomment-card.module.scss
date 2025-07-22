@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "styles/typography.scss" as typo;
 
 .wrapper {
   padding-top: 20px;
@@ -43,11 +43,11 @@
 }
 
 .author {
-  @include body-s-bold;
+  @include typo.body-s-bold;
 }
 
 .date {
-  @include body-xs-thin;
+  @include typo.body-xs-thin;
 
   color: var(--text-color-20);
 }

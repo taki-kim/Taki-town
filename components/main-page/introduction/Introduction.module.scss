@@ -1,4 +1,4 @@
-@import "../../../styles/typography.scss";
+@use "../../../styles/typography.scss" as typo;
 
 .background {
   width: 100%;
@@ -31,7 +31,7 @@
   justify-content: center;
   flex: 1;
 
-  @include title-xxl-thin;
+  @include typo.title-xxl-thin;
 
   z-index: 10;
 

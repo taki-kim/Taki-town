@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "styles/typography.scss" as typo;
 
 .wrapper {
   width: 100%;
@@ -68,7 +68,7 @@
 }
 
 .summary {
-  @include body-xs-thin;
+  @include typo.body-xs-thin;
 
   color: var(--text-color-30);
 }

@@ -1,4 +1,4 @@
-@import "../../../styles/typography.scss";
+@use "../../../styles/typography.scss" as typo;
 
 .wrapper {
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .title {
-  @include title-xl-bold;
+  @include typo.title-xl-bold;
 }
 
 .text-wrapper {

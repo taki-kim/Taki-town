@@ -1,4 +1,4 @@
-@import "../../styles/typography.scss";
+@use "../../styles/typography.scss" as typo;
 
 .wrapper {
   width: 100%;
@@ -11,6 +11,6 @@
 }
 
 .text-wrapper {
-  @include body-l-bold;
+  @include typo.body-l-bold;
   padding: 2rem;
 }

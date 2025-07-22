@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "styles/typography.scss" as typo;
 
 .wrapper {
   display: flex;
@@ -23,11 +23,11 @@
 .title {
   padding: 0 0.5rem;
 
-  @include title-xxl-regular;
+  @include typo.title-xxl-regular;
 }
 
 .description {
   padding: 0 0.5rem;
 
-  @include body-m-regular;
+  @include typo.body-m-regular;
 }

@@ -2,7 +2,7 @@
 const nextConfig = {
   sassOptions: {
     includePaths: ["styles"],
-    prependData: `@import "variables.scss";`, // 자동으로 삽입
+    prependData: `@use "variables" as *;`,
   },
   images: {
     remotePatterns: [

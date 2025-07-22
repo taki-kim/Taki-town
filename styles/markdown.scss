@@ -1,5 +1,5 @@
-@import "../styles/fonts.scss";
-@import "../styles/typography.scss";
+@use "../styles/fonts.scss";
+@use "../styles/typography.scss" as typo;
 
 .markdown-body {
   -ms-text-size-adjust: 100%;
@@ -14,7 +14,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  @include body-s-regular;
+  @include typo.body-s-regular;
 }
 
 .markdown-body details,

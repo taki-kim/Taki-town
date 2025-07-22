@@ -1,4 +1,4 @@
-@import "../../../styles/typography.scss";
+@use "../../../styles/typography.scss" as typo;
 
 .wrapper {
   width: 100%;
@@ -51,10 +51,10 @@
 }
 
 .sub-title {
-  @include subtitle-l-bold;
+  @include typo.subtitle-l-bold;
 }
 
 .semi-introduce {
-  @include body-m-thin;
+  @include typo.body-m-thin;
   text-align: center;
 }
