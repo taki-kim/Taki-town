@@ -7,7 +7,7 @@ config.autoAddCss = false;
 import "./globals.scss";
 import NextAuthProvider from "@/providers/next-auth-provider";
 import ReactQueryProvider from "@/providers/react-query-provider";
-import Header from "@/components/header/header";
+import Header from "../components/header/Header";
 import Footer from "@/components/footer/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ThemeProvider from "@/providers/context/theme-provider";

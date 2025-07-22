@@ -1,3 +1,5 @@
+@use "../../../styles/variables.scss" as *;
+
 .background {
   position: fixed;
   width: 100vw;
@@ -10,6 +12,12 @@
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   z-index: 45;
+
+  display: none;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: block;
+  }
 }
 
 .list-wrapper {
@@ -32,6 +40,12 @@
   transition: transform 0.3s ease-in-out;
 
   z-index: 50;
+
+  visibility: hidden;
+
+  @media (max-width: $tablet-breakpoint) {
+    visibility: visible;
+  }
 }
 
 .background-open {
