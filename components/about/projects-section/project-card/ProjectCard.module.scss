@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "../../../../styles/typography.scss" as typo;
 
 .wrapper {
   grid: 1;
@@ -71,7 +71,7 @@
 }
 
 .title {
-  @include title-xxl-regular;
+  @include typo.title-xxl-regular;
 }
 
 .stacks-wrapper {
@@ -84,7 +84,7 @@
 }
 
 .description {
-  @include body-m-regular;
+  @include typo.body-m-regular;
 
   padding-bottom: 1rem;
   border-bottom: 1px solid white;

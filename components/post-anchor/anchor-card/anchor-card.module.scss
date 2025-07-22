@@ -1,4 +1,4 @@
-@import "styles/typography.scss";
+@use "styles/typography.scss" as typo;
 
 .wrapper {
   width: 100%;
@@ -28,5 +28,5 @@
 }
 
 .postTitle {
-  @include body-m-bold;
+  @include typo.body-m-bold;
 }

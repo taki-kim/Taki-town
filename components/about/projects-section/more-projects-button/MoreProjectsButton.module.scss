@@ -1,4 +1,4 @@
-@import "../../../../styles/typography.scss";
+@use "../../../../styles/typography.scss" as typo;
 
 .wrapper {
   grid: 1;
@@ -33,7 +33,7 @@
 }
 
 .title {
-  @include title-xl-bold;
+  @include typo.title-xl-bold;
 
   transform: translateY(0);
   transition: all 0.2s ease;

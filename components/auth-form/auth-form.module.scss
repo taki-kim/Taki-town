@@ -1,4 +1,4 @@
-@import "../../styles/typography.scss";
+@use "../../styles/typography.scss" as typo;
 
 .login-wrapper {
   width: 400px;
@@ -27,7 +27,7 @@
 .header {
   padding: 1rem;
 
-  @include subtitle-l-bold;
+  @include typo.subtitle-l-bold;
 }
 
 .text-container {

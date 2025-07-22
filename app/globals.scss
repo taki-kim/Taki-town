@@ -1,8 +1,8 @@
-@import "../styles/reset.scss";
-@import "../styles/theme.scss";
-@import "../styles/fonts.scss";
-@import "../styles/variables.scss";
-@import "../styles/typography.scss";
+@use "../styles/reset.scss";
+@use "../styles/theme.scss";
+@use "../styles/fonts.scss";
+@use "../styles/variables.scss";
+@use "../styles/typography.scss";
 
 * {
   font-family: "Pretendard", sans-serif !important;

@@ -1,4 +1,4 @@
-@import "../../../styles/typography.scss";
+@use "../../../styles/typography.scss" as typo;
 
 .wrapper {
   width: 70%;
@@ -11,7 +11,7 @@
 }
 
 .title {
-  @include title-xl-bold;
+  @include typo.title-xl-bold;
 }
 
 .projects-list {
