@@ -1,6 +1,8 @@
-export function checkIsCurrentPath(pathName: string, listName: string) {
+export function checkIsCurrentPath(
+  pathName?: string,
+  listName?: string
+): boolean {
+  if (!pathName || !listName) return false;
   const pathArr = pathName.split("/");
-
-  if (pathArr.includes(listName.toLocaleLowerCase())) return true;
-  else return false;
+  return pathArr.includes(listName.toLowerCase());
 }
