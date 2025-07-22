@@ -4,14 +4,14 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
 import MainLogo from "../main-logo/main-logo";
-import HeaderList from "./header-list";
-import ThemeChangeButton from "./theme-change-button/theme-change-button";
-import styles from "./header.module.scss";
-import AdminMenu from "./admin-menu/admin-menu";
-import MobileOpenButton from "./mobile/mobile-open-button";
+import HeaderList from "./HeaderList";
+import ThemeChangeButton from "./theme-change-button/ThemeChangeButton";
+import styles from "./Header.module.scss";
+import AdminMenu from "./admin-menu/AdminMenu";
+import MobileOpenButton from "./mobile/MobileOpenButton";
 import { headerNavList } from "../../lib/nav-list";
 
-const MobileNavList = dynamic(() => import("./mobile/mobile-nav-list"), {
+const MobileNavList = dynamic(() => import("./mobile/MobileNavList"), {
   ssr: false,
 });
 

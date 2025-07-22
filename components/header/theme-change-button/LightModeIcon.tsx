@@ -1,5 +1,5 @@
-import { IConProps } from "./theme-change-button";
-import styles from "./light-mode-icon.module.scss";
+import { IConProps } from "./ThemeChangeButton";
+import styles from "./LightModeIcon.module.scss";
 
 export default function LightModeIcon({ onClick }: IConProps) {
   return (

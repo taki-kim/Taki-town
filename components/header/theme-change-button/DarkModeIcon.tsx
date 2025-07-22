@@ -1,5 +1,5 @@
-import { IConProps } from "./theme-change-button";
-import styles from "./dark-mode-icon.module.scss";
+import { IConProps } from "./ThemeChangeButton";
+import styles from "./DarkModeIcon.module.scss";
 
 export default function DarkModeIcon({ onClick }: IConProps) {
   return (

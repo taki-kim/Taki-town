@@ -1,7 +1,7 @@
 "use client";
 
-import DarkModeIcon from "./dark-mode-icon";
-import LightModeIcon from "./light-mode-icon";
+import DarkModeIcon from "./DarkModeIcon";
+import LightModeIcon from "./LightModeIcon";
 import useTheme from "@/hooks/useTheme";
 
 export type IConProps = {

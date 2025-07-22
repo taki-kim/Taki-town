@@ -1,5 +1,7 @@
+@use "../../styles/variables.scss" as *;
+
 .header {
-  width: 100vw;
+  width: 100%;
   height: var(--header-height);
 
   position: fixed;

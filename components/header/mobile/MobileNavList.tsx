@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./mobile-nav-list.module.scss";
-import HeaderList from "../header-list";
+import styles from "./MobileNavList.module.scss";
+import HeaderList from "../HeaderList";
 import { headerNavList } from "@/lib/nav-list";
 
 type MobileNavListProps = {
