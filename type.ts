@@ -23,6 +23,14 @@ export type ProjectDataProps = {
   date: string;
 };
 
+export type ArticleCardProps = {
+  title: string;
+  summary: string;
+  imageLink: string;
+  content: string;
+  date: string;
+};
+
 export type PostCountProps = {
   count: number;
   postCategory: string;
