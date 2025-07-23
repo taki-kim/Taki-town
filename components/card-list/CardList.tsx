@@ -1,13 +1,9 @@
-"use client";
-
-import { useState, useEffect } from "react";
-
-import styles from "./project-list.module.scss";
+import styles from "./CardList.module.scss";
 import ArticleCard from "@/components/article-card/ArticleCard";
 import { sortByNewestArticle } from "@/utils/article";
 import { ProjectDataProps } from "@/type";
 
-export default function ProjectList({
+export default function CardList({
   cardList,
 }: {
   cardList: ProjectDataProps[];
