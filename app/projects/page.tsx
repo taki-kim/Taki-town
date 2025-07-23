@@ -13,7 +13,7 @@ export default async function Projects() {
   return (
     <div className={styles["wrapper"]}>
       <ProjectsHeader />
-      <CardList cardList={dataList} />
+      <CardList cardList={dataList} articleSort="project" />
     </div>
   );
 }

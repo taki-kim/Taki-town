@@ -14,11 +14,10 @@ export type ThemeContextProps = {
   toggleTheme: () => void;
 };
 
-export type ProjectDataProps = {
+export type ArticleCardProps = {
   title: string;
   summary: string;
   imageLink: string;
-  category: string;
   content: string;
   date: string;
 };
