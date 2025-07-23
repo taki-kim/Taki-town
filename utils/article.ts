@@ -1,7 +1,7 @@
-import { PostDataProps, ProjectDataProps } from "@/type";
+import { PostDataProps, ProjectDataProps, ArticleCardProps } from "@/type";
 
 export function sortByNewestArticle(
-  data: PostDataProps[] | ProjectDataProps[]
+  data: PostDataProps[] | ProjectDataProps[] | ArticleCardProps[]
 ) {
   const dateStringToNumber = (date: string) => {
     return Number(date.split("-").join(""));
