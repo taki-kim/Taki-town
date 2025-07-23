@@ -2,7 +2,7 @@
 
 import styles from "./highlight-list.module.scss";
 import { ProjectDataProps } from "@/type";
-import ArticleCard from "@/components/article-card/article-card";
+import ArticleCard from "@/components/article-card/ArticleCard";
 import NavButton from "@/components/button/NavButton";
 import useFloatingEffect from "@/hooks/useFloatingEffect";
 

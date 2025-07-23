@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 
-import styles from "./article-card.module.scss";
+import styles from "./ArticleCard.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ export type ArticleCardProps = {
   title: string;
   summary: string;
   postLink: string;
-  articleSort: string;
+  articleSort: "post" | "project";
 };
 
 export default function ArticleCard({
@@ -22,7 +21,7 @@ export default function ArticleCard({
   articleSort,
 }: ArticleCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null);
-  const path = usePathname();
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -46,7 +45,7 @@ export default function ArticleCard({
         observer.unobserve(cardRef.current);
       }
     };
-  }, [path]);
+  }, []);
 
   return (
     <Link

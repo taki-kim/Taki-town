@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import styles from "./post-list.module.scss";
-import ArticleCard from "@/components/article-card/article-card";
+import ArticleCard from "@/components/article-card/ArticleCard";
 import { getCategoryString } from "@/utils/postPage";
 import PostNotReady from "../post-not-ready/post-not-ready";
 import { useEffect, useRef } from "react";
