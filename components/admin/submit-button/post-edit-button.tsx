@@ -1,39 +1,19 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import sytles from "./submit-button.module.scss";
+import { PostDataProps } from "@/type";
+import { editPost } from "@/utils/api";
 
-export default function PostEditButton({ formData }: any) {
-  const [submit, setSubmit] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/post/edit/`, {
-          method: "PATCH",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    if (submit) {
-      fetchData();
-    }
-  }, [submit]);
+export default function PostEditButton({
+  formData,
+}: {
+  formData: PostDataProps;
+}) {
+  const handleClick = async () => {
+    const success = await editPost(formData);
+    if (success) alert("Post edited successfully");
+  };
 
   return (
-    <div
-      className={sytles["button"]}
-      onClick={(e: any) => {
-        setSubmit(true);
-      }}
-    >
+    <div className={sytles["button"]} onClick={handleClick}>
       SUBMIT
     </div>
   );

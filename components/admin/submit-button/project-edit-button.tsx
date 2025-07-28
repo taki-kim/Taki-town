@@ -1,39 +1,19 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import sytles from "./submit-button.module.scss";
+import { editProject } from "@/utils/api";
+import { ProjectDataProps } from "@/type";
 
-export default function ProjectEditButton({ formData }: any) {
-  const [submit, setSubmit] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/project/edit/${formData.title}`, {
-          method: "PATCH",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    if (submit) {
-      fetchData();
-    }
-  }, [submit]);
+export default function ProjectEditButton({
+  formData,
+}: {
+  formData: ProjectDataProps;
+}) {
+  const handleClick = async () => {
+    const success = await editProject(formData);
+    if (success) alert("Project edited successfully");
+  };
 
   return (
-    <div
-      className={sytles["button"]}
-      onClick={(e: any) => {
-        setSubmit(true);
-      }}
-    >
+    <div className={sytles["button"]} onClick={handleClick}>
       SUBMIT
     </div>
   );

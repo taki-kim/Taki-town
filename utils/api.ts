@@ -57,7 +57,7 @@ export async function fetchPostListByPage({
 
 export async function fetchProjectList(): Promise<ProjectDataProps[]> {
   const response = await fetch(
-    `${process.env.PUBLIC_URL}/api/project/get/all-projects`,
+    `${process.env.NEXT_PUBLIC_URL}/api/project/get/all-projects`,
     { next: { revalidate: STALE_TIME } }
   );
 
@@ -122,43 +122,6 @@ export async function fetchPostCount(
   }
 
   return response.json();
-}
-
-export async function createPost(formData: PostDataProps) {
-  // update Counter
-  await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/post-counter/patch/increase`,
-    {
-      method: "PATCH",
-      body: JSON.stringify(formData.category),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-
-  const recentCount: PostCountProps = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/post-counter/get/${formData.category}`,
-    { next: { revalidate: STALE_TIME } }
-  ).then((res) => res.json());
-
-  formData.postNumber = recentCount.count;
-
-  alert(process.env.PUBLIC_URL);
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/post/create-post`,
-    {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
 }
 
 // comments
@@ -331,3 +294,91 @@ export async function relatedArticleList(
     console.error(error);
   }
 }
+
+// admin
+
+export async function createPost(formData: PostDataProps) {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/post/create`,
+    {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+}
+
+export const deletePost = async (postTitle: string, postCategory: string) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/post/delete/${postTitle}`,
+    {
+      method: "DELETE",
+      body: JSON.stringify({ postTitle, postCategory }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to delete the post");
+  }
+};
+
+export const createProject = async (formData: ProjectDataProps) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/project/create`,
+    {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+};
+
+export const editPost = async (formData: PostDataProps) => {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/post/edit/`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response.ok;
+  } catch (error) {
+    console.error("Post edit error:", error);
+    return false;
+  }
+};
+
+export const editProject = async (formData: ProjectDataProps) => {
+  try {
+    const response = await fetch(`/api/project/edit/${formData.title}`, {
+      method: "PATCH",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Project edit error:", error);
+    return false;
+  }
+};

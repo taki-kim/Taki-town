@@ -5,9 +5,10 @@ import { useState, useEffect } from "react";
 import styles from "./admin-post-list.module.scss";
 import { fetchPostList } from "@/utils/api";
 import AdminPostCard from "../admin-post-card/admin-post-card";
+import { PostDataProps } from "@/type";
 
 export default function AdminPostList() {
-  const [cardData, setCardData] = useState<any[]>();
+  const [cardData, setCardData] = useState<PostDataProps[]>();
 
   useEffect(() => {
     async function fetchData() {

@@ -14,7 +14,7 @@ export async function DELETE(
     const postsCollection = db.collection("posts");
     const counterCollection = db.collection("counter");
 
-    const postCategory = await req.json();
+    const { postCategory } = await req.json();
 
     // update post-counter
     await counterCollection.bulkWrite([
