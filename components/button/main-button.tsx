@@ -1,32 +1,23 @@
 import styles from "./button.module.scss";
 import { getButtonSizeClass } from "@/utils/button";
+import useFloatingEffect from "@/hooks/useFloatingEffect";
 
 type MainButtonProps = {
   text: string;
   size: string;
-  color?: string | undefined;
   onClick?: () => void;
 };
 
-export default function MainButton({
-  text,
-  size,
-  color,
-  onClick,
-}: MainButtonProps) {
+export default function MainButton({ text, size, onClick }: MainButtonProps) {
+  const { isVisible, targetRef } = useFloatingEffect<HTMLDivElement>();
+
   return (
     <div
+      ref={targetRef}
       onClick={onClick ? onClick : undefined}
       className={`${styles["button-wrapper"]} ${
         styles[getButtonSizeClass(size) as string]
-      } `}
-      style={
-        color === "light"
-          ? { color: "lightgray", border: "1px solid lightgray" }
-          : color === "dark"
-          ? { color: "#1a2140", border: "1px solid #1a2140" }
-          : {}
-      }
+      } ${isVisible ? styles.visible : ""}`}
     >
       {text}
     </div>
