@@ -28,11 +28,11 @@ export default function AdminPostList() {
       {cardData?.map((e) => (
         <AdminPostCard
           key={e.title}
-          postLink={e.title}
-          imageLink={e.imageLink}
-          title={e.title}
-          summary={e.summary}
-          category={e.category}
+          postLink={e.title || ""}
+          imageLink={e.imageLink || ""}
+          title={e.title || ""}
+          summary={e.summary || ""}
+          category={e.category || ""}
         />
       ))}
     </div>

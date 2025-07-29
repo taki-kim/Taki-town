@@ -24,10 +24,10 @@ export default function AdminProjectList() {
       {cardData.map((e) => (
         <AdminProjectCard
           key={e.title}
-          postLink={e.title}
-          imageLink={e.imageLink}
-          title={e.title}
-          summary={e.summary}
+          postLink={e.title || ""}
+          imageLink={e.imageLink || ""}
+          title={e.title || ""}
+          summary={e.summary || ""}
         />
       ))}
     </div>
