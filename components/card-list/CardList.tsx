@@ -1,10 +1,9 @@
 import styles from "./CardList.module.scss";
 import ArticleCard from "@/components/article-card/ArticleCard";
 import { sortByNewestArticle } from "@/utils/article";
-import { PostDataProps, ProjectDataProps } from "@/type";
 
 export type CardListProps = {
-  cardList: PostDataProps[] | ProjectDataProps[];
+  cardList: any;
   articleSort: "post" | "project";
 };
 
