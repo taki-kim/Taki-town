@@ -22,7 +22,7 @@ export async function GET(req: Request) {
 
     const data = await collection
       .find(query)
-      .sort({ date: -1 })
+      .sort({ _id: -1 })
       .skip(offset)
       .limit(FETCH_POSTS_LIMIT)
       .toArray();

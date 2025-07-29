@@ -1,6 +1,7 @@
 import styles from "./edit-delete-bar.module.scss";
 import MainButton from "@/components/button/main-button";
 import NavButton from "@/components/button/NavButton";
+import { deletePost } from "@/utils/api";
 
 type EditDeleteBarProps = {
   postTitle: string;
@@ -11,23 +12,10 @@ export default function EditDeleteBar({
   postTitle,
   postCategory,
 }: EditDeleteBarProps) {
-  async function deletePost() {
-    try {
-      const response = await fetch(`/api/post/delete/${postTitle}`, {
-        method: "DELETE",
-        body: JSON.stringify(postCategory),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  const handleDeletePost = async () => {
+    await deletePost(postTitle, postCategory);
+  };
 
-      if (!response.ok) {
-        throw new Error("Failed to delete the post");
-      }
-    } catch (error) {
-      console.error("Error deleting post:", error);
-    }
-  }
   return (
     <div className={styles["wrapper"]}>
       <NavButton
@@ -35,7 +23,8 @@ export default function EditDeleteBar({
         size="small"
         link={`/admin/edit/post/${postTitle}`}
       />
-      <MainButton text="삭제" size="small" onClick={deletePost} />
+
+      <MainButton text="삭제" size="small" onClick={handleDeletePost} />
     </div>
   );
 }
