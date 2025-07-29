@@ -1,12 +1,7 @@
 import sytles from "./submit-button.module.scss";
 import { editProject } from "@/utils/api";
-import { ProjectDataProps } from "@/type";
 
-export default function ProjectEditButton({
-  formData,
-}: {
-  formData: ProjectDataProps;
-}) {
+export default function ProjectEditButton({ formData }: { formData: any }) {
   const handleClick = async () => {
     const success = await editProject(formData);
     if (success) alert("Project edited successfully");
