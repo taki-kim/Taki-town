@@ -1,10 +1,10 @@
 import styles from "./CardList.module.scss";
 import ArticleCard from "@/components/article-card/ArticleCard";
 import { sortByNewestArticle } from "@/utils/article";
-import { ArticleCardProps } from "@/type";
+import { PostDataProps, ProjectDataProps } from "@/type";
 
 export type CardListProps = {
-  cardList: ArticleCardProps[];
+  cardList: PostDataProps[] | ProjectDataProps[];
   articleSort: "post" | "project";
 };
 
@@ -15,10 +15,10 @@ export default function CardList({ cardList, articleSort }: CardListProps) {
         <ArticleCard
           key={e.title}
           articleSort={articleSort}
-          postLink={e.title}
-          imageLink={e.imageLink}
-          title={e.title}
-          summary={e.summary}
+          postLink={e.title || ""}
+          imageLink={e.imageLink || ""}
+          title={e.title || ""}
+          summary={e.summary || ""}
         />
       ))}
     </div>
