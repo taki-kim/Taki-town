@@ -1,12 +1,7 @@
 import sytles from "./submit-button.module.scss";
-import { PostDataProps } from "@/type";
 import { editPost } from "@/utils/api";
 
-export default function PostEditButton({
-  formData,
-}: {
-  formData: PostDataProps;
-}) {
+export default function PostEditButton({ formData }: { formData: any }) {
   const handleClick = async () => {
     const success = await editPost(formData);
     if (success) alert("Post edited successfully");

@@ -15,10 +15,10 @@ export default function CardList({ cardList, articleSort }: CardListProps) {
         <ArticleCard
           key={e.title}
           articleSort={articleSort}
-          postLink={e.title || ""}
-          imageLink={e.imageLink || ""}
-          title={e.title || ""}
-          summary={e.summary || ""}
+          postLink={e.title}
+          imageLink={e.imageLink}
+          title={e.title}
+          summary={e.summary}
         />
       ))}
     </div>
