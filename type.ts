@@ -3,10 +3,10 @@ export type PostDataProps = {
   summary: string;
   imageLink: string;
   category: string;
-  tags: string;
+  tags?: string;
   content: string;
-  date: string;
-  postNumber: number;
+  date?: string;
+  postNumber?: number;
 };
 
 export type ThemeContextProps = {
@@ -20,7 +20,7 @@ export type ProjectDataProps = {
   imageLink: string;
   category: string;
   content: string;
-  date: string;
+  date?: string;
 };
 
 export type ArticleCardProps = {

@@ -3,11 +3,10 @@
 import { useRouter } from "next/navigation";
 import sytles from "./submit-button.module.scss";
 import { getDateString } from "@/utils/date";
-import { PostDataProps, ProjectDataProps } from "@/type";
 import { createPost, createProject } from "@/utils/api";
 
 type PostSubmitButtonProps = {
-  formData: PostDataProps | ProjectDataProps;
+  formData: any;
   article: "post" | "project";
 };
 
@@ -23,11 +22,11 @@ export default function ArticleCreateButton({
       formData.date = date; // add date
 
       if (article === "post") {
-        await createPost(formData as PostDataProps);
+        await createPost(formData);
       }
 
       if (article === "project") {
-        await createProject(formData as ProjectDataProps);
+        await createProject(formData);
       }
     } catch (error) {
       console.log(error);
