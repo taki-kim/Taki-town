@@ -3,7 +3,7 @@ export type PostDataProps = {
   summary: string;
   imageLink: string;
   category: string;
-  tags: string;
+  tags: string[];
   content: string;
   date: string;
   postNumber: number;

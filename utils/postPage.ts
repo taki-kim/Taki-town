@@ -78,3 +78,11 @@ export function getPrevAndNextPost({
 
   return [prevPost, nextPost];
 }
+
+export function tagsToArray(tags: string) {
+  return tags.split(",").map((tag) => tag.trim());
+}
+
+export function tagsArrayToString(tags: string[]) {
+  return tags.join(",");
+}
